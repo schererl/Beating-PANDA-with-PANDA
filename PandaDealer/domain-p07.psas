@@ -1,0 +1,1669 @@
+;; #state features
+69
++clear[crate5]
++clear[pallet1]
++clear[crate3]
++clear[pallet3]
++clear[crate4]
++clear[crate1]
++at[truck0,distributor1]
++at[truck1,depot0]
++available[hoist0]
++available[hoist1]
++available[hoist2]
++at[crate0,distributor0]
++on[crate0,pallet4]
++at[crate1,distributor1]
++on[crate1,pallet5]
++at[crate3,distributor1]
++on[crate3,crate2]
++at[crate4,distributor0]
++on[crate4,crate0]
++at[crate5,depot0]
++on[crate5,pallet0]
+-at[truck0,depot0]
+-at[truck0,distributor0]
+-at[truck1,distributor0]
+-at[truck1,distributor1]
+-clear[crate0]
+-clear[pallet5]
+-at[truck0,distributor1]
++at[truck0,depot0]
++at[truck0,distributor0]
+-at[truck1,depot0]
++at[truck1,distributor0]
++at[truck1,distributor1]
++lifting[hoist2,crate1]
+-clear[crate1]
++clear[pallet5]
++lifting[hoist2,crate3]
++lifting[hoist1,crate4]
+-clear[crate4]
++clear[crate0]
++lifting[hoist0,crate5]
++in[crate1,truck0]
++in[crate1,truck1]
++in[crate3,truck0]
++in[crate3,truck1]
++in[crate4,truck0]
++in[crate4,truck1]
++lifting[hoist1,crate0]
++in[crate5,truck1]
++in[crate5,truck0]
++lifting[hoist1,crate1]
++lifting[hoist1,crate3]
++lifting[hoist2,crate4]
+-clear[pallet3]
++on[crate0,pallet3]
++in[crate0,truck0]
++in[crate0,truck1]
++lifting[hoist1,crate5]
++lifting[hoist2,crate5]
++at[crate1,distributor0]
++on[crate1,crate4]
++at[crate3,distributor0]
+-clear[pallet1]
++on[crate3,pallet1]
++at[crate4,distributor1]
++on[crate4,pallet5]
++at[crate5,distributor1]
++on[crate5,crate1]
++at[crate5,distributor0]
+
+;; Mutex Groups
+69
+0 0 +clear[crate5]
+1 1 +clear[pallet1]
+2 2 +clear[crate3]
+3 3 +clear[pallet3]
+4 4 +clear[crate4]
+5 5 +clear[crate1]
+6 6 +at[truck0,distributor1]
+7 7 +at[truck1,depot0]
+8 8 +available[hoist0]
+9 9 +available[hoist1]
+10 10 +available[hoist2]
+11 11 +at[crate0,distributor0]
+12 12 +on[crate0,pallet4]
+13 13 +at[crate1,distributor1]
+14 14 +on[crate1,pallet5]
+15 15 +at[crate3,distributor1]
+16 16 +on[crate3,crate2]
+17 17 +at[crate4,distributor0]
+18 18 +on[crate4,crate0]
+19 19 +at[crate5,depot0]
+20 20 +on[crate5,pallet0]
+21 21 -at[truck0,depot0]
+22 22 -at[truck0,distributor0]
+23 23 -at[truck1,distributor0]
+24 24 -at[truck1,distributor1]
+25 25 -clear[crate0]
+26 26 -clear[pallet5]
+27 27 -at[truck0,distributor1]
+28 28 +at[truck0,depot0]
+29 29 +at[truck0,distributor0]
+30 30 -at[truck1,depot0]
+31 31 +at[truck1,distributor0]
+32 32 +at[truck1,distributor1]
+33 33 +lifting[hoist2,crate1]
+34 34 -clear[crate1]
+35 35 +clear[pallet5]
+36 36 +lifting[hoist2,crate3]
+37 37 +lifting[hoist1,crate4]
+38 38 -clear[crate4]
+39 39 +clear[crate0]
+40 40 +lifting[hoist0,crate5]
+41 41 +in[crate1,truck0]
+42 42 +in[crate1,truck1]
+43 43 +in[crate3,truck0]
+44 44 +in[crate3,truck1]
+45 45 +in[crate4,truck0]
+46 46 +in[crate4,truck1]
+47 47 +lifting[hoist1,crate0]
+48 48 +in[crate5,truck1]
+49 49 +in[crate5,truck0]
+50 50 +lifting[hoist1,crate1]
+51 51 +lifting[hoist1,crate3]
+52 52 +lifting[hoist2,crate4]
+53 53 -clear[pallet3]
+54 54 +on[crate0,pallet3]
+55 55 +in[crate0,truck0]
+56 56 +in[crate0,truck1]
+57 57 +lifting[hoist1,crate5]
+58 58 +lifting[hoist2,crate5]
+59 59 +at[crate1,distributor0]
+60 60 +on[crate1,crate4]
+61 61 +at[crate3,distributor0]
+62 62 -clear[pallet1]
+63 63 +on[crate3,pallet1]
+64 64 +at[crate4,distributor1]
+65 65 +on[crate4,pallet5]
+66 66 +at[crate5,distributor1]
+67 67 +on[crate5,crate1]
+68 68 +at[crate5,distributor0]
+
+;; further strict Mutex Groups
+0
+
+;; further non strict Mutex Groups
+0
+
+;; known invariants
+0
+
+;; Actions
+154
+0
+67 -1
+-1
+-1
+1
+-1
+-1
+-1
+1
+13 5 58 -1
+0 67  0 0  0 34  0 66  0 10  -1
+0 5  0 58  -1
+1
+6 10 49 -1
+0 58  -1
+0 10  0 49  -1
+0
+13 5 -1
+-1
+-1
+0
+13 67 34 -1
+-1
+-1
+1
+66 0 67 10 -1
+0 5  0 58  -1
+0 67  0 34  0 10  0 0  0 66  -1
+1
+6 58 -1
+0 10  0 49  -1
+0 58  -1
+0
+6 -1
+-1
+-1
+1
+28 -1
+0 6  0 21  -1
+0 27  0 28  -1
+1
+29 -1
+0 6  0 22  -1
+0 27  0 29  -1
+1
+6 -1
+0 6  -1
+0 27  -1
+0
+27 -1
+-1
+-1
+1
+32 58 -1
+0 10  0 48  -1
+0 58  -1
+0
+32 -1
+-1
+-1
+1
+31 -1
+0 32  0 23  -1
+0 24  0 31  -1
+1
+32 -1
+0 32  -1
+0 24  -1
+1
+7 -1
+0 32  0 30  -1
+0 24  0 7  -1
+0
+24 -1
+-1
+-1
+0
+66 0 -1
+-1
+-1
+1
+59 5 57 -1
+0 67  0 0  0 34  0 68  0 9  -1
+0 5  0 57  -1
+1
+29 9 49 -1
+0 57  -1
+0 9  0 49  -1
+0
+59 5 -1
+-1
+-1
+0
+59 67 34 -1
+-1
+-1
+1
+68 0 67 9 -1
+0 5  0 57  -1
+0 67  0 34  0 9  0 0  0 68  -1
+1
+29 57 -1
+0 9  0 49  -1
+0 57  -1
+0
+29 -1
+-1
+-1
+1
+29 -1
+0 29  -1
+0 22  -1
+1
+28 -1
+0 29  0 21  -1
+0 22  0 28  -1
+1
+6 -1
+0 29  0 27  -1
+0 22  0 6  -1
+0
+22 -1
+-1
+-1
+1
+31 57 -1
+0 9  0 48  -1
+0 57  -1
+0
+31 -1
+-1
+-1
+1
+31 -1
+0 31  -1
+0 23  -1
+1
+32 -1
+0 31  0 24  -1
+0 23  0 32  -1
+1
+7 -1
+0 31  0 30  -1
+0 23  0 7  -1
+0
+23 -1
+-1
+-1
+0
+68 0 -1
+-1
+-1
+0
+49 -1
+-1
+-1
+1
+31 9 48 -1
+0 57  -1
+0 9  0 48  -1
+1
+32 10 48 -1
+0 58  -1
+0 10  0 48  -1
+0
+48 -1
+-1
+-1
+0
+59 68 67 -1
+-1
+-1
+0
+68 -1
+-1
+-1
+0
+13 66 67 -1
+-1
+-1
+0
+66 -1
+-1
+-1
+0
+13 32 48 -1
+-1
+-1
+0
+19 20 -1
+-1
+-1
+1
+7 40 -1
+0 8  0 48  -1
+0 40  -1
+1
+19 0 20 8 -1
+0 40  -1
+0 20  0 8  0 0  0 19  -1
+0
+19 0 -1
+-1
+-1
+0
+7 -1
+-1
+-1
+1
+32 -1
+0 7  0 24  -1
+0 30  0 32  -1
+1
+31 -1
+0 7  0 23  -1
+0 30  0 31  -1
+1
+7 -1
+0 7  -1
+0 30  -1
+0
+30 -1
+-1
+-1
+0
+59 31 48 -1
+-1
+-1
+0
+13 6 49 -1
+-1
+-1
+1
+28 40 -1
+0 8  0 49  -1
+0 40  -1
+0
+28 -1
+-1
+-1
+1
+28 -1
+0 28  -1
+0 21  -1
+1
+29 -1
+0 28  0 22  -1
+0 21  0 29  -1
+1
+6 -1
+0 28  0 27  -1
+0 21  0 6  -1
+0
+21 -1
+-1
+-1
+0
+59 29 49 -1
+-1
+-1
+0
+60 -1
+-1
+-1
+1
+64 4 33 -1
+0 60  0 5  0 38  0 13  0 10  -1
+0 34  0 4  0 33  -1
+1
+6 10 41 -1
+0 33  -1
+0 10  0 41  -1
+0
+64 4 -1
+-1
+-1
+0
+60 64 38 -1
+-1
+-1
+1
+13 5 60 10 -1
+0 4  0 34  0 33  -1
+0 60  0 38  0 10  0 5  0 13  -1
+1
+6 33 -1
+0 10  0 41  -1
+0 33  -1
+1
+32 33 -1
+0 10  0 42  -1
+0 33  -1
+1
+17 4 50 -1
+0 60  0 5  0 38  0 59  0 9  -1
+0 34  0 4  0 50  -1
+1
+29 9 41 -1
+0 50  -1
+0 9  0 41  -1
+0
+17 4 -1
+-1
+-1
+0
+17 60 38 -1
+-1
+-1
+1
+59 5 60 9 -1
+0 4  0 34  0 50  -1
+0 60  0 38  0 9  0 5  0 59  -1
+1
+29 50 -1
+0 9  0 41  -1
+0 50  -1
+1
+31 50 -1
+0 9  0 42  -1
+0 50  -1
+0
+41 -1
+-1
+-1
+1
+31 9 42 -1
+0 50  -1
+0 9  0 42  -1
+1
+32 10 42 -1
+0 33  -1
+0 10  0 42  -1
+0
+42 -1
+-1
+-1
+0
+13 14 -1
+-1
+-1
+1
+13 5 14 10 -1
+0 35  0 34  0 33  -1
+0 14  0 10  0 5  0 26  0 13  -1
+0
+64 13 60 -1
+-1
+-1
+0
+13 -1
+-1
+-1
+0
+17 59 60 -1
+-1
+-1
+0
+59 -1
+-1
+-1
+0
+17 29 41 -1
+-1
+-1
+0
+64 6 41 -1
+-1
+-1
+0
+17 31 42 -1
+-1
+-1
+0
+64 32 42 -1
+-1
+-1
+0
+65 -1
+-1
+-1
+1
+35 52 -1
+0 4  0 65  0 26  0 64  0 10  -1
+0 38  0 35  0 52  -1
+1
+10 6 45 -1
+0 52  -1
+0 10  0 45  -1
+0
+35 -1
+-1
+-1
+0
+65 26 -1
+-1
+-1
+1
+64 4 65 10 -1
+0 35  0 38  0 52  -1
+0 65  0 26  0 10  0 4  0 64  -1
+1
+6 52 -1
+0 10  0 45  -1
+0 52  -1
+1
+32 52 -1
+0 10  0 46  -1
+0 52  -1
+0
+14 26 -1
+-1
+-1
+0
+45 -1
+-1
+-1
+1
+32 10 46 -1
+0 52  -1
+0 10  0 46  -1
+0
+46 -1
+-1
+-1
+0
+64 65 -1
+-1
+-1
+0
+64 -1
+-1
+-1
+0
+6 45 -1
+-1
+-1
+0
+11 17 18 -1
+-1
+-1
+1
+29 37 -1
+0 9  0 45  -1
+0 37  -1
+1
+17 4 18 9 -1
+0 39  0 38  0 37  -1
+0 18  0 25  0 9  0 4  0 17  -1
+0
+32 46 -1
+-1
+-1
+1
+31 37 -1
+0 9  0 46  -1
+0 37  -1
+0
+54 -1
+-1
+-1
+1
+3 47 -1
+0 54  0 39  0 53  0 11  0 9  -1
+0 25  0 3  0 47  -1
+1
+9 29 55 -1
+0 47  -1
+0 9  0 55  -1
+0
+3 -1
+-1
+-1
+0
+54 53 -1
+-1
+-1
+1
+11 39 54 9 -1
+0 3  0 25  0 47  -1
+0 54  0 53  0 9  0 39  0 11  -1
+1
+29 47 -1
+0 9  0 55  -1
+0 47  -1
+1
+31 47 -1
+0 9  0 56  -1
+0 47  -1
+0
+11 39 -1
+-1
+-1
+0
+11 18 25 -1
+-1
+-1
+0
+55 -1
+-1
+-1
+1
+31 9 56 -1
+0 47  -1
+0 9  0 56  -1
+0
+56 -1
+-1
+-1
+0
+11 12 -1
+-1
+-1
+1
+11 39 12 9 -1
+0 25  0 47  -1
+0 12  0 9  0 39  0 11  -1
+0
+11 54 -1
+-1
+-1
+0
+11 -1
+-1
+-1
+0
+29 55 -1
+-1
+-1
+0
+31 56 -1
+-1
+-1
+0
+63 -1
+-1
+-1
+1
+1 51 -1
+0 63  0 2  0 62  0 61  0 9  -1
+0 1  0 51  -1
+1
+29 9 43 -1
+0 51  -1
+0 9  0 43  -1
+0
+1 -1
+-1
+-1
+0
+63 62 -1
+-1
+-1
+1
+2 63 61 9 -1
+0 1  0 51  -1
+0 63  0 62  0 2  0 9  0 61  -1
+1
+29 51 -1
+0 9  0 43  -1
+0 51  -1
+1
+31 51 -1
+0 9  0 44  -1
+0 51  -1
+0
+61 2 -1
+-1
+-1
+0
+43 -1
+-1
+-1
+1
+9 31 44 -1
+0 51  -1
+0 9  0 44  -1
+0
+44 -1
+-1
+-1
+0
+61 63 -1
+-1
+-1
+0
+61 -1
+-1
+-1
+0
+29 43 -1
+-1
+-1
+0
+15 16 -1
+-1
+-1
+1
+6 36 -1
+0 10  0 43  -1
+0 36  -1
+1
+15 2 16 10 -1
+0 36  -1
+0 16  0 10  0 2  0 15  -1
+0
+15 2 -1
+-1
+-1
+0
+31 44 -1
+-1
+-1
+1
+32 36 -1
+0 10  0 44  -1
+0 36  -1
+
+;; initial state
+24 22 20 18 17 16 15 14 13 19 0 21 1 23 2 25 3 11 4 5 26 6 7 8 9 10 12 -1
+
+;; goal
+54 60 63 65 67 -1
+
+;; tasks (primitive and abstract)
+215
+0 __method_precondition_m0_do_put_on[crate5,crate1]
+0 nop[]
+0 Drop[hoist2,crate5,crate1,distributor1]
+0 Unload[hoist2,crate5,truck0,distributor1]
+0 __method_precondition_m4_do_clear[crate1,distributor1]
+0 __method_precondition_m5_do_clear[crate1,distributor1,crate5,hoist2]
+0 Lift[hoist2,crate5,crate1,distributor1]
+0 Load[hoist2,crate5,truck0,distributor1]
+0 __method_precondition_m6_do_get_truck[truck0,distributor1]
+0 Drive[truck0,depot0,distributor1]
+0 Drive[truck0,distributor0,distributor1]
+0 Drive[truck0,distributor1,distributor1]
+0 __method_precondition_m7_do_get_truck[truck0,distributor1]
+0 Load[hoist2,crate5,truck1,distributor1]
+0 __method_precondition_m6_do_get_truck[truck1,distributor1]
+0 Drive[truck1,distributor0,distributor1]
+0 Drive[truck1,distributor1,distributor1]
+0 Drive[truck1,depot0,distributor1]
+0 __method_precondition_m7_do_get_truck[truck1,distributor1]
+0 __method_precondition_m4_do_clear[crate5,distributor1]
+0 Drop[hoist1,crate5,crate1,distributor0]
+0 Unload[hoist1,crate5,truck0,distributor0]
+0 __method_precondition_m4_do_clear[crate1,distributor0]
+0 __method_precondition_m5_do_clear[crate1,distributor0,crate5,hoist1]
+0 Lift[hoist1,crate5,crate1,distributor0]
+0 Load[hoist1,crate5,truck0,distributor0]
+0 __method_precondition_m6_do_get_truck[truck0,distributor0]
+0 Drive[truck0,distributor0,distributor0]
+0 Drive[truck0,depot0,distributor0]
+0 Drive[truck0,distributor1,distributor0]
+0 __method_precondition_m7_do_get_truck[truck0,distributor0]
+0 Load[hoist1,crate5,truck1,distributor0]
+0 __method_precondition_m6_do_get_truck[truck1,distributor0]
+0 Drive[truck1,distributor0,distributor0]
+0 Drive[truck1,distributor1,distributor0]
+0 Drive[truck1,depot0,distributor0]
+0 __method_precondition_m7_do_get_truck[truck1,distributor0]
+0 __method_precondition_m4_do_clear[crate5,distributor0]
+0 __method_precondition_m2_do_put_on[crate5,truck0]
+0 Unload[hoist1,crate5,truck1,distributor0]
+0 Unload[hoist2,crate5,truck1,distributor1]
+0 __method_precondition_m2_do_put_on[crate5,truck1]
+0 __method_precondition_m9_do_lift_crate[crate5,distributor0,hoist1,crate1]
+0 __method_precondition_m1_do_put_on[crate5,distributor0]
+0 __method_precondition_m9_do_lift_crate[crate5,distributor1,hoist2,crate1]
+0 __method_precondition_m1_do_put_on[crate5,distributor1]
+0 __method_precondition_m11_do_unload_truck[crate5,crate1,distributor1,truck1,hoist2]
+0 __method_precondition_m10_do_load_truck[crate5,pallet0,depot0,hoist0]
+0 Load[hoist0,crate5,truck1,depot0]
+0 Lift[hoist0,crate5,pallet0,depot0]
+0 __method_precondition_m4_do_clear[crate5,depot0]
+0 __method_precondition_m6_do_get_truck[truck1,depot0]
+0 Drive[truck1,distributor1,depot0]
+0 Drive[truck1,distributor0,depot0]
+0 Drive[truck1,depot0,depot0]
+0 __method_precondition_m7_do_get_truck[truck1,depot0]
+0 __method_precondition_m11_do_unload_truck[crate5,crate1,distributor0,truck1,hoist1]
+0 __method_precondition_m11_do_unload_truck[crate5,crate1,distributor1,truck0,hoist2]
+0 Load[hoist0,crate5,truck0,depot0]
+0 __method_precondition_m6_do_get_truck[truck0,depot0]
+0 Drive[truck0,depot0,depot0]
+0 Drive[truck0,distributor0,depot0]
+0 Drive[truck0,distributor1,depot0]
+0 __method_precondition_m7_do_get_truck[truck0,depot0]
+0 __method_precondition_m11_do_unload_truck[crate5,crate1,distributor0,truck0,hoist1]
+0 __method_precondition_m0_do_put_on[crate1,crate4]
+0 Drop[hoist2,crate1,crate4,distributor1]
+0 Unload[hoist2,crate1,truck0,distributor1]
+0 __method_precondition_m4_do_clear[crate4,distributor1]
+0 __method_precondition_m5_do_clear[crate4,distributor1,crate1,hoist2]
+0 Lift[hoist2,crate1,crate4,distributor1]
+0 Load[hoist2,crate1,truck0,distributor1]
+0 Load[hoist2,crate1,truck1,distributor1]
+0 Drop[hoist1,crate1,crate4,distributor0]
+0 Unload[hoist1,crate1,truck0,distributor0]
+0 __method_precondition_m4_do_clear[crate4,distributor0]
+0 __method_precondition_m5_do_clear[crate4,distributor0,crate1,hoist1]
+0 Lift[hoist1,crate1,crate4,distributor0]
+0 Load[hoist1,crate1,truck0,distributor0]
+0 Load[hoist1,crate1,truck1,distributor0]
+0 __method_precondition_m2_do_put_on[crate1,truck0]
+0 Unload[hoist1,crate1,truck1,distributor0]
+0 Unload[hoist2,crate1,truck1,distributor1]
+0 __method_precondition_m2_do_put_on[crate1,truck1]
+0 __method_precondition_m9_do_lift_crate[crate1,distributor1,hoist2,pallet5]
+0 Lift[hoist2,crate1,pallet5,distributor1]
+0 __method_precondition_m9_do_lift_crate[crate1,distributor1,hoist2,crate4]
+0 __method_precondition_m1_do_put_on[crate1,distributor1]
+0 __method_precondition_m9_do_lift_crate[crate1,distributor0,hoist1,crate4]
+0 __method_precondition_m1_do_put_on[crate1,distributor0]
+0 __method_precondition_m11_do_unload_truck[crate1,crate4,distributor0,truck0,hoist1]
+0 __method_precondition_m11_do_unload_truck[crate1,crate4,distributor1,truck0,hoist2]
+0 __method_precondition_m11_do_unload_truck[crate1,crate4,distributor0,truck1,hoist1]
+0 __method_precondition_m11_do_unload_truck[crate1,crate4,distributor1,truck1,hoist2]
+0 __method_precondition_m0_do_put_on[crate4,pallet5]
+0 Drop[hoist2,crate4,pallet5,distributor1]
+0 Unload[hoist2,crate4,truck0,distributor1]
+0 __method_precondition_m4_do_clear[pallet5,distributor1]
+0 __method_precondition_m5_do_clear[pallet5,distributor1,crate4,hoist2]
+0 Lift[hoist2,crate4,pallet5,distributor1]
+0 Load[hoist2,crate4,truck0,distributor1]
+0 Load[hoist2,crate4,truck1,distributor1]
+0 __method_precondition_m5_do_clear[pallet5,distributor1,crate1,hoist2]
+0 __method_precondition_m2_do_put_on[crate4,truck0]
+0 Unload[hoist2,crate4,truck1,distributor1]
+0 __method_precondition_m2_do_put_on[crate4,truck1]
+0 __method_precondition_m9_do_lift_crate[crate4,distributor1,hoist2,pallet5]
+0 __method_precondition_m1_do_put_on[crate4,distributor1]
+0 __method_precondition_m11_do_unload_truck[crate4,pallet5,distributor1,truck0,hoist2]
+0 __method_precondition_m10_do_load_truck[crate4,crate0,distributor0,hoist1]
+0 Load[hoist1,crate4,truck0,distributor0]
+0 Lift[hoist1,crate4,crate0,distributor0]
+0 __method_precondition_m11_do_unload_truck[crate4,pallet5,distributor1,truck1,hoist2]
+0 Load[hoist1,crate4,truck1,distributor0]
+0 __method_precondition_m0_do_put_on[crate0,pallet3]
+0 Drop[hoist1,crate0,pallet3,distributor0]
+0 Unload[hoist1,crate0,truck0,distributor0]
+0 __method_precondition_m4_do_clear[pallet3,distributor0]
+0 __method_precondition_m5_do_clear[pallet3,distributor0,crate0,hoist1]
+0 Lift[hoist1,crate0,pallet3,distributor0]
+0 Load[hoist1,crate0,truck0,distributor0]
+0 Load[hoist1,crate0,truck1,distributor0]
+0 __method_precondition_m4_do_clear[crate0,distributor0]
+0 __method_precondition_m5_do_clear[crate0,distributor0,crate4,hoist1]
+0 __method_precondition_m2_do_put_on[crate0,truck0]
+0 Unload[hoist1,crate0,truck1,distributor0]
+0 __method_precondition_m2_do_put_on[crate0,truck1]
+0 __method_precondition_m9_do_lift_crate[crate0,distributor0,hoist1,pallet4]
+0 Lift[hoist1,crate0,pallet4,distributor0]
+0 __method_precondition_m9_do_lift_crate[crate0,distributor0,hoist1,pallet3]
+0 __method_precondition_m1_do_put_on[crate0,distributor0]
+0 __method_precondition_m11_do_unload_truck[crate0,pallet3,distributor0,truck0,hoist1]
+0 __method_precondition_m11_do_unload_truck[crate0,pallet3,distributor0,truck1,hoist1]
+0 __method_precondition_m0_do_put_on[crate3,pallet1]
+0 Drop[hoist1,crate3,pallet1,distributor0]
+0 Unload[hoist1,crate3,truck0,distributor0]
+0 __method_precondition_m4_do_clear[pallet1,distributor0]
+0 __method_precondition_m5_do_clear[pallet1,distributor0,crate3,hoist1]
+0 Lift[hoist1,crate3,pallet1,distributor0]
+0 Load[hoist1,crate3,truck0,distributor0]
+0 Load[hoist1,crate3,truck1,distributor0]
+0 __method_precondition_m4_do_clear[crate3,distributor0]
+0 __method_precondition_m2_do_put_on[crate3,truck0]
+0 Unload[hoist1,crate3,truck1,distributor0]
+0 __method_precondition_m2_do_put_on[crate3,truck1]
+0 __method_precondition_m9_do_lift_crate[crate3,distributor0,hoist1,pallet1]
+0 __method_precondition_m1_do_put_on[crate3,distributor0]
+0 __method_precondition_m11_do_unload_truck[crate3,pallet1,distributor0,truck0,hoist1]
+0 __method_precondition_m10_do_load_truck[crate3,crate2,distributor1,hoist2]
+0 Load[hoist2,crate3,truck0,distributor1]
+0 Lift[hoist2,crate3,crate2,distributor1]
+0 __method_precondition_m4_do_clear[crate3,distributor1]
+0 __method_precondition_m11_do_unload_truck[crate3,pallet1,distributor0,truck1,hoist1]
+0 Load[hoist2,crate3,truck1,distributor1]
+1 __top[]
+1 do_put_on[crate5,crate1]
+1 m2_do_put_on_splitted_6[truck0,crate1,crate5]
+1 do_clear[crate1,distributor1]
+1 m5_do_clear_splitted_1[distributor1,hoist2,crate5]
+1 do_get_truck[truck0,distributor1]
+1 m7_do_get_truck_splitted_2[truck0,distributor1]
+1 do_get_truck[truck1,distributor1]
+1 m7_do_get_truck_splitted_2[truck1,distributor1]
+1 do_clear[crate1,distributor0]
+1 m5_do_clear_splitted_1[distributor0,hoist1,crate5]
+1 do_get_truck[truck0,distributor0]
+1 m7_do_get_truck_splitted_2[truck0,distributor0]
+1 do_get_truck[truck1,distributor0]
+1 m7_do_get_truck_splitted_2[truck1,distributor0]
+1 m2_do_put_on_splitted_6[truck1,crate1,crate5]
+1 do_lift_crate[crate5,distributor0,hoist1]
+1 do_lift_crate[crate5,distributor1,hoist2]
+1 m3_do_put_on_splitted_7[truck1,distributor1,crate5]
+1 do_get_truck[truck1,depot0]
+1 m7_do_get_truck_splitted_2[truck1,depot0]
+1 m3_do_put_on_splitted_7[truck1,distributor0,crate5]
+1 m3_do_put_on_splitted_7[truck0,distributor1,crate5]
+1 do_get_truck[truck0,depot0]
+1 m7_do_get_truck_splitted_2[truck0,depot0]
+1 m3_do_put_on_splitted_7[truck0,distributor0,crate5]
+1 do_put_on[crate1,crate4]
+1 m2_do_put_on_splitted_6[truck0,crate4,crate1]
+1 do_clear[crate4,distributor1]
+1 m5_do_clear_splitted_1[distributor1,hoist2,crate1]
+1 do_clear[crate4,distributor0]
+1 m5_do_clear_splitted_1[distributor0,hoist1,crate1]
+1 m2_do_put_on_splitted_6[truck1,crate4,crate1]
+1 do_lift_crate[crate1,distributor1,hoist2]
+1 do_lift_crate[crate1,distributor0,hoist1]
+1 m3_do_put_on_splitted_7[truck0,distributor0,crate1]
+1 m3_do_put_on_splitted_5[crate1,distributor1,truck0]
+1 m3_do_put_on_splitted_7[truck0,distributor1,crate1]
+1 m3_do_put_on_splitted_7[truck1,distributor0,crate1]
+1 m3_do_put_on_splitted_5[crate1,distributor1,truck1]
+1 m3_do_put_on_splitted_7[truck1,distributor1,crate1]
+1 do_put_on[crate4,pallet5]
+1 do_clear[pallet5,distributor1]
+1 m5_do_clear_splitted_1[distributor1,hoist2,crate4]
+1 do_lift_crate[crate4,distributor1,hoist2]
+1 m3_do_put_on_splitted_7[truck0,distributor1,crate4]
+1 m3_do_put_on_splitted_7[truck1,distributor1,crate4]
+1 do_put_on[crate0,pallet3]
+1 do_clear[pallet3,distributor0]
+1 m5_do_clear_splitted_1[distributor0,hoist1,crate0]
+1 do_clear[crate0,distributor0]
+1 m5_do_clear_splitted_1[distributor0,hoist1,crate4]
+1 do_lift_crate[crate0,distributor0,hoist1]
+1 m3_do_put_on_splitted_5[crate0,distributor0,truck0]
+1 m3_do_put_on_splitted_5[crate0,distributor0,truck1]
+1 do_put_on[crate3,pallet1]
+1 do_clear[pallet1,distributor0]
+1 m5_do_clear_splitted_1[distributor0,hoist1,crate3]
+1 do_lift_crate[crate3,distributor0,hoist1]
+1 m3_do_put_on_splitted_7[truck0,distributor0,crate3]
+1 m3_do_put_on_splitted_7[truck1,distributor0,crate3]
+
+;; initial abstract task
+154
+
+;; methods
+167
+__top_method
+154
+209 201 195 180 155 -1
+3 4 2 3 1 2 0 1 -1
+m0_do_put_on
+155
+0 1 -1
+0 1 -1
+m2_do_put_on
+155
+38 156 -1
+0 1 -1
+<_splitting_method_m2_do_put_on_splitted_6;m2_do_put_on_splitted_4[crate5,truck0,distributor1,crate1];_splitting_method_m2_do_put_on_splitted_4;2;0,1,-1,-2>
+156
+159 157 3 2 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+m4_do_clear
+157
+4 1 -1
+0 1 -1
+<m5_do_clear;do_clear[crate5,distributor1];m4_do_clear;1;0,-1,-2,2,3>
+157
+5 19 1 6 158 -1
+0 3 0 4 0 1 0 2 3 4 1 3 1 4 1 2 2 3 2 4 -1
+_splitting_method_m5_do_clear_splitted_1
+158
+159 7 -1
+0 1 -1
+m6_do_get_truck
+159
+8 1 -1
+0 1 -1
+m7_do_get_truck
+159
+12 160 -1
+0 1 -1
+_splitting_method_m7_do_get_truck_splitted_2
+160
+9 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+160
+10 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+160
+11 -1
+-1
+_splitting_method_m5_do_clear_splitted_1
+158
+161 13 -1
+0 1 -1
+m6_do_get_truck
+161
+14 1 -1
+0 1 -1
+m7_do_get_truck
+161
+18 162 -1
+0 1 -1
+_splitting_method_m7_do_get_truck_splitted_2
+162
+15 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+162
+16 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+162
+17 -1
+-1
+<_splitting_method_m2_do_put_on_splitted_6;m2_do_put_on_splitted_4[crate5,truck0,distributor0,crate1];_splitting_method_m2_do_put_on_splitted_4;2;0,1,-1,-2>
+156
+165 163 21 20 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+m4_do_clear
+163
+22 1 -1
+0 1 -1
+<m5_do_clear;do_clear[crate5,distributor0];m4_do_clear;1;0,-1,-2,2,3>
+163
+23 37 1 24 164 -1
+0 3 0 4 0 1 0 2 3 4 1 3 1 4 1 2 2 3 2 4 -1
+_splitting_method_m5_do_clear_splitted_1
+164
+165 25 -1
+0 1 -1
+m6_do_get_truck
+165
+26 1 -1
+0 1 -1
+m7_do_get_truck
+165
+30 166 -1
+0 1 -1
+_splitting_method_m7_do_get_truck_splitted_2
+166
+27 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+166
+28 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+166
+29 -1
+-1
+_splitting_method_m5_do_clear_splitted_1
+164
+167 31 -1
+0 1 -1
+m6_do_get_truck
+167
+32 1 -1
+0 1 -1
+m7_do_get_truck
+167
+36 168 -1
+0 1 -1
+_splitting_method_m7_do_get_truck_splitted_2
+168
+33 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+168
+34 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+168
+35 -1
+-1
+m2_do_put_on
+155
+41 169 -1
+0 1 -1
+<_splitting_method_m2_do_put_on_splitted_6;m2_do_put_on_splitted_4[crate5,truck1,distributor0,crate1];_splitting_method_m2_do_put_on_splitted_4;2;0,1,-1,-2>
+169
+167 163 39 20 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_m2_do_put_on_splitted_6;m2_do_put_on_splitted_4[crate5,truck1,distributor1,crate1];_splitting_method_m2_do_put_on_splitted_4;2;0,1,-1,-2>
+169
+161 157 40 2 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<<m1_do_put_on;do_clear[crate5,distributor0];m4_do_clear;1;0,-1,-2,2,3>;m1_do_put_on_splitted_3[crate5,distributor0,crate1];_splitting_method_m1_do_put_on_splitted_3;4;0,1,2,3,-1,-2>
+155
+43 37 1 163 170 20 -1
+0 5 0 3 0 1 0 2 0 4 3 5 3 4 1 5 1 3 1 2 1 4 2 5 2 3 2 4 4 5 -1
+m9_do_lift_crate
+170
+42 24 -1
+0 1 -1
+m8_do_lift_crate
+170
+38 165 21 -1
+0 2 0 1 1 2 -1
+m8_do_lift_crate
+170
+41 167 39 -1
+0 2 0 1 1 2 -1
+<<m1_do_put_on;do_clear[crate5,distributor1];m4_do_clear;1;0,-1,-2,2,3>;m1_do_put_on_splitted_3[crate5,distributor1,crate1];_splitting_method_m1_do_put_on_splitted_3;4;0,1,2,3,-1,-2>
+155
+45 19 1 157 171 2 -1
+0 5 0 3 0 1 0 2 0 4 3 5 3 4 1 5 1 3 1 2 1 4 2 5 2 3 2 4 4 5 -1
+m9_do_lift_crate
+171
+44 6 -1
+0 1 -1
+m8_do_lift_crate
+171
+38 159 3 -1
+0 2 0 1 1 2 -1
+m8_do_lift_crate
+171
+41 161 40 -1
+0 2 0 1 1 2 -1
+<m3_do_put_on;do_unload_truck[crate5,crate1,distributor1,truck1];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+155
+172 46 157 40 2 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,depot0,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,pallet0,depot0,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>;do_clear[crate5,depot0];m4_do_clear;2;0,1,-1,-2,3,4,5>
+172
+47 173 50 1 49 48 17 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+m6_do_get_truck
+173
+51 1 -1
+0 1 -1
+m7_do_get_truck
+173
+55 174 -1
+0 1 -1
+_splitting_method_m7_do_get_truck_splitted_2
+174
+52 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+174
+53 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+174
+54 -1
+-1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,distributor0,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,crate1,distributor0,truck1];<m10_do_load_truck;do_clear[crate5,distributor0];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+172
+42 167 37 1 24 31 15 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,distributor1,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,crate1,distributor1,truck1];<m10_do_load_truck;do_clear[crate5,distributor1];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+172
+44 161 19 1 6 13 16 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<m3_do_put_on;do_unload_truck[crate5,crate1,distributor0,truck1];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+155
+175 56 163 39 20 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,depot0,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,pallet0,depot0,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>;do_clear[crate5,depot0];m4_do_clear;2;0,1,-1,-2,3,4,5>
+175
+47 173 50 1 49 48 35 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,distributor0,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,crate1,distributor0,truck1];<m10_do_load_truck;do_clear[crate5,distributor0];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+175
+42 167 37 1 24 31 33 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,distributor1,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,crate1,distributor1,truck1];<m10_do_load_truck;do_clear[crate5,distributor1];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+175
+44 161 19 1 6 13 34 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<m3_do_put_on;do_unload_truck[crate5,crate1,distributor1,truck0];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+155
+176 57 157 3 2 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,depot0,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,pallet0,depot0,truck0];<m10_do_load_truck;do_clear[crate5,depot0];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+176
+47 177 50 1 49 58 9 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+m6_do_get_truck
+177
+59 1 -1
+0 1 -1
+m7_do_get_truck
+177
+63 178 -1
+0 1 -1
+_splitting_method_m7_do_get_truck_splitted_2
+178
+60 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+178
+61 -1
+-1
+_splitting_method_m7_do_get_truck_splitted_2
+178
+62 -1
+-1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,distributor1,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,crate1,distributor1,truck0];<m10_do_load_truck;do_clear[crate5,distributor1];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+176
+44 159 19 1 6 7 11 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,distributor0,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,crate1,distributor0,truck0];<m10_do_load_truck;do_clear[crate5,distributor0];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+176
+42 165 37 1 24 25 10 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<m3_do_put_on;do_unload_truck[crate5,crate1,distributor0,truck0];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+155
+179 64 163 21 20 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,depot0,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,pallet0,depot0,truck0];<m10_do_load_truck;do_clear[crate5,depot0];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+179
+47 177 50 1 49 58 28 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,distributor1,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,crate1,distributor1,truck0];<m10_do_load_truck;do_clear[crate5,distributor1];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+179
+44 159 19 1 6 7 29 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate5,distributor0,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate5,crate1,distributor0,truck0];<m10_do_load_truck;do_clear[crate5,distributor0];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+179
+42 165 37 1 24 25 27 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+m0_do_put_on
+180
+65 1 -1
+0 1 -1
+m2_do_put_on
+180
+80 181 -1
+0 1 -1
+<_splitting_method_m2_do_put_on_splitted_6;m2_do_put_on_splitted_4[crate1,truck0,distributor1,crate4];_splitting_method_m2_do_put_on_splitted_4;2;0,1,-1,-2>
+181
+159 182 67 66 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+m4_do_clear
+182
+68 1 -1
+0 1 -1
+m5_do_clear
+182
+69 157 70 183 -1
+0 2 0 3 0 1 2 3 1 2 1 3 -1
+_splitting_method_m5_do_clear_splitted_1
+183
+159 71 -1
+0 1 -1
+_splitting_method_m5_do_clear_splitted_1
+183
+161 72 -1
+0 1 -1
+<_splitting_method_m2_do_put_on_splitted_6;m2_do_put_on_splitted_4[crate1,truck0,distributor0,crate4];_splitting_method_m2_do_put_on_splitted_4;2;0,1,-1,-2>
+181
+165 184 74 73 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+m4_do_clear
+184
+75 1 -1
+0 1 -1
+m5_do_clear
+184
+76 163 77 185 -1
+0 2 0 3 0 1 2 3 1 2 1 3 -1
+_splitting_method_m5_do_clear_splitted_1
+185
+165 78 -1
+0 1 -1
+_splitting_method_m5_do_clear_splitted_1
+185
+167 79 -1
+0 1 -1
+m2_do_put_on
+180
+83 186 -1
+0 1 -1
+<_splitting_method_m2_do_put_on_splitted_6;m2_do_put_on_splitted_4[crate1,truck1,distributor0,crate4];_splitting_method_m2_do_put_on_splitted_4;2;0,1,-1,-2>
+186
+167 184 81 73 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_m2_do_put_on_splitted_6;m2_do_put_on_splitted_4[crate1,truck1,distributor1,crate4];_splitting_method_m2_do_put_on_splitted_4;2;0,1,-1,-2>
+186
+161 182 82 66 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<m1_do_put_on;m1_do_put_on_splitted_3[crate1,distributor1,crate4];_splitting_method_m1_do_put_on_splitted_3;3;0,1,2,-1,-2>
+180
+87 157 182 187 66 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+m9_do_lift_crate
+187
+84 85 -1
+0 1 -1
+m9_do_lift_crate
+187
+86 70 -1
+0 1 -1
+m8_do_lift_crate
+187
+80 159 67 -1
+0 2 0 1 1 2 -1
+m8_do_lift_crate
+187
+83 161 82 -1
+0 2 0 1 1 2 -1
+<m1_do_put_on;m1_do_put_on_splitted_3[crate1,distributor0,crate4];_splitting_method_m1_do_put_on_splitted_3;3;0,1,2,-1,-2>
+180
+89 163 184 188 73 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+m9_do_lift_crate
+188
+88 77 -1
+0 1 -1
+m8_do_lift_crate
+188
+80 165 74 -1
+0 2 0 1 1 2 -1
+m8_do_lift_crate
+188
+83 167 81 -1
+0 2 0 1 1 2 -1
+<m3_do_put_on;do_unload_truck[crate1,crate4,distributor0,truck0];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+180
+189 90 184 74 73 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+_splitting_method_m3_do_put_on_splitted_7
+189
+190 29 -1
+0 1 -1
+<_splitting_method_m3_do_put_on_splitted_5;do_load_truck[crate1,crate4,distributor1,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5>
+190
+86 159 157 70 71 -1
+0 4 0 3 0 2 0 1 3 4 2 3 1 2 -1
+<_splitting_method_m3_do_put_on_splitted_5;do_load_truck[crate1,pallet5,distributor1,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5>
+190
+84 159 157 85 71 -1
+0 4 0 3 0 2 0 1 3 4 2 3 1 2 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate1,distributor0,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate1,crate4,distributor0,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>
+189
+88 165 163 77 78 27 -1
+0 5 0 4 0 3 0 2 0 1 4 5 3 5 3 4 2 5 2 3 1 5 1 2 -1
+<m3_do_put_on;do_unload_truck[crate1,crate4,distributor1,truck0];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+180
+191 91 182 67 66 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+_splitting_method_m3_do_put_on_splitted_7
+191
+190 11 -1
+0 1 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate1,distributor0,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate1,crate4,distributor0,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>
+191
+88 165 163 77 78 10 -1
+0 5 0 4 0 3 0 2 0 1 4 5 3 5 3 4 2 5 2 3 1 5 1 2 -1
+<m3_do_put_on;do_unload_truck[crate1,crate4,distributor0,truck1];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+180
+192 92 184 81 73 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate1,distributor0,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate1,crate4,distributor0,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>
+192
+88 167 163 77 79 33 -1
+0 5 0 4 0 3 0 2 0 1 4 5 3 5 3 4 2 5 2 3 1 5 1 2 -1
+_splitting_method_m3_do_put_on_splitted_7
+192
+193 34 -1
+0 1 -1
+<_splitting_method_m3_do_put_on_splitted_5;do_load_truck[crate1,crate4,distributor1,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5>
+193
+86 161 157 70 72 -1
+0 4 0 3 0 2 0 1 3 4 2 3 1 2 -1
+<_splitting_method_m3_do_put_on_splitted_5;do_load_truck[crate1,pallet5,distributor1,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5>
+193
+84 161 157 85 72 -1
+0 4 0 3 0 2 0 1 3 4 2 3 1 2 -1
+<m3_do_put_on;do_unload_truck[crate1,crate4,distributor1,truck1];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+180
+194 93 182 82 66 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate1,distributor0,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate1,crate4,distributor0,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>
+194
+88 167 163 77 79 15 -1
+0 5 0 4 0 3 0 2 0 1 4 5 3 5 3 4 2 5 2 3 1 5 1 2 -1
+_splitting_method_m3_do_put_on_splitted_7
+194
+193 16 -1
+0 1 -1
+m0_do_put_on
+195
+94 1 -1
+0 1 -1
+<<m2_do_put_on;m2_do_put_on_splitted_6[truck0,pallet5,crate4];_splitting_method_m2_do_put_on_splitted_6;1;0,-1,-2,-3>;m2_do_put_on_splitted_4[crate4,truck0,distributor1,pallet5];_splitting_method_m2_do_put_on_splitted_4;3;0,1,2,-1,-2>
+195
+103 159 196 96 95 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+m4_do_clear
+196
+97 1 -1
+0 1 -1
+m5_do_clear
+196
+98 182 99 197 -1
+0 2 0 3 0 1 2 3 1 2 1 3 -1
+_splitting_method_m5_do_clear_splitted_1
+197
+159 100 -1
+0 1 -1
+_splitting_method_m5_do_clear_splitted_1
+197
+161 101 -1
+0 1 -1
+m5_do_clear
+196
+102 157 85 183 -1
+0 2 0 3 0 1 2 3 1 2 1 3 -1
+<<m2_do_put_on;m2_do_put_on_splitted_6[truck1,pallet5,crate4];_splitting_method_m2_do_put_on_splitted_6;1;0,-1,-2,-3>;m2_do_put_on_splitted_4[crate4,truck1,distributor1,pallet5];_splitting_method_m2_do_put_on_splitted_4;3;0,1,2,-1,-2>
+195
+105 161 196 104 95 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+<m1_do_put_on;m1_do_put_on_splitted_3[crate4,distributor1,pallet5];_splitting_method_m1_do_put_on_splitted_3;3;0,1,2,-1,-2>
+195
+107 182 196 198 95 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+m9_do_lift_crate
+198
+106 99 -1
+0 1 -1
+m8_do_lift_crate
+198
+103 159 96 -1
+0 2 0 1 1 2 -1
+m8_do_lift_crate
+198
+105 161 104 -1
+0 2 0 1 1 2 -1
+<m3_do_put_on;do_unload_truck[crate4,pallet5,distributor1,truck0];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+195
+199 108 196 96 95 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate4,distributor1,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate4,pallet5,distributor1,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>
+199
+106 159 182 99 100 11 -1
+0 5 0 4 0 3 0 2 0 1 4 5 3 5 3 4 2 5 2 3 1 5 1 2 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate4,distributor0,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate4,crate0,distributor0,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>
+199
+109 165 184 111 110 10 -1
+0 5 0 4 0 3 0 2 0 1 4 5 3 5 3 4 2 5 2 3 1 5 1 2 -1
+<m3_do_put_on;do_unload_truck[crate4,pallet5,distributor1,truck1];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+195
+200 112 196 104 95 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate4,distributor0,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate4,crate0,distributor0,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>
+200
+109 167 184 111 113 15 -1
+0 5 0 4 0 3 0 2 0 1 4 5 3 5 3 4 2 5 2 3 1 5 1 2 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate4,distributor1,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate4,pallet5,distributor1,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>
+200
+106 161 182 99 101 16 -1
+0 5 0 4 0 3 0 2 0 1 4 5 3 5 3 4 2 5 2 3 1 5 1 2 -1
+m0_do_put_on
+201
+114 1 -1
+0 1 -1
+<<m2_do_put_on;m2_do_put_on_splitted_6[truck0,pallet3,crate0];_splitting_method_m2_do_put_on_splitted_6;1;0,-1,-2,-3>;m2_do_put_on_splitted_4[crate0,truck0,distributor0,pallet3];_splitting_method_m2_do_put_on_splitted_4;3;0,1,2,-1,-2>
+201
+124 165 202 116 115 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+m4_do_clear
+202
+117 1 -1
+0 1 -1
+m5_do_clear
+202
+118 204 119 203 -1
+0 2 0 3 0 1 2 3 1 2 1 3 -1
+_splitting_method_m5_do_clear_splitted_1
+203
+165 120 -1
+0 1 -1
+_splitting_method_m5_do_clear_splitted_1
+203
+167 121 -1
+0 1 -1
+m4_do_clear
+204
+122 1 -1
+0 1 -1
+m5_do_clear
+204
+123 184 111 205 -1
+0 2 0 3 0 1 2 3 1 2 1 3 -1
+_splitting_method_m5_do_clear_splitted_1
+205
+165 110 -1
+0 1 -1
+_splitting_method_m5_do_clear_splitted_1
+205
+167 113 -1
+0 1 -1
+<<m2_do_put_on;m2_do_put_on_splitted_6[truck1,pallet3,crate0];_splitting_method_m2_do_put_on_splitted_6;1;0,-1,-2,-3>;m2_do_put_on_splitted_4[crate0,truck1,distributor0,pallet3];_splitting_method_m2_do_put_on_splitted_4;3;0,1,2,-1,-2>
+201
+126 167 202 125 115 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+<m1_do_put_on;m1_do_put_on_splitted_3[crate0,distributor0,pallet3];_splitting_method_m1_do_put_on_splitted_3;3;0,1,2,-1,-2>
+201
+130 204 202 206 115 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+m9_do_lift_crate
+206
+127 128 -1
+0 1 -1
+m9_do_lift_crate
+206
+129 119 -1
+0 1 -1
+m8_do_lift_crate
+206
+124 165 116 -1
+0 2 0 1 1 2 -1
+m8_do_lift_crate
+206
+126 167 125 -1
+0 2 0 1 1 2 -1
+<<m3_do_put_on;do_unload_truck[crate0,pallet3,distributor0,truck0];m11_do_unload_truck;1;0,-1,-2,-3,-4>;m3_do_put_on_splitted_7[truck0,distributor0,crate0];_splitting_method_m3_do_put_on_splitted_7;0;-1,-2,1,2,3,4>
+201
+207 27 131 202 116 115 -1
+2 5 2 4 2 3 0 2 0 5 0 4 0 3 0 1 4 5 3 4 1 2 1 5 1 4 1 3 -1
+<_splitting_method_m3_do_put_on_splitted_5;do_load_truck[crate0,pallet4,distributor0,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5>
+207
+127 165 204 128 120 -1
+0 4 0 3 0 2 0 1 3 4 2 3 1 2 -1
+<_splitting_method_m3_do_put_on_splitted_5;do_load_truck[crate0,pallet3,distributor0,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5>
+207
+129 165 204 119 120 -1
+0 4 0 3 0 2 0 1 3 4 2 3 1 2 -1
+<<m3_do_put_on;do_unload_truck[crate0,pallet3,distributor0,truck1];m11_do_unload_truck;1;0,-1,-2,-3,-4>;m3_do_put_on_splitted_7[truck1,distributor0,crate0];_splitting_method_m3_do_put_on_splitted_7;0;-1,-2,1,2,3,4>
+201
+208 33 132 202 125 115 -1
+2 5 2 4 2 3 0 2 0 5 0 4 0 3 0 1 4 5 3 4 1 2 1 5 1 4 1 3 -1
+<_splitting_method_m3_do_put_on_splitted_5;do_load_truck[crate0,pallet4,distributor0,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5>
+208
+127 167 204 128 121 -1
+0 4 0 3 0 2 0 1 3 4 2 3 1 2 -1
+<_splitting_method_m3_do_put_on_splitted_5;do_load_truck[crate0,pallet3,distributor0,truck1];m10_do_load_truck;0;-1,-2,-3,-4,-5>
+208
+129 167 204 119 121 -1
+0 4 0 3 0 2 0 1 3 4 2 3 1 2 -1
+m0_do_put_on
+209
+133 1 -1
+0 1 -1
+<<m2_do_put_on;m2_do_put_on_splitted_6[truck0,pallet1,crate3];_splitting_method_m2_do_put_on_splitted_6;1;0,-1,-2,-3>;m2_do_put_on_splitted_4[crate3,truck0,distributor0,pallet1];_splitting_method_m2_do_put_on_splitted_4;3;0,1,2,-1,-2>
+209
+142 165 210 135 134 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+m4_do_clear
+210
+136 1 -1
+0 1 -1
+<m5_do_clear;do_clear[crate3,distributor0];m4_do_clear;1;0,-1,-2,2,3>
+210
+137 141 1 138 211 -1
+0 3 0 4 0 1 0 2 3 4 1 3 1 4 1 2 2 3 2 4 -1
+_splitting_method_m5_do_clear_splitted_1
+211
+165 139 -1
+0 1 -1
+_splitting_method_m5_do_clear_splitted_1
+211
+167 140 -1
+0 1 -1
+<<m2_do_put_on;m2_do_put_on_splitted_6[truck1,pallet1,crate3];_splitting_method_m2_do_put_on_splitted_6;1;0,-1,-2,-3>;m2_do_put_on_splitted_4[crate3,truck1,distributor0,pallet1];_splitting_method_m2_do_put_on_splitted_4;3;0,1,2,-1,-2>
+209
+144 167 210 143 134 -1
+0 4 0 2 0 1 0 3 2 4 2 3 1 4 1 2 1 3 3 4 -1
+<<m1_do_put_on;do_clear[crate3,distributor0];m4_do_clear;1;0,-1,-2,2,3>;m1_do_put_on_splitted_3[crate3,distributor0,pallet1];_splitting_method_m1_do_put_on_splitted_3;4;0,1,2,3,-1,-2>
+209
+146 141 1 210 212 134 -1
+0 5 0 3 0 1 0 2 0 4 3 5 3 4 1 5 1 3 1 2 1 4 2 5 2 3 2 4 4 5 -1
+m9_do_lift_crate
+212
+145 138 -1
+0 1 -1
+m8_do_lift_crate
+212
+142 165 135 -1
+0 2 0 1 1 2 -1
+m8_do_lift_crate
+212
+144 167 143 -1
+0 2 0 1 1 2 -1
+<m3_do_put_on;do_unload_truck[crate3,pallet1,distributor0,truck0];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+209
+213 147 210 135 134 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate3,distributor1,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate3,crate2,distributor1,truck0];m10_do_load_truck;0;-1,-2,-3,-4,-5,1>;do_clear[crate3,distributor1];m4_do_clear;2;0,1,-1,-2,3,4,5>
+213
+148 159 151 1 150 149 29 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate3,distributor0,truck0];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate3,pallet1,distributor0,truck0];<m10_do_load_truck;do_clear[crate3,distributor0];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+213
+145 165 141 1 138 139 27 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<m3_do_put_on;do_unload_truck[crate3,pallet1,distributor0,truck1];m11_do_unload_truck;1;0,-1,-2,-3,-4>
+209
+214 152 210 143 134 -1
+1 4 1 3 1 2 0 1 0 4 0 3 0 2 3 4 2 3 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate3,distributor0,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate3,pallet1,distributor0,truck1];<m10_do_load_truck;do_clear[crate3,distributor0];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+214
+145 167 141 1 138 140 33 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1
+<<_splitting_method_m3_do_put_on_splitted_7;m3_do_put_on_splitted_5[crate3,distributor1,truck1];_splitting_method_m3_do_put_on_splitted_5;0;-1,1>;do_load_truck[crate3,crate2,distributor1,truck1];<m10_do_load_truck;do_clear[crate3,distributor1];m4_do_clear;2;0,1,-1,-2,3,4>;0;-1,-2,-3,-4,-5,-6,1>
+214
+148 161 151 1 150 153 34 -1
+0 6 0 5 0 4 0 2 0 1 0 3 5 6 4 6 4 5 2 6 2 4 2 3 1 6 1 2 1 3 3 6 3 4 -1

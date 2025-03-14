@@ -1,0 +1,3304 @@
+;; #state features
+104
++ontable[shaker1]
++ontable[shot1]
++ontable[shot2]
++ontable[shot3]
++ontable[shot4]
++ontable[shot5]
++clean[shaker1]
++clean[shot1]
++clean[shot2]
++clean[shot3]
++clean[shot4]
++clean[shot5]
++empty[shaker1]
++empty[shot1]
++empty[shot2]
++empty[shot3]
++empty[shot4]
++empty[shot5]
++handEmpty[left]
++handEmpty[right]
+-contains[shot4,cocktail1]
+-contains[shot5,cocktail2]
+-contains[shot1,ingredient1]
+-contains[shot1,ingredient3]
+-contains[shot1,ingredient4]
+-contains[shot2,ingredient1]
+-contains[shot2,ingredient3]
+-contains[shot2,ingredient4]
+-contains[shot3,ingredient1]
+-contains[shot3,ingredient3]
+-contains[shot3,ingredient4]
+-contains[shot4,ingredient1]
+-contains[shot4,ingredient3]
+-contains[shot4,ingredient4]
+-contains[shot5,ingredient1]
+-contains[shot5,ingredient3]
+-contains[shot5,ingredient4]
+-holding[left,shaker1]
+-holding[left,shot1]
+-holding[left,shot2]
+-holding[left,shot3]
+-holding[left,shot4]
+-holding[left,shot5]
+-holding[right,shaker1]
+-holding[right,shot1]
+-holding[right,shot2]
+-holding[right,shot3]
+-holding[right,shot4]
+-holding[right,shot5]
++holding[left,shaker1]
++holding[left,shot1]
++holding[left,shot2]
++holding[left,shot3]
++holding[left,shot4]
++holding[left,shot5]
++holding[right,shaker1]
++holding[right,shot1]
++holding[right,shot2]
++holding[right,shot3]
++holding[right,shot4]
++holding[right,shot5]
++contains[shot1,ingredient1]
++used[shot1,ingredient1]
++contains[shot1,ingredient3]
++used[shot1,ingredient3]
++contains[shot1,ingredient4]
++used[shot1,ingredient4]
++contains[shot2,ingredient1]
++used[shot2,ingredient1]
++contains[shot2,ingredient3]
++used[shot2,ingredient3]
++contains[shot2,ingredient4]
++used[shot2,ingredient4]
++contains[shot3,ingredient1]
++used[shot3,ingredient1]
++contains[shot3,ingredient3]
++used[shot3,ingredient3]
++contains[shot3,ingredient4]
++used[shot3,ingredient4]
++contains[shot4,ingredient1]
++used[shot4,ingredient1]
++contains[shot4,ingredient3]
++used[shot4,ingredient3]
++contains[shot4,ingredient4]
++used[shot4,ingredient4]
++contains[shot5,ingredient1]
++used[shot5,ingredient1]
++contains[shot5,ingredient3]
++used[shot5,ingredient3]
++contains[shot5,ingredient4]
++used[shot5,ingredient4]
++contains[shaker1,ingredient1]
++unshaked[shaker1]
+-clean[shaker1]
+-empty[shaker1]
++contains[shaker1,ingredient3]
++contains[shaker1,ingredient4]
++shaked[shaker1]
++contains[shaker1,cocktail1]
++contains[shaker1,cocktail2]
++contains[shot4,cocktail1]
++used[shot4,cocktail1]
++contains[shot5,cocktail2]
++used[shot5,cocktail2]
+
+;; Mutex Groups
+104
+0 0 +ontable[shaker1]
+1 1 +ontable[shot1]
+2 2 +ontable[shot2]
+3 3 +ontable[shot3]
+4 4 +ontable[shot4]
+5 5 +ontable[shot5]
+6 6 +clean[shaker1]
+7 7 +clean[shot1]
+8 8 +clean[shot2]
+9 9 +clean[shot3]
+10 10 +clean[shot4]
+11 11 +clean[shot5]
+12 12 +empty[shaker1]
+13 13 +empty[shot1]
+14 14 +empty[shot2]
+15 15 +empty[shot3]
+16 16 +empty[shot4]
+17 17 +empty[shot5]
+18 18 +handEmpty[left]
+19 19 +handEmpty[right]
+20 20 -contains[shot4,cocktail1]
+21 21 -contains[shot5,cocktail2]
+22 22 -contains[shot1,ingredient1]
+23 23 -contains[shot1,ingredient3]
+24 24 -contains[shot1,ingredient4]
+25 25 -contains[shot2,ingredient1]
+26 26 -contains[shot2,ingredient3]
+27 27 -contains[shot2,ingredient4]
+28 28 -contains[shot3,ingredient1]
+29 29 -contains[shot3,ingredient3]
+30 30 -contains[shot3,ingredient4]
+31 31 -contains[shot4,ingredient1]
+32 32 -contains[shot4,ingredient3]
+33 33 -contains[shot4,ingredient4]
+34 34 -contains[shot5,ingredient1]
+35 35 -contains[shot5,ingredient3]
+36 36 -contains[shot5,ingredient4]
+37 37 -holding[left,shaker1]
+38 38 -holding[left,shot1]
+39 39 -holding[left,shot2]
+40 40 -holding[left,shot3]
+41 41 -holding[left,shot4]
+42 42 -holding[left,shot5]
+43 43 -holding[right,shaker1]
+44 44 -holding[right,shot1]
+45 45 -holding[right,shot2]
+46 46 -holding[right,shot3]
+47 47 -holding[right,shot4]
+48 48 -holding[right,shot5]
+49 49 +holding[left,shaker1]
+50 50 +holding[left,shot1]
+51 51 +holding[left,shot2]
+52 52 +holding[left,shot3]
+53 53 +holding[left,shot4]
+54 54 +holding[left,shot5]
+55 55 +holding[right,shaker1]
+56 56 +holding[right,shot1]
+57 57 +holding[right,shot2]
+58 58 +holding[right,shot3]
+59 59 +holding[right,shot4]
+60 60 +holding[right,shot5]
+61 61 +contains[shot1,ingredient1]
+62 62 +used[shot1,ingredient1]
+63 63 +contains[shot1,ingredient3]
+64 64 +used[shot1,ingredient3]
+65 65 +contains[shot1,ingredient4]
+66 66 +used[shot1,ingredient4]
+67 67 +contains[shot2,ingredient1]
+68 68 +used[shot2,ingredient1]
+69 69 +contains[shot2,ingredient3]
+70 70 +used[shot2,ingredient3]
+71 71 +contains[shot2,ingredient4]
+72 72 +used[shot2,ingredient4]
+73 73 +contains[shot3,ingredient1]
+74 74 +used[shot3,ingredient1]
+75 75 +contains[shot3,ingredient3]
+76 76 +used[shot3,ingredient3]
+77 77 +contains[shot3,ingredient4]
+78 78 +used[shot3,ingredient4]
+79 79 +contains[shot4,ingredient1]
+80 80 +used[shot4,ingredient1]
+81 81 +contains[shot4,ingredient3]
+82 82 +used[shot4,ingredient3]
+83 83 +contains[shot4,ingredient4]
+84 84 +used[shot4,ingredient4]
+85 85 +contains[shot5,ingredient1]
+86 86 +used[shot5,ingredient1]
+87 87 +contains[shot5,ingredient3]
+88 88 +used[shot5,ingredient3]
+89 89 +contains[shot5,ingredient4]
+90 90 +used[shot5,ingredient4]
+91 91 +contains[shaker1,ingredient1]
+92 92 +unshaked[shaker1]
+93 93 -clean[shaker1]
+94 94 -empty[shaker1]
+95 95 +contains[shaker1,ingredient3]
+96 96 +contains[shaker1,ingredient4]
+97 97 +shaked[shaker1]
+98 98 +contains[shaker1,cocktail1]
+99 99 +contains[shaker1,cocktail2]
+100 100 +contains[shot4,cocktail1]
+101 101 +used[shot4,cocktail1]
+102 102 +contains[shot5,cocktail2]
+103 103 +used[shot5,cocktail2]
+
+;; further strict Mutex Groups
+0
+
+;; further non strict Mutex Groups
+0
+
+;; known invariants
+0
+
+;; Actions
+303
+0
+102 -1
+-1
+-1
+0
+11 17 99 97 55 -1
+-1
+-1
+1
+17 11 97 99 55 -1
+0 103  0 102  -1
+0 17  0 11  0 21  -1
+0
+11 17 99 97 49 -1
+-1
+-1
+1
+17 11 97 99 49 -1
+0 103  0 102  -1
+0 17  0 11  0 21  -1
+0
+21 -1
+-1
+-1
+0
+99 -1
+-1
+-1
+1
+92 18 96 91 55 -1
+0 99  0 97  -1
+0 96  0 91  0 92  -1
+0
+49 -1
+-1
+-1
+1
+49 -1
+0 37  0 18  0 0  -1
+0 49  -1
+0
+54 -1
+-1
+-1
+1
+54 -1
+0 42  0 18  0 5  -1
+0 54  -1
+0
+51 -1
+-1
+-1
+1
+51 -1
+0 39  0 18  0 2  -1
+0 51  -1
+0
+50 -1
+-1
+-1
+1
+50 -1
+0 38  0 18  0 1  -1
+0 50  -1
+0
+53 -1
+-1
+-1
+1
+53 -1
+0 41  0 18  0 4  -1
+0 53  -1
+0
+52 -1
+-1
+-1
+1
+52 -1
+0 40  0 18  0 3  -1
+0 52  -1
+0
+19 -1
+-1
+-1
+0
+18 -1
+-1
+-1
+0
+55 -1
+-1
+-1
+0
+43 -1
+-1
+-1
+1
+0 19 -1
+0 55  -1
+0 0  0 19  0 43  -1
+1
+55 -1
+0 43  0 19  0 0  -1
+0 55  -1
+0
+0 -1
+-1
+-1
+0
+57 -1
+-1
+-1
+1
+57 -1
+0 45  0 19  0 2  -1
+0 57  -1
+0
+56 -1
+-1
+-1
+1
+56 -1
+0 44  0 19  0 1  -1
+0 56  -1
+0
+60 -1
+-1
+-1
+1
+60 -1
+0 48  0 19  0 5  -1
+0 60  -1
+0
+59 -1
+-1
+-1
+1
+59 -1
+0 47  0 19  0 4  -1
+0 59  -1
+0
+58 -1
+-1
+-1
+1
+58 -1
+0 46  0 19  0 3  -1
+0 58  -1
+1
+19 92 96 91 49 -1
+0 99  0 97  -1
+0 96  0 91  0 92  -1
+0
+37 -1
+-1
+-1
+1
+0 18 -1
+0 49  -1
+0 0  0 18  0 37  -1
+0
+96 -1
+-1
+-1
+1
+6 12 60 89 -1
+0 36  0 94  0 93  0 17  0 92  0 96  -1
+0 89  0 12  0 6  -1
+0
+48 -1
+-1
+-1
+1
+5 19 -1
+0 60  -1
+0 5  0 19  0 48  -1
+0
+5 -1
+-1
+-1
+1
+6 12 54 89 -1
+0 36  0 94  0 93  0 17  0 92  0 96  -1
+0 89  0 12  0 6  -1
+0
+42 -1
+-1
+-1
+1
+5 18 -1
+0 54  -1
+0 5  0 18  0 42  -1
+0
+89 -1
+-1
+-1
+1
+11 17 19 54 -1
+0 90  0 89  -1
+0 17  0 11  0 36  -1
+1
+11 17 18 60 -1
+0 90  0 89  -1
+0 17  0 11  0 36  -1
+0
+36 -1
+-1
+-1
+0
+11 -1
+-1
+-1
+1
+17 18 86 60 -1
+0 11  -1
+0 86  -1
+1
+85 60 -1
+0 34  0 17  -1
+0 85  -1
+1
+17 19 86 54 -1
+0 11  -1
+0 86  -1
+1
+85 54 -1
+0 34  0 17  -1
+0 85  -1
+0
+85 -1
+-1
+-1
+1
+17 18 88 60 -1
+0 11  -1
+0 88  -1
+1
+87 60 -1
+0 35  0 17  -1
+0 87  -1
+1
+17 19 88 54 -1
+0 11  -1
+0 88  -1
+1
+87 54 -1
+0 35  0 17  -1
+0 87  -1
+0
+87 -1
+-1
+-1
+1
+17 18 103 60 -1
+0 11  -1
+0 103  -1
+1
+102 60 -1
+0 21  0 17  -1
+0 102  -1
+1
+17 19 103 54 -1
+0 11  -1
+0 103  -1
+1
+102 54 -1
+0 21  0 17  -1
+0 102  -1
+1
+17 18 90 60 -1
+0 11  -1
+0 90  -1
+1
+89 60 -1
+0 36  0 17  -1
+0 89  -1
+1
+17 19 90 54 -1
+0 11  -1
+0 90  -1
+1
+89 54 -1
+0 36  0 17  -1
+0 89  -1
+0
+103 -1
+-1
+-1
+0
+90 -1
+-1
+-1
+0
+86 -1
+-1
+-1
+0
+88 -1
+-1
+-1
+0
+17 -1
+-1
+-1
+1
+6 12 56 65 -1
+0 24  0 94  0 93  0 13  0 92  0 96  -1
+0 65  0 12  0 6  -1
+0
+44 -1
+-1
+-1
+1
+1 19 -1
+0 56  -1
+0 1  0 19  0 44  -1
+0
+1 -1
+-1
+-1
+1
+6 12 50 65 -1
+0 24  0 94  0 93  0 13  0 92  0 96  -1
+0 65  0 12  0 6  -1
+0
+38 -1
+-1
+-1
+1
+1 18 -1
+0 50  -1
+0 1  0 18  0 38  -1
+0
+65 -1
+-1
+-1
+1
+7 13 19 50 -1
+0 66  0 65  -1
+0 13  0 7  0 24  -1
+1
+7 13 18 56 -1
+0 66  0 65  -1
+0 13  0 7  0 24  -1
+0
+24 -1
+-1
+-1
+0
+7 -1
+-1
+-1
+1
+13 18 66 56 -1
+0 7  -1
+0 66  -1
+1
+65 56 -1
+0 24  0 13  -1
+0 65  -1
+1
+13 19 66 50 -1
+0 7  -1
+0 66  -1
+1
+65 50 -1
+0 24  0 13  -1
+0 65  -1
+1
+13 18 64 56 -1
+0 7  -1
+0 64  -1
+1
+63 56 -1
+0 23  0 13  -1
+0 63  -1
+1
+13 19 64 50 -1
+0 7  -1
+0 64  -1
+1
+63 50 -1
+0 23  0 13  -1
+0 63  -1
+0
+63 -1
+-1
+-1
+1
+13 18 62 56 -1
+0 7  -1
+0 62  -1
+1
+61 56 -1
+0 22  0 13  -1
+0 61  -1
+1
+13 19 62 50 -1
+0 7  -1
+0 62  -1
+1
+61 50 -1
+0 22  0 13  -1
+0 61  -1
+0
+61 -1
+-1
+-1
+0
+66 -1
+-1
+-1
+0
+64 -1
+-1
+-1
+0
+62 -1
+-1
+-1
+0
+13 -1
+-1
+-1
+1
+6 58 12 77 -1
+0 30  0 94  0 93  0 15  0 92  0 96  -1
+0 77  0 12  0 6  -1
+0
+46 -1
+-1
+-1
+1
+3 19 -1
+0 58  -1
+0 3  0 19  0 46  -1
+0
+3 -1
+-1
+-1
+1
+6 52 12 77 -1
+0 30  0 94  0 93  0 15  0 92  0 96  -1
+0 77  0 12  0 6  -1
+0
+40 -1
+-1
+-1
+1
+3 18 -1
+0 52  -1
+0 3  0 18  0 40  -1
+0
+77 -1
+-1
+-1
+1
+9 15 19 52 -1
+0 78  0 77  -1
+0 15  0 9  0 30  -1
+1
+9 15 18 58 -1
+0 78  0 77  -1
+0 15  0 9  0 30  -1
+0
+30 -1
+-1
+-1
+0
+9 -1
+-1
+-1
+1
+15 18 78 58 -1
+0 9  -1
+0 78  -1
+1
+77 58 -1
+0 30  0 15  -1
+0 77  -1
+1
+15 19 78 52 -1
+0 9  -1
+0 78  -1
+1
+77 52 -1
+0 30  0 15  -1
+0 77  -1
+1
+15 18 76 58 -1
+0 9  -1
+0 76  -1
+1
+75 58 -1
+0 29  0 15  -1
+0 75  -1
+1
+15 19 76 52 -1
+0 9  -1
+0 76  -1
+1
+75 52 -1
+0 29  0 15  -1
+0 75  -1
+0
+75 -1
+-1
+-1
+1
+15 18 74 58 -1
+0 9  -1
+0 74  -1
+1
+73 58 -1
+0 28  0 15  -1
+0 73  -1
+1
+15 19 74 52 -1
+0 9  -1
+0 74  -1
+1
+73 52 -1
+0 28  0 15  -1
+0 73  -1
+0
+73 -1
+-1
+-1
+0
+78 -1
+-1
+-1
+0
+76 -1
+-1
+-1
+0
+74 -1
+-1
+-1
+0
+15 -1
+-1
+-1
+1
+12 57 6 71 -1
+0 94  0 93  0 27  0 14  0 92  0 96  -1
+0 12  0 71  0 6  -1
+0
+45 -1
+-1
+-1
+1
+2 19 -1
+0 57  -1
+0 2  0 19  0 45  -1
+0
+2 -1
+-1
+-1
+1
+12 51 6 71 -1
+0 94  0 93  0 27  0 14  0 92  0 96  -1
+0 12  0 71  0 6  -1
+0
+39 -1
+-1
+-1
+1
+2 18 -1
+0 51  -1
+0 2  0 18  0 39  -1
+0
+71 -1
+-1
+-1
+1
+8 14 19 51 -1
+0 72  0 71  -1
+0 8  0 14  0 27  -1
+1
+8 14 18 57 -1
+0 72  0 71  -1
+0 8  0 14  0 27  -1
+0
+27 -1
+-1
+-1
+0
+8 -1
+-1
+-1
+1
+14 18 70 57 -1
+0 8  -1
+0 70  -1
+1
+69 57 -1
+0 26  0 14  -1
+0 69  -1
+1
+14 19 70 51 -1
+0 8  -1
+0 70  -1
+1
+69 51 -1
+0 26  0 14  -1
+0 69  -1
+0
+69 -1
+-1
+-1
+1
+14 72 18 57 -1
+0 8  -1
+0 72  -1
+1
+71 57 -1
+0 27  0 14  -1
+0 71  -1
+1
+14 19 72 51 -1
+0 8  -1
+0 72  -1
+1
+71 51 -1
+0 27  0 14  -1
+0 71  -1
+1
+14 68 18 57 -1
+0 8  -1
+0 68  -1
+1
+67 57 -1
+0 25  0 14  -1
+0 67  -1
+1
+14 19 68 51 -1
+0 8  -1
+0 68  -1
+1
+67 51 -1
+0 25  0 14  -1
+0 67  -1
+0
+67 -1
+-1
+-1
+0
+68 -1
+-1
+-1
+0
+70 -1
+-1
+-1
+0
+72 -1
+-1
+-1
+0
+14 -1
+-1
+-1
+1
+6 12 59 83 -1
+0 33  0 93  0 94  0 16  0 92  0 96  -1
+0 83  0 12  0 6  -1
+0
+47 -1
+-1
+-1
+1
+4 19 -1
+0 59  -1
+0 4  0 19  0 47  -1
+0
+4 -1
+-1
+-1
+1
+6 12 53 83 -1
+0 33  0 93  0 94  0 16  0 92  0 96  -1
+0 83  0 12  0 6  -1
+0
+41 -1
+-1
+-1
+1
+4 18 -1
+0 53  -1
+0 4  0 18  0 41  -1
+0
+83 -1
+-1
+-1
+1
+10 16 19 53 -1
+0 84  0 83  -1
+0 16  0 10  0 33  -1
+1
+10 16 18 59 -1
+0 84  0 83  -1
+0 16  0 10  0 33  -1
+0
+33 -1
+-1
+-1
+0
+10 -1
+-1
+-1
+1
+16 18 80 59 -1
+0 10  -1
+0 80  -1
+1
+79 59 -1
+0 31  0 16  -1
+0 79  -1
+1
+16 19 80 53 -1
+0 10  -1
+0 80  -1
+1
+79 53 -1
+0 31  0 16  -1
+0 79  -1
+0
+79 -1
+-1
+-1
+1
+16 18 101 59 -1
+0 10  -1
+0 101  -1
+1
+100 59 -1
+0 20  0 16  -1
+0 100  -1
+1
+16 19 101 53 -1
+0 10  -1
+0 101  -1
+1
+100 53 -1
+0 20  0 16  -1
+0 100  -1
+0
+100 -1
+-1
+-1
+1
+16 18 82 59 -1
+0 10  -1
+0 82  -1
+1
+81 59 -1
+0 32  0 16  -1
+0 81  -1
+1
+16 19 82 53 -1
+0 10  -1
+0 82  -1
+1
+81 53 -1
+0 32  0 16  -1
+0 81  -1
+0
+81 -1
+-1
+-1
+1
+16 18 84 59 -1
+0 10  -1
+0 84  -1
+1
+83 59 -1
+0 33  0 16  -1
+0 83  -1
+1
+16 19 84 53 -1
+0 10  -1
+0 84  -1
+1
+83 53 -1
+0 33  0 16  -1
+0 83  -1
+0
+101 -1
+-1
+-1
+0
+80 -1
+-1
+-1
+0
+82 -1
+-1
+-1
+0
+84 -1
+-1
+-1
+0
+16 -1
+-1
+-1
+0
+6 12 -1
+-1
+-1
+1
+60 92 89 -1
+0 36  0 17  0 96  -1
+0 89  -1
+1
+54 92 89 -1
+0 36  0 17  0 96  -1
+0 89  -1
+1
+56 92 65 -1
+0 24  0 13  0 96  -1
+0 65  -1
+1
+50 92 65 -1
+0 24  0 13  0 96  -1
+0 65  -1
+1
+58 92 77 -1
+0 30  0 15  0 96  -1
+0 77  -1
+1
+52 92 77 -1
+0 30  0 15  0 96  -1
+0 77  -1
+1
+57 92 71 -1
+0 27  0 14  0 96  -1
+0 71  -1
+1
+51 92 71 -1
+0 27  0 14  0 96  -1
+0 71  -1
+1
+59 92 83 -1
+0 33  0 16  0 96  -1
+0 83  -1
+1
+53 92 83 -1
+0 33  0 16  0 96  -1
+0 83  -1
+0
+94 -1
+-1
+-1
+0
+91 -1
+-1
+-1
+1
+6 12 60 85 -1
+0 34  0 94  0 93  0 17  0 92  0 91  -1
+0 85  0 12  0 6  -1
+1
+6 12 54 85 -1
+0 34  0 94  0 93  0 17  0 92  0 91  -1
+0 85  0 12  0 6  -1
+1
+11 17 19 54 -1
+0 86  0 85  -1
+0 17  0 11  0 34  -1
+1
+11 17 18 60 -1
+0 86  0 85  -1
+0 17  0 11  0 34  -1
+0
+34 -1
+-1
+-1
+1
+6 12 56 61 -1
+0 22  0 94  0 93  0 92  0 13  0 91  -1
+0 61  0 12  0 6  -1
+1
+6 12 50 61 -1
+0 22  0 94  0 93  0 92  0 13  0 91  -1
+0 61  0 12  0 6  -1
+1
+7 13 19 50 -1
+0 62  0 61  -1
+0 13  0 7  0 22  -1
+1
+7 13 18 56 -1
+0 62  0 61  -1
+0 13  0 7  0 22  -1
+0
+22 -1
+-1
+-1
+1
+12 6 58 73 -1
+0 94  0 28  0 93  0 15  0 92  0 91  -1
+0 73  0 12  0 6  -1
+1
+6 12 52 73 -1
+0 94  0 28  0 93  0 15  0 92  0 91  -1
+0 73  0 12  0 6  -1
+1
+9 15 19 52 -1
+0 74  0 73  -1
+0 9  0 15  0 28  -1
+1
+9 15 18 58 -1
+0 74  0 73  -1
+0 9  0 15  0 28  -1
+0
+28 -1
+-1
+-1
+1
+6 12 57 67 -1
+0 25  0 94  0 93  0 14  0 92  0 91  -1
+0 67  0 12  0 6  -1
+1
+6 12 51 67 -1
+0 25  0 94  0 93  0 14  0 92  0 91  -1
+0 67  0 12  0 6  -1
+1
+8 14 19 51 -1
+0 68  0 67  -1
+0 14  0 8  0 25  -1
+1
+8 14 18 57 -1
+0 68  0 67  -1
+0 14  0 8  0 25  -1
+0
+25 -1
+-1
+-1
+1
+6 12 59 79 -1
+0 31  0 93  0 94  0 16  0 92  0 91  -1
+0 79  0 12  0 6  -1
+1
+6 12 53 79 -1
+0 31  0 93  0 94  0 16  0 92  0 91  -1
+0 79  0 12  0 6  -1
+1
+10 16 19 53 -1
+0 80  0 79  -1
+0 16  0 10  0 31  -1
+1
+10 16 18 59 -1
+0 80  0 79  -1
+0 16  0 10  0 31  -1
+0
+31 -1
+-1
+-1
+1
+60 92 85 -1
+0 34  0 17  0 91  -1
+0 85  -1
+1
+54 92 85 -1
+0 34  0 17  0 91  -1
+0 85  -1
+1
+56 92 61 -1
+0 22  0 13  0 91  -1
+0 61  -1
+1
+50 92 61 -1
+0 22  0 13  0 91  -1
+0 61  -1
+1
+58 92 73 -1
+0 28  0 15  0 91  -1
+0 73  -1
+1
+52 92 73 -1
+0 28  0 15  0 91  -1
+0 73  -1
+1
+57 92 67 -1
+0 25  0 14  0 91  -1
+0 67  -1
+1
+51 92 67 -1
+0 25  0 14  0 91  -1
+0 67  -1
+1
+59 92 79 -1
+0 31  0 16  0 91  -1
+0 79  -1
+1
+53 92 79 -1
+0 31  0 16  0 91  -1
+0 79  -1
+0
+6 -1
+-1
+-1
+1
+12 18 55 -1
+0 6  -1
+0 93  -1
+1
+12 19 49 -1
+0 6  -1
+0 93  -1
+0
+12 93 -1
+-1
+-1
+1
+97 98 55 -1
+0 92  0 12  -1
+0 97  0 98  0 94  -1
+0
+98 -1
+-1
+-1
+1
+97 99 55 -1
+0 92  0 12  -1
+0 97  0 99  0 94  -1
+1
+97 98 49 -1
+0 92  0 12  -1
+0 97  0 98  0 94  -1
+1
+97 99 49 -1
+0 92  0 12  -1
+0 97  0 99  0 94  -1
+0
+97 -1
+-1
+-1
+0
+16 98 97 10 49 -1
+-1
+-1
+1
+16 97 98 10 49 -1
+0 101  0 100  -1
+0 16  0 10  0 20  -1
+0
+10 98 97 16 55 -1
+-1
+-1
+1
+10 97 98 16 55 -1
+0 101  0 100  -1
+0 16  0 10  0 20  -1
+0
+20 -1
+-1
+-1
+1
+92 95 18 96 55 -1
+0 98  0 97  -1
+0 95  0 96  0 92  -1
+1
+19 92 95 96 49 -1
+0 98  0 97  -1
+0 95  0 96  0 92  -1
+0
+95 -1
+-1
+-1
+1
+6 12 60 87 -1
+0 35  0 94  0 93  0 92  0 17  0 95  -1
+0 87  0 12  0 6  -1
+1
+6 12 54 87 -1
+0 35  0 94  0 93  0 92  0 17  0 95  -1
+0 87  0 12  0 6  -1
+1
+11 17 19 54 -1
+0 88  0 87  -1
+0 17  0 11  0 35  -1
+1
+11 17 18 60 -1
+0 88  0 87  -1
+0 17  0 11  0 35  -1
+0
+35 -1
+-1
+-1
+1
+6 12 56 63 -1
+0 23  0 94  0 93  0 13  0 92  0 95  -1
+0 63  0 12  0 6  -1
+1
+6 12 50 63 -1
+0 23  0 94  0 93  0 13  0 92  0 95  -1
+0 63  0 12  0 6  -1
+1
+7 13 19 50 -1
+0 64  0 63  -1
+0 13  0 7  0 23  -1
+1
+7 13 18 56 -1
+0 64  0 63  -1
+0 13  0 7  0 23  -1
+0
+23 -1
+-1
+-1
+1
+12 6 58 75 -1
+0 29  0 94  0 93  0 15  0 92  0 95  -1
+0 75  0 12  0 6  -1
+1
+6 12 52 75 -1
+0 29  0 94  0 93  0 15  0 92  0 95  -1
+0 75  0 12  0 6  -1
+1
+9 15 19 52 -1
+0 76  0 75  -1
+0 15  0 9  0 29  -1
+1
+9 15 18 58 -1
+0 76  0 75  -1
+0 15  0 9  0 29  -1
+0
+29 -1
+-1
+-1
+1
+6 12 57 69 -1
+0 26  0 94  0 93  0 14  0 92  0 95  -1
+0 69  0 12  0 6  -1
+1
+6 12 51 69 -1
+0 26  0 94  0 93  0 14  0 92  0 95  -1
+0 69  0 12  0 6  -1
+1
+8 14 19 51 -1
+0 70  0 69  -1
+0 14  0 8  0 26  -1
+1
+8 14 18 57 -1
+0 70  0 69  -1
+0 14  0 8  0 26  -1
+0
+26 -1
+-1
+-1
+1
+6 12 59 81 -1
+0 32  0 93  0 94  0 16  0 92  0 95  -1
+0 81  0 12  0 6  -1
+1
+6 12 53 81 -1
+0 32  0 93  0 94  0 16  0 92  0 95  -1
+0 81  0 12  0 6  -1
+1
+10 16 19 53 -1
+0 82  0 81  -1
+0 16  0 10  0 32  -1
+1
+10 16 18 59 -1
+0 82  0 81  -1
+0 16  0 10  0 32  -1
+0
+32 -1
+-1
+-1
+1
+60 92 87 -1
+0 35  0 17  0 95  -1
+0 87  -1
+1
+54 92 87 -1
+0 35  0 17  0 95  -1
+0 87  -1
+1
+56 92 63 -1
+0 23  0 13  0 95  -1
+0 63  -1
+1
+92 50 63 -1
+0 23  0 13  0 95  -1
+0 63  -1
+1
+58 92 75 -1
+0 29  0 15  0 95  -1
+0 75  -1
+1
+52 92 75 -1
+0 29  0 15  0 95  -1
+0 75  -1
+1
+57 92 69 -1
+0 26  0 14  0 95  -1
+0 69  -1
+1
+51 92 69 -1
+0 26  0 14  0 95  -1
+0 69  -1
+1
+59 92 81 -1
+0 32  0 16  0 95  -1
+0 81  -1
+1
+53 92 81 -1
+0 32  0 16  0 95  -1
+0 81  -1
+
+;; initial state
+48 47 46 31 30 29 40 12 39 11 38 10 20 37 9 8 36 7 35 6 5 34 4 3 33 2 32 1 0 41 13 21 42 14 22 43 15 44 16 23 45 17 24 18 19 28 25 26 27 -1
+
+;; goal
+-1
+
+;; tasks (primitive and abstract)
+444
+0 __method_precondition_MakeAndPourCocktailNull[shot5,cocktail2]
+0 __method_precondition_pour_shaker_to_shot_action[shaker1,shot5,cocktail2,level1,right,level1]
+0 pour-shaker-to-shot[cocktail2,shot5,right,shaker1,level1,level1]
+0 __method_precondition_pour_shaker_to_shot_action[shaker1,shot5,cocktail2,level1,left,level1]
+0 pour-shaker-to-shot[cocktail2,shot5,left,shaker1,level1,level1]
+0 __method_precondition_MakeAndPourCocktail[shot5,cocktail2]
+0 __method_precondition_MakeCocktailNull[shaker1,cocktail2]
+0 shake[cocktail2,ingredient1,ingredient4,shaker1,right,left]
+0 __method_precondition_EmptyHand[left,shaker1]
+0 drop[left,shaker1]
+0 __method_precondition_EmptyHand[left,shot5]
+0 drop[left,shot5]
+0 __method_precondition_EmptyHand[left,shot2]
+0 drop[left,shot2]
+0 __method_precondition_EmptyHand[left,shot1]
+0 drop[left,shot1]
+0 __method_precondition_EmptyHand[left,shot4]
+0 drop[left,shot4]
+0 __method_precondition_EmptyHand[left,shot3]
+0 drop[left,shot3]
+0 __method_precondition_HandEmptyNull[right]
+0 __method_precondition_HandEmptyNull[left]
+0 __method_precondition_HoldingNull[right,shaker1]
+0 __method_precondition_PickUp[right,shaker1]
+0 grasp[right,shaker1]
+0 drop[right,shaker1]
+0 __method_precondition_OnTableNull[shaker1]
+0 __method_precondition_EmptyHand[right,shot2]
+0 drop[right,shot2]
+0 __method_precondition_EmptyHand[right,shot1]
+0 drop[right,shot1]
+0 __method_precondition_EmptyHand[right,shot5]
+0 drop[right,shot5]
+0 __method_precondition_EmptyHand[right,shot4]
+0 drop[right,shot4]
+0 __method_precondition_EmptyHand[right,shot3]
+0 drop[right,shot3]
+0 shake[cocktail2,ingredient1,ingredient4,shaker1,left,right]
+0 __method_precondition_PickUp[left,shaker1]
+0 grasp[left,shaker1]
+0 __method_precondition_AddIngredientToShakerNull[shaker1,ingredient4]
+0 pour-shot-to-clean-shaker[shot5,ingredient4,shaker1,right,level1,level1]
+0 __method_precondition_PickUp[right,shot5]
+0 grasp[right,shot5]
+0 __method_precondition_OnTableNull[shot5]
+0 pour-shot-to-clean-shaker[shot5,ingredient4,shaker1,left,level1,level1]
+0 __method_precondition_PickUp[left,shot5]
+0 grasp[left,shot5]
+0 __method_precondition_AddIngredientToShotNull[shot5,ingredient4]
+0 fill-shot[shot5,ingredient4,left,right,dispenser4]
+0 fill-shot[shot5,ingredient4,right,left,dispenser4]
+0 __method_precondition_AddIngredientToShot_base_base[shot5,ingredient4]
+0 __method_precondition_CleanShotNull[shot5]
+0 clean-shot[shot5,ingredient1,right,left]
+0 empty-shot[right,shot5,ingredient1]
+0 clean-shot[shot5,ingredient1,left,right]
+0 empty-shot[left,shot5,ingredient1]
+0 __method_precondition_CleanFullShot_base[shot5,ingredient1]
+0 clean-shot[shot5,ingredient3,right,left]
+0 empty-shot[right,shot5,ingredient3]
+0 clean-shot[shot5,ingredient3,left,right]
+0 empty-shot[left,shot5,ingredient3]
+0 __method_precondition_CleanFullShot_base[shot5,ingredient3]
+0 clean-shot[shot5,cocktail2,right,left]
+0 empty-shot[right,shot5,cocktail2]
+0 clean-shot[shot5,cocktail2,left,right]
+0 empty-shot[left,shot5,cocktail2]
+0 clean-shot[shot5,ingredient4,right,left]
+0 empty-shot[right,shot5,ingredient4]
+0 clean-shot[shot5,ingredient4,left,right]
+0 empty-shot[left,shot5,ingredient4]
+0 __method_precondition_CleanEmptyShot_split[shot5,left,cocktail2,right]
+0 __method_precondition_CleanEmptyShot_split[shot5,left,ingredient4,right]
+0 __method_precondition_CleanEmptyShot_split[shot5,left,ingredient1,right]
+0 __method_precondition_CleanEmptyShot_split[shot5,left,ingredient3,right]
+0 __method_precondition_CleanEmptyShot_base[shot5]
+0 pour-shot-to-clean-shaker[shot1,ingredient4,shaker1,right,level1,level1]
+0 __method_precondition_PickUp[right,shot1]
+0 grasp[right,shot1]
+0 __method_precondition_OnTableNull[shot1]
+0 pour-shot-to-clean-shaker[shot1,ingredient4,shaker1,left,level1,level1]
+0 __method_precondition_PickUp[left,shot1]
+0 grasp[left,shot1]
+0 __method_precondition_AddIngredientToShotNull[shot1,ingredient4]
+0 fill-shot[shot1,ingredient4,left,right,dispenser4]
+0 fill-shot[shot1,ingredient4,right,left,dispenser4]
+0 __method_precondition_AddIngredientToShot_base_base[shot1,ingredient4]
+0 __method_precondition_CleanShotNull[shot1]
+0 clean-shot[shot1,ingredient4,right,left]
+0 empty-shot[right,shot1,ingredient4]
+0 clean-shot[shot1,ingredient4,left,right]
+0 empty-shot[left,shot1,ingredient4]
+0 clean-shot[shot1,ingredient3,right,left]
+0 empty-shot[right,shot1,ingredient3]
+0 clean-shot[shot1,ingredient3,left,right]
+0 empty-shot[left,shot1,ingredient3]
+0 __method_precondition_CleanFullShot_base[shot1,ingredient3]
+0 clean-shot[shot1,ingredient1,right,left]
+0 empty-shot[right,shot1,ingredient1]
+0 clean-shot[shot1,ingredient1,left,right]
+0 empty-shot[left,shot1,ingredient1]
+0 __method_precondition_CleanFullShot_base[shot1,ingredient1]
+0 __method_precondition_CleanEmptyShot_split[shot1,left,ingredient4,right]
+0 __method_precondition_CleanEmptyShot_split[shot1,left,ingredient3,right]
+0 __method_precondition_CleanEmptyShot_split[shot1,left,ingredient1,right]
+0 __method_precondition_CleanEmptyShot_base[shot1]
+0 pour-shot-to-clean-shaker[shot3,ingredient4,shaker1,right,level1,level1]
+0 __method_precondition_PickUp[right,shot3]
+0 grasp[right,shot3]
+0 __method_precondition_OnTableNull[shot3]
+0 pour-shot-to-clean-shaker[shot3,ingredient4,shaker1,left,level1,level1]
+0 __method_precondition_PickUp[left,shot3]
+0 grasp[left,shot3]
+0 __method_precondition_AddIngredientToShotNull[shot3,ingredient4]
+0 fill-shot[shot3,ingredient4,left,right,dispenser4]
+0 fill-shot[shot3,ingredient4,right,left,dispenser4]
+0 __method_precondition_AddIngredientToShot_base_base[shot3,ingredient4]
+0 __method_precondition_CleanShotNull[shot3]
+0 clean-shot[shot3,ingredient4,right,left]
+0 empty-shot[right,shot3,ingredient4]
+0 clean-shot[shot3,ingredient4,left,right]
+0 empty-shot[left,shot3,ingredient4]
+0 clean-shot[shot3,ingredient3,right,left]
+0 empty-shot[right,shot3,ingredient3]
+0 clean-shot[shot3,ingredient3,left,right]
+0 empty-shot[left,shot3,ingredient3]
+0 __method_precondition_CleanFullShot_base[shot3,ingredient3]
+0 clean-shot[shot3,ingredient1,right,left]
+0 empty-shot[right,shot3,ingredient1]
+0 clean-shot[shot3,ingredient1,left,right]
+0 empty-shot[left,shot3,ingredient1]
+0 __method_precondition_CleanFullShot_base[shot3,ingredient1]
+0 __method_precondition_CleanEmptyShot_split[shot3,left,ingredient4,right]
+0 __method_precondition_CleanEmptyShot_split[shot3,left,ingredient3,right]
+0 __method_precondition_CleanEmptyShot_split[shot3,left,ingredient1,right]
+0 __method_precondition_CleanEmptyShot_base[shot3]
+0 pour-shot-to-clean-shaker[shot2,ingredient4,shaker1,right,level1,level1]
+0 __method_precondition_PickUp[right,shot2]
+0 grasp[right,shot2]
+0 __method_precondition_OnTableNull[shot2]
+0 pour-shot-to-clean-shaker[shot2,ingredient4,shaker1,left,level1,level1]
+0 __method_precondition_PickUp[left,shot2]
+0 grasp[left,shot2]
+0 __method_precondition_AddIngredientToShotNull[shot2,ingredient4]
+0 fill-shot[shot2,ingredient4,left,right,dispenser4]
+0 fill-shot[shot2,ingredient4,right,left,dispenser4]
+0 __method_precondition_AddIngredientToShot_base_base[shot2,ingredient4]
+0 __method_precondition_CleanShotNull[shot2]
+0 clean-shot[shot2,ingredient3,right,left]
+0 empty-shot[right,shot2,ingredient3]
+0 clean-shot[shot2,ingredient3,left,right]
+0 empty-shot[left,shot2,ingredient3]
+0 __method_precondition_CleanFullShot_base[shot2,ingredient3]
+0 clean-shot[shot2,ingredient4,right,left]
+0 empty-shot[right,shot2,ingredient4]
+0 clean-shot[shot2,ingredient4,left,right]
+0 empty-shot[left,shot2,ingredient4]
+0 clean-shot[shot2,ingredient1,right,left]
+0 empty-shot[right,shot2,ingredient1]
+0 clean-shot[shot2,ingredient1,left,right]
+0 empty-shot[left,shot2,ingredient1]
+0 __method_precondition_CleanFullShot_base[shot2,ingredient1]
+0 __method_precondition_CleanEmptyShot_split[shot2,left,ingredient1,right]
+0 __method_precondition_CleanEmptyShot_split[shot2,left,ingredient3,right]
+0 __method_precondition_CleanEmptyShot_split[shot2,left,ingredient4,right]
+0 __method_precondition_CleanEmptyShot_base[shot2]
+0 pour-shot-to-clean-shaker[shot4,ingredient4,shaker1,right,level1,level1]
+0 __method_precondition_PickUp[right,shot4]
+0 grasp[right,shot4]
+0 __method_precondition_OnTableNull[shot4]
+0 pour-shot-to-clean-shaker[shot4,ingredient4,shaker1,left,level1,level1]
+0 __method_precondition_PickUp[left,shot4]
+0 grasp[left,shot4]
+0 __method_precondition_AddIngredientToShotNull[shot4,ingredient4]
+0 fill-shot[shot4,ingredient4,left,right,dispenser4]
+0 fill-shot[shot4,ingredient4,right,left,dispenser4]
+0 __method_precondition_AddIngredientToShot_base_base[shot4,ingredient4]
+0 __method_precondition_CleanShotNull[shot4]
+0 clean-shot[shot4,ingredient1,right,left]
+0 empty-shot[right,shot4,ingredient1]
+0 clean-shot[shot4,ingredient1,left,right]
+0 empty-shot[left,shot4,ingredient1]
+0 __method_precondition_CleanFullShot_base[shot4,ingredient1]
+0 clean-shot[shot4,cocktail1,right,left]
+0 empty-shot[right,shot4,cocktail1]
+0 clean-shot[shot4,cocktail1,left,right]
+0 empty-shot[left,shot4,cocktail1]
+0 __method_precondition_CleanFullShot_base[shot4,cocktail1]
+0 clean-shot[shot4,ingredient3,right,left]
+0 empty-shot[right,shot4,ingredient3]
+0 clean-shot[shot4,ingredient3,left,right]
+0 empty-shot[left,shot4,ingredient3]
+0 __method_precondition_CleanFullShot_base[shot4,ingredient3]
+0 clean-shot[shot4,ingredient4,right,left]
+0 empty-shot[right,shot4,ingredient4]
+0 clean-shot[shot4,ingredient4,left,right]
+0 empty-shot[left,shot4,ingredient4]
+0 __method_precondition_CleanEmptyShot_split[shot4,left,cocktail1,right]
+0 __method_precondition_CleanEmptyShot_split[shot4,left,ingredient1,right]
+0 __method_precondition_CleanEmptyShot_split[shot4,left,ingredient3,right]
+0 __method_precondition_CleanEmptyShot_split[shot4,left,ingredient4,right]
+0 __method_precondition_CleanEmptyShot_base[shot4]
+0 __method_precondition_AddIngredientToEmptyShaker[shaker1,level1,level1]
+0 pour-shot-to-used-shaker[shot5,ingredient4,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot5,ingredient4,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot1,ingredient4,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot1,ingredient4,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot3,ingredient4,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot3,ingredient4,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot2,ingredient4,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot2,ingredient4,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot4,ingredient4,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot4,ingredient4,shaker1,left,level1,level1]
+0 __method_precondition_AddIngredientToUsedShaker[shaker1,level1,level1]
+0 __method_precondition_AddIngredientToShakerNull[shaker1,ingredient1]
+0 pour-shot-to-clean-shaker[shot5,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot5,ingredient1,shaker1,left,level1,level1]
+0 fill-shot[shot5,ingredient1,left,right,dispenser1]
+0 fill-shot[shot5,ingredient1,right,left,dispenser1]
+0 __method_precondition_AddIngredientToShot_base_base[shot5,ingredient1]
+0 pour-shot-to-clean-shaker[shot1,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot1,ingredient1,shaker1,left,level1,level1]
+0 fill-shot[shot1,ingredient1,left,right,dispenser1]
+0 fill-shot[shot1,ingredient1,right,left,dispenser1]
+0 __method_precondition_AddIngredientToShot_base_base[shot1,ingredient1]
+0 pour-shot-to-clean-shaker[shot3,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot3,ingredient1,shaker1,left,level1,level1]
+0 fill-shot[shot3,ingredient1,left,right,dispenser1]
+0 fill-shot[shot3,ingredient1,right,left,dispenser1]
+0 __method_precondition_AddIngredientToShot_base_base[shot3,ingredient1]
+0 pour-shot-to-clean-shaker[shot2,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot2,ingredient1,shaker1,left,level1,level1]
+0 fill-shot[shot2,ingredient1,left,right,dispenser1]
+0 fill-shot[shot2,ingredient1,right,left,dispenser1]
+0 __method_precondition_AddIngredientToShot_base_base[shot2,ingredient1]
+0 pour-shot-to-clean-shaker[shot4,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot4,ingredient1,shaker1,left,level1,level1]
+0 fill-shot[shot4,ingredient1,left,right,dispenser1]
+0 fill-shot[shot4,ingredient1,right,left,dispenser1]
+0 __method_precondition_AddIngredientToShot_base_base[shot4,ingredient1]
+0 pour-shot-to-used-shaker[shot5,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot5,ingredient1,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot1,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot1,ingredient1,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot3,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot3,ingredient1,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot2,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot2,ingredient1,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot4,ingredient1,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot4,ingredient1,shaker1,left,level1,level1]
+0 __method_precondition_CleanShakerNull[shaker1]
+0 clean-shaker[shaker1,right,left]
+0 clean-shaker[shaker1,left,right]
+0 __method_precondition_CleanEmptyShaker_base[shaker1]
+0 empty-shaker[right,shaker1,cocktail1,level1,level1]
+0 __method_precondition_CleanFullShaker_split[shaker1,level1,cocktail1,level1]
+0 empty-shaker[right,shaker1,cocktail2,level1,level1]
+0 empty-shaker[left,shaker1,cocktail1,level1,level1]
+0 empty-shaker[left,shaker1,cocktail2,level1,level1]
+0 __method_precondition_CleanFullShaker_base_base[shaker1]
+0 __method_precondition_pour_shaker_to_shot_action[shaker1,shot4,cocktail1,level1,left,level1]
+0 pour-shaker-to-shot[cocktail1,shot4,left,shaker1,level1,level1]
+0 __method_precondition_pour_shaker_to_shot_action[shaker1,shot4,cocktail1,level1,right,level1]
+0 pour-shaker-to-shot[cocktail1,shot4,right,shaker1,level1,level1]
+0 __method_precondition_MakeAndPourCocktail[shot4,cocktail1]
+0 shake[cocktail1,ingredient4,ingredient3,shaker1,right,left]
+0 shake[cocktail1,ingredient4,ingredient3,shaker1,left,right]
+0 __method_precondition_AddIngredientToShakerNull[shaker1,ingredient3]
+0 pour-shot-to-clean-shaker[shot5,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot5,ingredient3,shaker1,left,level1,level1]
+0 fill-shot[shot5,ingredient3,left,right,dispenser3]
+0 fill-shot[shot5,ingredient3,right,left,dispenser3]
+0 __method_precondition_AddIngredientToShot_base_base[shot5,ingredient3]
+0 pour-shot-to-clean-shaker[shot1,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot1,ingredient3,shaker1,left,level1,level1]
+0 fill-shot[shot1,ingredient3,left,right,dispenser3]
+0 fill-shot[shot1,ingredient3,right,left,dispenser3]
+0 __method_precondition_AddIngredientToShot_base_base[shot1,ingredient3]
+0 pour-shot-to-clean-shaker[shot3,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot3,ingredient3,shaker1,left,level1,level1]
+0 fill-shot[shot3,ingredient3,left,right,dispenser3]
+0 fill-shot[shot3,ingredient3,right,left,dispenser3]
+0 __method_precondition_AddIngredientToShot_base_base[shot3,ingredient3]
+0 pour-shot-to-clean-shaker[shot2,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot2,ingredient3,shaker1,left,level1,level1]
+0 fill-shot[shot2,ingredient3,left,right,dispenser3]
+0 fill-shot[shot2,ingredient3,right,left,dispenser3]
+0 __method_precondition_AddIngredientToShot_base_base[shot2,ingredient3]
+0 pour-shot-to-clean-shaker[shot4,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-clean-shaker[shot4,ingredient3,shaker1,left,level1,level1]
+0 fill-shot[shot4,ingredient3,left,right,dispenser3]
+0 fill-shot[shot4,ingredient3,right,left,dispenser3]
+0 __method_precondition_AddIngredientToShot_base_base[shot4,ingredient3]
+0 pour-shot-to-used-shaker[shot5,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot5,ingredient3,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot1,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot1,ingredient3,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot3,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot3,ingredient3,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot2,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot2,ingredient3,shaker1,left,level1,level1]
+0 pour-shot-to-used-shaker[shot4,ingredient3,shaker1,right,level1,level1]
+0 pour-shot-to-used-shaker[shot4,ingredient3,shaker1,left,level1,level1]
+1 __top[]
+1 AchieveContainsShotCocktail[shot5,cocktail2]
+1 DoPourShakerToShot[shaker1,shot5,cocktail2]
+1 AchieveContainsShakerCocktail[shaker1,cocktail2]
+1 MakeCocktail_splitted_14[shaker1,cocktail2,ingredient1,ingredient4]
+1 AchieveHandEmpty[left]
+1 AchieveHolding[right,shaker1]
+1 AchieveOnTable[shaker1]
+1 AchieveHandEmpty[right]
+1 AchieveHolding[left,shaker1]
+1 AchieveContainsShakerIngredient[shaker1,ingredient4]
+1 AddIngredientToEmptyShaker_splitted_6[ingredient4,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot5,ingredient4,shaker1,level1,level1]
+1 AchieveHolding[right,shot5]
+1 AchieveOnTable[shot5]
+1 AchieveHolding[left,shot5]
+1 AchieveContainsShotIngredient[shot5,ingredient4]
+1 AddIngredientToShot_splitted_20[shot5,ingredient4]
+1 AchieveCleanShot[shot5]
+1 CleanFullShot_splitted_12[shot5,ingredient1]
+1 CleanFullShot_splitted_12[shot5,ingredient3]
+1 CleanFullShot_splitted_12[shot5,cocktail2]
+1 CleanFullShot_splitted_12[shot5,ingredient4]
+1 CleanEmptyShot_splitted_13[shot5]
+1 CleanEmptyShot_splitted_4[shot5,right]
+1 CleanEmptyShot_splitted_4[shot5,left]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot1,ingredient4,shaker1,level1,level1]
+1 AchieveHolding[right,shot1]
+1 AchieveOnTable[shot1]
+1 AchieveHolding[left,shot1]
+1 AchieveContainsShotIngredient[shot1,ingredient4]
+1 AddIngredientToShot_splitted_20[shot1,ingredient4]
+1 AchieveCleanShot[shot1]
+1 CleanFullShot_splitted_12[shot1,ingredient4]
+1 CleanFullShot_splitted_12[shot1,ingredient3]
+1 CleanFullShot_splitted_12[shot1,ingredient1]
+1 CleanEmptyShot_splitted_13[shot1]
+1 CleanEmptyShot_splitted_4[shot1,right]
+1 CleanEmptyShot_splitted_4[shot1,left]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot3,ingredient4,shaker1,level1,level1]
+1 AchieveHolding[right,shot3]
+1 AchieveOnTable[shot3]
+1 AchieveHolding[left,shot3]
+1 AchieveContainsShotIngredient[shot3,ingredient4]
+1 AddIngredientToShot_splitted_20[shot3,ingredient4]
+1 AchieveCleanShot[shot3]
+1 CleanFullShot_splitted_12[shot3,ingredient4]
+1 CleanFullShot_splitted_12[shot3,ingredient3]
+1 CleanFullShot_splitted_12[shot3,ingredient1]
+1 CleanEmptyShot_splitted_13[shot3]
+1 CleanEmptyShot_splitted_4[shot3,right]
+1 CleanEmptyShot_splitted_4[shot3,left]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot2,ingredient4,shaker1,level1,level1]
+1 AchieveHolding[right,shot2]
+1 AchieveOnTable[shot2]
+1 AchieveHolding[left,shot2]
+1 AchieveContainsShotIngredient[shot2,ingredient4]
+1 AddIngredientToShot_splitted_20[shot2,ingredient4]
+1 AchieveCleanShot[shot2]
+1 CleanFullShot_splitted_12[shot2,ingredient3]
+1 CleanFullShot_splitted_12[shot2,ingredient4]
+1 CleanFullShot_splitted_12[shot2,ingredient1]
+1 CleanEmptyShot_splitted_13[shot2]
+1 CleanEmptyShot_splitted_4[shot2,right]
+1 CleanEmptyShot_splitted_4[shot2,left]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot4,ingredient4,shaker1,level1,level1]
+1 AchieveHolding[right,shot4]
+1 AchieveOnTable[shot4]
+1 AchieveHolding[left,shot4]
+1 AchieveContainsShotIngredient[shot4,ingredient4]
+1 AddIngredientToShot_splitted_20[shot4,ingredient4]
+1 AchieveCleanShot[shot4]
+1 CleanFullShot_splitted_12[shot4,ingredient1]
+1 CleanFullShot_splitted_12[shot4,cocktail1]
+1 CleanFullShot_splitted_12[shot4,ingredient3]
+1 CleanFullShot_splitted_12[shot4,ingredient4]
+1 CleanEmptyShot_splitted_13[shot4]
+1 CleanEmptyShot_splitted_4[shot4,right]
+1 CleanEmptyShot_splitted_4[shot4,left]
+1 AddIngredientToUsedShaker_splitted_7[ingredient4,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot5,ingredient4,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot1,ingredient4,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot3,ingredient4,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot2,ingredient4,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot4,ingredient4,shaker1,level1,level1]
+1 AchieveContainsShakerIngredient[shaker1,ingredient1]
+1 AddIngredientToEmptyShaker_splitted_6[ingredient1,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot5,ingredient1,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot5,ingredient1]
+1 AddIngredientToShot_splitted_20[shot5,ingredient1]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot1,ingredient1,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot1,ingredient1]
+1 AddIngredientToShot_splitted_20[shot1,ingredient1]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot3,ingredient1,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot3,ingredient1]
+1 AddIngredientToShot_splitted_20[shot3,ingredient1]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot2,ingredient1,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot2,ingredient1]
+1 AddIngredientToShot_splitted_20[shot2,ingredient1]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot4,ingredient1,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot4,ingredient1]
+1 AddIngredientToShot_splitted_20[shot4,ingredient1]
+1 AddIngredientToUsedShaker_splitted_7[ingredient1,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot5,ingredient1,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot1,ingredient1,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot3,ingredient1,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot2,ingredient1,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot4,ingredient1,shaker1,level1,level1]
+1 AchieveCleanShaker[shaker1]
+1 CleanEmptyShaker_splitted_10[shaker1]
+1 CleanFullShaker_splitted_18[shaker1]
+1 CleanFullShaker_splitted_2[right,shaker1]
+1 CleanFullShaker_splitted_2[left,shaker1]
+1 MakeAndPourCocktail_splitted_8[shaker1]
+1 AchieveContainsShotCocktail[shot4,cocktail1]
+1 DoPourShakerToShot[shaker1,shot4,cocktail1]
+1 AchieveContainsShakerCocktail[shaker1,cocktail1]
+1 MakeCocktail_splitted_14[shaker1,cocktail1,ingredient4,ingredient3]
+1 AchieveContainsShakerIngredient[shaker1,ingredient3]
+1 AddIngredientToEmptyShaker_splitted_6[ingredient3,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot5,ingredient3,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot5,ingredient3]
+1 AddIngredientToShot_splitted_20[shot5,ingredient3]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot1,ingredient3,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot1,ingredient3]
+1 AddIngredientToShot_splitted_20[shot1,ingredient3]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot3,ingredient3,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot3,ingredient3]
+1 AddIngredientToShot_splitted_20[shot3,ingredient3]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot2,ingredient3,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot2,ingredient3]
+1 AddIngredientToShot_splitted_20[shot2,ingredient3]
+1 _splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15[shot4,ingredient3,shaker1,level1,level1]
+1 AchieveContainsShotIngredient[shot4,ingredient3]
+1 AddIngredientToShot_splitted_20[shot4,ingredient3]
+1 AddIngredientToUsedShaker_splitted_7[ingredient3,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot5,ingredient3,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot1,ingredient3,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot3,ingredient3,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot2,ingredient3,shaker1,level1,level1]
+1 _splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16[shot4,ingredient3,shaker1,level1,level1]
+
+;; initial abstract task
+303
+
+;; methods
+352
+__top_method
+303
+417 304 -1
+0 1 -1
+MakeAndPourCocktailNull
+304
+0 -1
+-1
+MakeAndPourCocktail
+304
+5 306 321 416 305 -1
+0 4 0 1 0 3 0 2 1 2 3 4 2 3 -1
+pour_shaker_to_shot_action
+305
+1 2 -1
+0 1 -1
+pour_shaker_to_shot_action
+305
+3 4 -1
+0 1 -1
+MakeCocktailNull
+306
+6 -1
+-1
+<<MakeCocktail;MakeCocktail_splitted_21[shaker1,cocktail2];_splitting_method_MakeCocktail_splitted_21;1;0,-1,-2>;MakeCocktail_splitted_19[shaker1,cocktail2,ingredient1];_splitting_method_MakeCocktail_splitted_19;2;0,1,-1,-2>
+306
+411 388 313 307 -1
+0 3 0 1 0 2 1 3 1 2 2 3 -1
+<_splitting_method_MakeCocktail_splitted_14;MakeCocktail_splitted_5[cocktail2,ingredient1,ingredient4,shaker1,right];_splitting_method_MakeCocktail_splitted_5;1;0,-1,-2>
+307
+309 308 7 -1
+0 2 0 1 1 2 -1
+EmptyHand
+308
+8 9 -1
+0 1 -1
+EmptyHand
+308
+10 11 -1
+0 1 -1
+EmptyHand
+308
+12 13 -1
+0 1 -1
+EmptyHand
+308
+14 15 -1
+0 1 -1
+EmptyHand
+308
+16 17 -1
+0 1 -1
+EmptyHand
+308
+18 19 -1
+0 1 -1
+HandEmptyNull
+308
+20 -1
+-1
+HandEmptyNull
+308
+21 -1
+-1
+HoldingNull
+309
+22 -1
+-1
+PickUp
+309
+23 311 310 24 -1
+0 3 0 2 0 1 2 3 1 2 -1
+PutDown
+310
+22 25 -1
+0 1 -1
+PutDown
+310
+8 9 -1
+0 1 -1
+OnTableNull
+310
+26 -1
+-1
+EmptyHand
+311
+27 28 -1
+0 1 -1
+EmptyHand
+311
+22 25 -1
+0 1 -1
+EmptyHand
+311
+29 30 -1
+0 1 -1
+EmptyHand
+311
+31 32 -1
+0 1 -1
+EmptyHand
+311
+33 34 -1
+0 1 -1
+EmptyHand
+311
+35 36 -1
+0 1 -1
+HandEmptyNull
+311
+20 -1
+-1
+HandEmptyNull
+311
+21 -1
+-1
+<_splitting_method_MakeCocktail_splitted_14;MakeCocktail_splitted_5[cocktail2,ingredient1,ingredient4,shaker1,left];_splitting_method_MakeCocktail_splitted_5;1;0,-1,-2>
+307
+312 311 37 -1
+0 2 0 1 1 2 -1
+HoldingNull
+312
+8 -1
+-1
+PickUp
+312
+38 308 310 39 -1
+0 3 0 2 0 1 2 3 1 2 -1
+AddIngredientToShakerNull
+313
+40 -1
+-1
+AddIngredientToEmptyShaker
+313
+202 314 -1
+0 1 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+314
+319 315 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+315
+316 41 -1
+0 1 -1
+HoldingNull
+316
+31 -1
+-1
+PickUp
+316
+42 311 317 43 -1
+0 3 0 2 0 1 2 3 1 2 -1
+PutDown
+317
+31 32 -1
+0 1 -1
+PutDown
+317
+10 11 -1
+0 1 -1
+OnTableNull
+317
+44 -1
+-1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+315
+318 45 -1
+0 1 -1
+HoldingNull
+318
+10 -1
+-1
+PickUp
+318
+46 308 317 47 -1
+0 3 0 2 0 1 2 3 1 2 -1
+AddIngredientToShotNull
+319
+48 -1
+-1
+AddIngredientToShot
+319
+51 321 320 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot5,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot5,ingredient4,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+320
+318 311 49 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot5,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot5,ingredient4,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+320
+316 308 50 -1
+0 2 0 1 1 2 -1
+CleanShotNull
+321
+52 -1
+-1
+CleanFullShot
+321
+57 322 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot5,ingredient1,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+322
+316 54 308 53 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot5,ingredient1,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+322
+318 56 311 55 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+321
+62 323 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot5,ingredient3,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+323
+316 59 308 58 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot5,ingredient3,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+323
+318 61 311 60 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+321
+0 324 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot5,cocktail2,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+324
+316 64 308 63 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot5,cocktail2,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+324
+318 66 311 65 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+321
+48 325 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot5,ingredient4,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+325
+316 68 308 67 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot5,ingredient4,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+325
+318 70 311 69 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanEmptyShot
+321
+75 326 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_13
+326
+316 327 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+327
+71 308 63 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+327
+72 308 67 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+327
+73 308 53 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+327
+74 308 58 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_13
+326
+318 328 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+328
+71 311 65 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+328
+72 311 69 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+328
+74 311 60 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+328
+73 311 55 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+314
+333 329 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+329
+330 76 -1
+0 1 -1
+HoldingNull
+330
+29 -1
+-1
+PickUp
+330
+77 311 331 78 -1
+0 3 0 2 0 1 2 3 1 2 -1
+PutDown
+331
+14 15 -1
+0 1 -1
+PutDown
+331
+29 30 -1
+0 1 -1
+OnTableNull
+331
+79 -1
+-1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+329
+332 80 -1
+0 1 -1
+HoldingNull
+332
+14 -1
+-1
+PickUp
+332
+81 308 331 82 -1
+0 3 0 2 0 1 2 3 1 2 -1
+AddIngredientToShotNull
+333
+83 -1
+-1
+AddIngredientToShot
+333
+86 335 334 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot1,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot1,ingredient4,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+334
+332 311 84 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot1,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot1,ingredient4,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+334
+330 308 85 -1
+0 2 0 1 1 2 -1
+CleanShotNull
+335
+87 -1
+-1
+CleanFullShot
+335
+83 336 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot1,ingredient4,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+336
+330 89 308 88 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot1,ingredient4,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+336
+332 91 311 90 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+335
+96 337 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot1,ingredient3,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+337
+330 93 308 92 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot1,ingredient3,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+337
+332 95 311 94 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+335
+101 338 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot1,ingredient1,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+338
+330 98 308 97 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot1,ingredient1,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+338
+332 100 311 99 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanEmptyShot
+335
+105 339 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_13
+339
+330 340 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+340
+102 308 88 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+340
+103 308 92 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+340
+104 308 97 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_13
+339
+332 341 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+341
+102 311 90 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+341
+104 311 99 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+341
+103 311 94 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+314
+346 342 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+342
+343 106 -1
+0 1 -1
+HoldingNull
+343
+35 -1
+-1
+PickUp
+343
+107 311 344 108 -1
+0 3 0 2 0 1 2 3 1 2 -1
+PutDown
+344
+18 19 -1
+0 1 -1
+PutDown
+344
+35 36 -1
+0 1 -1
+OnTableNull
+344
+109 -1
+-1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+342
+345 110 -1
+0 1 -1
+HoldingNull
+345
+18 -1
+-1
+PickUp
+345
+111 308 344 112 -1
+0 3 0 2 0 1 2 3 1 2 -1
+AddIngredientToShotNull
+346
+113 -1
+-1
+AddIngredientToShot
+346
+116 348 347 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot3,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot3,ingredient4,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+347
+345 311 114 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot3,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot3,ingredient4,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+347
+343 308 115 -1
+0 2 0 1 1 2 -1
+CleanShotNull
+348
+117 -1
+-1
+CleanFullShot
+348
+113 349 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot3,ingredient4,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+349
+343 119 308 118 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot3,ingredient4,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+349
+345 121 311 120 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+348
+126 350 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot3,ingredient3,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+350
+343 123 308 122 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot3,ingredient3,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+350
+345 125 311 124 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+348
+131 351 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot3,ingredient1,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+351
+343 128 308 127 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot3,ingredient1,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+351
+345 130 311 129 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanEmptyShot
+348
+135 352 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_13
+352
+343 353 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+353
+132 308 118 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+353
+133 308 122 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+353
+134 308 127 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_13
+352
+345 354 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+354
+134 311 129 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+354
+132 311 120 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+354
+133 311 124 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+314
+359 355 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+355
+356 136 -1
+0 1 -1
+HoldingNull
+356
+27 -1
+-1
+PickUp
+356
+137 311 357 138 -1
+0 3 0 2 0 1 2 3 1 2 -1
+PutDown
+357
+27 28 -1
+0 1 -1
+PutDown
+357
+12 13 -1
+0 1 -1
+OnTableNull
+357
+139 -1
+-1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+355
+358 140 -1
+0 1 -1
+HoldingNull
+358
+12 -1
+-1
+PickUp
+358
+141 308 357 142 -1
+0 3 0 2 0 1 2 3 1 2 -1
+AddIngredientToShotNull
+359
+143 -1
+-1
+AddIngredientToShot
+359
+146 361 360 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot2,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot2,ingredient4,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+360
+358 311 144 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot2,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot2,ingredient4,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+360
+356 308 145 -1
+0 2 0 1 1 2 -1
+CleanShotNull
+361
+147 -1
+-1
+CleanFullShot
+361
+152 362 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot2,ingredient3,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+362
+356 149 308 148 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot2,ingredient3,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+362
+358 151 311 150 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+361
+143 363 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot2,ingredient4,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+363
+356 154 308 153 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot2,ingredient4,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+363
+358 156 311 155 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+361
+161 364 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot2,ingredient1,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+364
+356 158 308 157 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot2,ingredient1,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+364
+358 160 311 159 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanEmptyShot
+361
+165 365 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_13
+365
+356 366 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+366
+162 308 157 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+366
+163 308 148 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+366
+164 308 153 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_13
+365
+358 367 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+367
+162 311 159 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+367
+164 311 155 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+367
+163 311 150 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+314
+372 368 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+368
+369 166 -1
+0 1 -1
+HoldingNull
+369
+33 -1
+-1
+PickUp
+369
+167 311 370 168 -1
+0 3 0 2 0 1 2 3 1 2 -1
+PutDown
+370
+16 17 -1
+0 1 -1
+PutDown
+370
+33 34 -1
+0 1 -1
+OnTableNull
+370
+169 -1
+-1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+368
+371 170 -1
+0 1 -1
+HoldingNull
+371
+16 -1
+-1
+PickUp
+371
+171 308 370 172 -1
+0 3 0 2 0 1 2 3 1 2 -1
+AddIngredientToShotNull
+372
+173 -1
+-1
+AddIngredientToShot
+372
+176 374 373 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot4,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot4,ingredient4,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+373
+371 311 174 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot4,ingredient4];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot4,ingredient4,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+373
+369 308 175 -1
+0 2 0 1 1 2 -1
+CleanShotNull
+374
+177 -1
+-1
+CleanFullShot
+374
+182 375 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot4,ingredient1,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+375
+369 179 308 178 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot4,ingredient1,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+375
+371 181 311 180 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+374
+187 376 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot4,cocktail1,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+376
+369 184 308 183 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot4,cocktail1,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+376
+371 186 311 185 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+374
+192 377 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot4,ingredient3,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+377
+369 189 308 188 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot4,ingredient3,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+377
+371 191 311 190 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanFullShot
+374
+173 378 -1
+0 1 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot4,ingredient4,right];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+378
+369 194 308 193 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+<_splitting_method_CleanFullShot_splitted_12;CleanFullShot_splitted_3[shot4,ingredient4,left];_splitting_method_CleanFullShot_splitted_3;2;0,1,-1,-2>
+378
+371 196 311 195 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+CleanEmptyShot
+374
+201 379 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_13
+379
+369 380 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+380
+197 308 183 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+380
+198 308 178 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+380
+199 308 188 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+380
+200 308 193 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_13
+379
+371 381 -1
+0 1 -1
+_splitting_method_CleanEmptyShot_splitted_4
+381
+197 311 185 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+381
+200 311 195 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+381
+198 311 180 -1
+0 2 0 1 1 2 -1
+_splitting_method_CleanEmptyShot_splitted_4
+381
+199 311 190 -1
+0 2 0 1 1 2 -1
+AddIngredientToUsedShaker
+313
+213 382 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+382
+319 383 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+383
+316 203 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+383
+318 204 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+382
+333 384 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+384
+330 205 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+384
+332 206 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+382
+346 385 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+385
+343 207 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+385
+345 208 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+382
+359 386 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+386
+356 209 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+386
+358 210 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+382
+372 387 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+387
+369 211 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+387
+371 212 -1
+0 1 -1
+AddIngredientToShakerNull
+388
+214 -1
+-1
+AddIngredientToEmptyShaker
+388
+202 389 -1
+0 1 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+389
+391 390 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+390
+316 215 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+390
+318 216 -1
+0 1 -1
+AddIngredientToShotNull
+391
+57 -1
+-1
+AddIngredientToShot
+391
+219 321 392 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot5,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot5,ingredient1,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+392
+318 311 217 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot5,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot5,ingredient1,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+392
+316 308 218 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+389
+394 393 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+393
+330 220 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+393
+332 221 -1
+0 1 -1
+AddIngredientToShotNull
+394
+101 -1
+-1
+AddIngredientToShot
+394
+224 335 395 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot1,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot1,ingredient1,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+395
+332 311 222 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot1,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot1,ingredient1,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+395
+330 308 223 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+389
+397 396 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+396
+343 225 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+396
+345 226 -1
+0 1 -1
+AddIngredientToShotNull
+397
+131 -1
+-1
+AddIngredientToShot
+397
+229 348 398 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot3,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot3,ingredient1,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+398
+345 311 227 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot3,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot3,ingredient1,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+398
+343 308 228 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+389
+400 399 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+399
+356 230 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+399
+358 231 -1
+0 1 -1
+AddIngredientToShotNull
+400
+161 -1
+-1
+AddIngredientToShot
+400
+234 361 401 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot2,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot2,ingredient1,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+401
+358 311 232 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot2,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot2,ingredient1,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+401
+356 308 233 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+389
+403 402 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+402
+369 235 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+402
+371 236 -1
+0 1 -1
+AddIngredientToShotNull
+403
+182 -1
+-1
+AddIngredientToShot
+403
+239 374 404 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot4,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot4,ingredient1,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+404
+371 311 237 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot4,ingredient1];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot4,ingredient1,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+404
+369 308 238 -1
+0 2 0 1 1 2 -1
+AddIngredientToUsedShaker
+388
+213 405 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+405
+391 406 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+406
+316 240 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+406
+318 241 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+405
+394 407 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+407
+330 242 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+407
+332 243 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+405
+397 408 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+408
+343 244 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+408
+345 245 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+405
+400 409 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+409
+356 246 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+409
+358 247 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+405
+403 410 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+410
+369 248 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+410
+371 249 -1
+0 1 -1
+CleanShakerNull
+411
+250 -1
+-1
+CleanEmptyShaker
+411
+253 412 -1
+0 1 -1
+<_splitting_method_CleanEmptyShaker_splitted_10;CleanEmptyShaker_splitted_1[shaker1,right];_splitting_method_CleanEmptyShaker_splitted_1;1;0,-1,-2>
+412
+309 308 251 -1
+0 2 0 1 1 2 -1
+<_splitting_method_CleanEmptyShaker_splitted_10;CleanEmptyShaker_splitted_1[shaker1,left];_splitting_method_CleanEmptyShaker_splitted_1;1;0,-1,-2>
+412
+312 311 252 -1
+0 2 0 1 1 2 -1
+CleanFullShaker
+411
+259 413 -1
+0 1 -1
+<_splitting_method_CleanFullShaker_splitted_18;CleanFullShaker_splitted_11[shaker1,right];_splitting_method_CleanFullShaker_splitted_11;2;0,1,-1,-2>
+413
+309 414 308 251 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+_splitting_method_CleanFullShaker_splitted_2
+414
+255 254 -1
+0 1 -1
+_splitting_method_CleanFullShaker_splitted_2
+414
+6 256 -1
+0 1 -1
+<_splitting_method_CleanFullShaker_splitted_18;CleanFullShaker_splitted_11[shaker1,left];_splitting_method_CleanFullShaker_splitted_11;2;0,1,-1,-2>
+413
+312 415 311 252 -1
+1 3 1 2 0 3 0 1 0 2 2 3 -1
+_splitting_method_CleanFullShaker_splitted_2
+415
+255 257 -1
+0 1 -1
+_splitting_method_CleanFullShaker_splitted_2
+415
+6 258 -1
+0 1 -1
+_splitting_method_MakeAndPourCocktail_splitted_8
+416
+312 -1
+-1
+_splitting_method_MakeAndPourCocktail_splitted_8
+416
+309 -1
+-1
+MakeAndPourCocktailNull
+417
+187 -1
+-1
+MakeAndPourCocktail
+417
+264 419 374 416 418 -1
+0 4 0 1 0 3 0 2 1 2 3 4 2 3 -1
+pour_shaker_to_shot_action
+418
+260 261 -1
+0 1 -1
+pour_shaker_to_shot_action
+418
+262 263 -1
+0 1 -1
+MakeCocktailNull
+419
+255 -1
+-1
+<<MakeCocktail;MakeCocktail_splitted_21[shaker1,cocktail1];_splitting_method_MakeCocktail_splitted_21;1;0,-1,-2>;MakeCocktail_splitted_19[shaker1,cocktail1,ingredient4];_splitting_method_MakeCocktail_splitted_19;2;0,1,-1,-2>
+419
+411 313 421 420 -1
+0 3 0 1 0 2 1 3 1 2 2 3 -1
+<_splitting_method_MakeCocktail_splitted_14;MakeCocktail_splitted_5[cocktail1,ingredient4,ingredient3,shaker1,right];_splitting_method_MakeCocktail_splitted_5;1;0,-1,-2>
+420
+309 308 265 -1
+0 2 0 1 1 2 -1
+<_splitting_method_MakeCocktail_splitted_14;MakeCocktail_splitted_5[cocktail1,ingredient4,ingredient3,shaker1,left];_splitting_method_MakeCocktail_splitted_5;1;0,-1,-2>
+420
+312 311 266 -1
+0 2 0 1 1 2 -1
+AddIngredientToShakerNull
+421
+267 -1
+-1
+AddIngredientToEmptyShaker
+421
+202 422 -1
+0 1 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+422
+424 423 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+423
+316 268 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+423
+318 269 -1
+0 1 -1
+AddIngredientToShotNull
+424
+62 -1
+-1
+AddIngredientToShot
+424
+272 321 425 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot5,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot5,ingredient3,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+425
+318 311 270 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot5,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot5,ingredient3,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+425
+316 308 271 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+422
+427 426 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+426
+330 273 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+426
+332 274 -1
+0 1 -1
+AddIngredientToShotNull
+427
+96 -1
+-1
+AddIngredientToShot
+427
+277 335 428 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot1,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot1,ingredient3,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+428
+332 311 275 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot1,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot1,ingredient3,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+428
+330 308 276 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+422
+430 429 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+429
+343 278 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+429
+345 279 -1
+0 1 -1
+AddIngredientToShotNull
+430
+126 -1
+-1
+AddIngredientToShot
+430
+282 348 431 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot3,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot3,ingredient3,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+431
+345 311 280 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot3,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot3,ingredient3,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+431
+343 308 281 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+422
+433 432 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+432
+356 283 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+432
+358 284 -1
+0 1 -1
+AddIngredientToShotNull
+433
+152 -1
+-1
+AddIngredientToShot
+433
+287 361 434 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot2,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot2,ingredient3,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+434
+358 311 285 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot2,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot2,ingredient3,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+434
+356 308 286 -1
+0 2 0 1 1 2 -1
+_splitting_method_AddIngredientToEmptyShaker_splitted_6
+422
+436 435 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+435
+369 288 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToEmptyShaker_splitted_6_splitted_15
+435
+371 289 -1
+0 1 -1
+AddIngredientToShotNull
+436
+192 -1
+-1
+AddIngredientToShot
+436
+292 374 437 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[left,shot4,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot4,ingredient3,left,right];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+437
+371 311 290 -1
+0 2 0 1 1 2 -1
+<<_splitting_method_AddIngredientToShot_splitted_20;AddIngredientToShot_splitted_17[right,shot4,ingredient3];_splitting_method_AddIngredientToShot_splitted_17;1;0,-1,-2>;AddIngredientToShot_splitted_9[shot4,ingredient3,right,left];_splitting_method_AddIngredientToShot_splitted_9;2;0,1,-1>
+437
+369 308 291 -1
+0 2 0 1 1 2 -1
+AddIngredientToUsedShaker
+421
+213 438 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+438
+424 439 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+439
+316 293 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+439
+318 294 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+438
+427 440 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+440
+330 295 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+440
+332 296 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+438
+430 441 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+441
+343 297 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+441
+345 298 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+438
+433 442 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+442
+356 299 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+442
+358 300 -1
+0 1 -1
+_splitting_method_AddIngredientToUsedShaker_splitted_7
+438
+436 443 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+443
+369 301 -1
+0 1 -1
+_splitting_method__splitting_method_AddIngredientToUsedShaker_splitted_7_splitted_16
+443
+371 302 -1
+0 1 -1

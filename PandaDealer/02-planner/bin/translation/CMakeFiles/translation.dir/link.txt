@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtranslation.a CMakeFiles/translation.dir/htnToSAS.cpp.o CMakeFiles/translation.dir/translationController.cpp.o
+/usr/bin/ranlib libtranslation.a
