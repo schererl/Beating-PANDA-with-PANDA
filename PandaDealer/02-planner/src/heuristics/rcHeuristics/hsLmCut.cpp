@@ -131,11 +131,7 @@ int hsLmCut::getHeuristicValue(bucketSet& s, noDelIntSet& g) {
         }
     }
 */
-	int i =0;
 	while (hMax > 0) {
-		if(i > 9)
-			exit(0);
-		i++;
 		goalZone->clear();
 		cut->clear();
 		precsOfCutNodes->clear();
@@ -178,12 +174,12 @@ int hsLmCut::getHeuristicValue(bucketSet& s, noDelIntSet& g) {
 		std::cout << "i am using update" << std::endl;
 		hMax = updateHMax(g, cut);
 #else
-		//hMax = getHMax(s, g, goalZone);
-		hMax = updateHMax(g, cut);
+		hMax = getHMax(s, g, goalZone);
+		//hMax = updateHMax(g, cut);
 #endif
-		std::cout << "( " << i << " ) new cost: " << minCosts << " HMAX: "<< hMax << "  " << hLmCut << std::endl;
+		
 	}
-	exit(0);
+	//exit(0);
 	//cout << "final lmc " << hLmCut << endl;
 	return hLmCut;
 }
@@ -259,12 +255,11 @@ void hsLmCut::forwardReachabilityDFS(bucketSet& s0, bucketSet* cut,
 	}
 }
 
-int hsLmCut::decidePcf(noDelIntSet* goalZone, int newProp, int op, int maxProp){
+int hsLmCut::decidePcf(noDelIntSet* goalZone, int newProp, int maxProp){
 	//return newProp;
 	if(maxProp == UNREACHABLE || !goalZone->get(maxProp)){
 		return newProp;
 	}else{
-		//return maxProp;
 		for (int i = 0; i < numAddToTask[newProp]; i++) {
 			int op = addToTask[newProp][i];
 			if(costs[op]==0){
@@ -308,9 +303,9 @@ int hsLmCut::getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone) {
 		for (int iOp = 0; iOp < m->precToActionSize[prop]; iOp++) {
 			int op = m->precToAction[prop][iOp];
 			if ((maxPrec[op] == UNREACHABLE)
-					|| (hVal[maxPrec[op]] < hVal[prop])) {
+					|| (hVal[maxPrec[op]] <= hVal[prop])) {
 				//maxPrec[op] = prop;
-				maxPrec[op] = decidePcf(goalZone, prop, op, maxPrec[op]);
+				maxPrec[op] = decidePcf(goalZone, prop, maxPrec[op]);
 			}
 			if (--unsatPrecs[op] == 0) {
 				for (int iF = 0; iF < m->numAdds[op]; iF++) {
@@ -326,14 +321,16 @@ int hsLmCut::getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone) {
 	}
 
 	int res = INT_MIN;
+	
 	for (int f = g.getFirst(); f >= 0; f = g.getNext()) {
 		if (hVal[f] == UNREACHABLE) {
 			res = UNREACHABLE;
 			maxPrecG = -1;
 			break;
-		} else if (res < hVal[f]) {
+		} else if (res <= hVal[f]) {
 			res = hVal[f];
-			maxPrecG = f;
+			//maxPrecG = f;
+			maxPrecG=decidePcf(goalZone, f, maxPrecG);
 		}
 	}
 
@@ -344,11 +341,17 @@ int hsLmCut::updateHMax(noDelIntSet& g, bucketSet* cut) {
     std::deque<int> updateQueue;
 	// for every operator in the cut, add each add–effect to the update queue.
     for (int op = cut->getFirst(); op >= 0; op = cut->getNext()) {
-		std::cout << "CUT OPERATOR " << m->taskNames[op] << std::endl;
+		//std::cout << "CUT OPERATOR " << m->taskNames[op] << std::endl;
         for (int iF = 0; iF < m->numAdds[op]; iF++) {
             int f = m->addLists[op][iF];
             updateQueue.push_back(f);
-        }
+
+			// if the decreased value is lower than fprime, fprime must chang value
+			if(hVal[maxPrec[op]] < hVal[f]){
+				hVal[f] = hVal[maxPrec[op]] ;
+				updateQueue.push_back(f);
+			}
+		}
     }
 
 	if(updateQueue.empty()) return 0;
@@ -357,7 +360,7 @@ int hsLmCut::updateHMax(noDelIntSet& g, bucketSet* cut) {
     while (!updateQueue.empty()) {
         int f = updateQueue.front();
 		updateQueue.pop_front();
-		std::cout << " fact " << m->factStrs[f] << " h: " << hVal[f] << std::endl;
+		//std::cout << " fact " << m->factStrs[f] << " h: " << hVal[f] << std::endl;
 		// for each operator op that has f as a precondition:
         for (int iOp = 0; iOp < m->precToActionSize[f]; iOp++) {
             int op = m->precToAction[f][iOp];
@@ -378,16 +381,15 @@ int hsLmCut::updateHMax(noDelIntSet& g, bucketSet* cut) {
             }
 			
             // if the new hmax F is different (is lower) than hmax of operator
-			// the pcf has changed
 			if(best != hVal[f]){
 				maxPrec[op] = pcf;
 			}
-			// if the pcf remains the same f, the value decreased
-			if(pcf == maxPrec[op]){
+			// if the pcf remains f, the value decreased
+			if(pcf == f){
 				for (int iF = 0; iF < m->numAdds[op]; iF++) {
 					int fprime = m->addLists[op][iF];
 					// if the decreased value is lower than fprime, fprime must chang value
-					if(best < hVal[fprime]){
+					if(best + costs[op] < hVal[fprime]){
 						hVal[fprime] = best + costs[op];
 						updateQueue.push_back(fprime);
 					}
@@ -398,22 +400,20 @@ int hsLmCut::updateHMax(noDelIntSet& g, bucketSet* cut) {
     }
 
 	
-    // Finally, recompute the overall hmax value as the maximum cost over all goal facts.
+    // recompute the overall hmax value as the maximum cost over all goal facts.
     int res = INT_MIN;
+	
     for (int f = g.getFirst(); f >= 0; f = g.getNext()) {
-        if (hVal[f] == UNREACHABLE) {
+		if (hVal[f] == UNREACHABLE) {
             maxPrecG = -1;
-			std::cout << "U" << std::endl;
-            return UNREACHABLE;
+		    return UNREACHABLE;
         }
         if (res < hVal[f]) {
-			std::cout << " G UPDATE " << m->factStrs[f] << " h: " << hVal[f] << std::endl;
-            res = hVal[f];
+		    res = hVal[f];
             maxPrecG = f;
         }
     }
-	//std::cout << "goal cost " << res << std::endl;
-    return res;
+	return res;
 }
 
 

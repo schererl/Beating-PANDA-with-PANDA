@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/pandaPIengine.dir/link.d"
-  "/home/mago/Desktop/lmcutTests/PandaDealer/02-planner/src/cmdline.c"
-  "/home/mago/Desktop/lmcutTests/PandaDealer/02-planner/src/cmdline.h"
+  "/home/putrich/Desktop/Beating-PANDA-with-PANDA/PandaDealer/02-planner/src/cmdline.c"
+  "/home/putrich/Desktop/Beating-PANDA-with-PANDA/PandaDealer/02-planner/src/cmdline.h"
   "CMakeFiles/pandaPIengine.dir/Debug.cpp.o"
   "CMakeFiles/pandaPIengine.dir/Debug.cpp.o.d"
   "CMakeFiles/pandaPIengine.dir/Invariants.cpp.o"

@@ -46,7 +46,7 @@ private:
 	void calcGoalZone(noDelIntSet* goalZone, bucketSet* cut, bucketSet* precsOfCutNodes);
 	void forwardReachabilityDFS(bucketSet& s0, bucketSet* cut, noDelIntSet* goalZone, bucketSet* testReachability);
 
-    int decidePcf(noDelIntSet *goalZone, int newProp, int op, int maxProp);
+    int decidePcf(noDelIntSet *goalZone, int newProp, int maxProp);
 
     int* costs;
 	noDelIntSet* goalZone;
@@ -71,6 +71,8 @@ private:
 	noDelIntSet* remove;
 	noDelIntSet* visited;
 
+	int totalDecisions=0;
+	int changesDecision=0;
 };
 
 } /* namespace progression */
