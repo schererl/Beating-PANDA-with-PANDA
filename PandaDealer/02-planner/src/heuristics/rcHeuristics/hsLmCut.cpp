@@ -23,6 +23,8 @@ hsLmCut::hsLmCut(Model* sas) {
 	unsatPrecs = new int[m->numActions];
 	hVal = new int[m->numStateBits];
 
+	hasZeroAchiever = new bool[m->numStateBits];
+
 	maxPrecInit = new int[m->numActions];
 	for (int i = 0; i < m->numActions; i++)
 		maxPrecInit[i] = UNREACHABLE;
@@ -36,6 +38,8 @@ hsLmCut::hsLmCut(Model* sas) {
 	precsOfCutNodes = new bucketSet();
 	precsOfCutNodes->init(m->numStateBits);
 	stack.init(m->numActions * 2);
+
+	
 
 	// init reverse mapping
 	numAddToTask = new int[m->numStateBits];
@@ -110,27 +114,11 @@ int hsLmCut::getHeuristicValue(bucketSet& s, noDelIntSet& g) {
 		return hMax;
 	//cout << endl << "start" << endl;
 
-	// Ausgabe
-	/*
-	bool factsUsed[m->numStateBits];
+
 	for (int i = 0; i < m->numStateBits; i++) {
-	    factsUsed[i] = s.get(i);
+		hasZeroAchiever[i] = false;
 	}
-	for (int i = 0; i < this->m->numActions; i++) {
-        if (maxPrec[i] != UNREACHABLE) {
-            factsUsed[i] = true;
-            for(int j =0 ; j < m->numAdds[i]; j++) {
-                int f = m->addLists[i][j];
-                factsUsed[f] = true;
-            }
-        }
-	}
-    for (int i = 0; i < m->numStateBits; i++) {
-        if(factsUsed[i]) {
-            cout << "node" << i << " "
-        }
-    }
-*/
+
 	while (hMax > 0) {
 		goalZone->clear();
 		cut->clear();
@@ -169,9 +157,14 @@ int hsLmCut::getHeuristicValue(bucketSet& s, noDelIntSet& g) {
 			costs[op] -= minCosts;
 			assert(costs[op] >= 0);
 			//assert(allPrecsTrue(op));
+
+			//TODO: update has zero-cost achievers array
+			for (int iF = 0; iF < m->numAdds[op]; iF++) {
+				int f = m->addLists[op][iF];
+				hasZeroAchiever[f] = true;
+			}
 		}
 #ifdef LMCINCHMAX
-		std::cout << "i am using update" << std::endl;
 		hMax = updateHMax(g, cut);
 #else
 		hMax = getHMax(s, g, goalZone);
@@ -256,19 +249,40 @@ void hsLmCut::forwardReachabilityDFS(bucketSet& s0, bucketSet* cut,
 }
 
 int hsLmCut::decidePcf(noDelIntSet* goalZone, int newProp, int maxProp){
-	//return newProp;
-	if(maxProp == UNREACHABLE || !goalZone->get(maxProp)){
-		return newProp;
-	}else{
-		for (int i = 0; i < numAddToTask[newProp]; i++) {
-			int op = addToTask[newProp][i];
-			if(costs[op]==0){
-				return maxProp;
-			}
+	
+	
+	// // Goal Zone Detection: prefer pcfs in goal zone
+	// if(!goalZone->get(maxProp)){
+	// 	//Border Detection (BD): Prefer nodes with non zero-cost achievers
+	// 	for (int i = 0; i < numAddToTask[newProp]; i++) {
+	// 		int op = addToTask[newProp][i];
+	// 		if(costs[op]==0){
+	// 			return maxProp;
+	// 		}
+	// 	}
+	// 	return newProp;
+	// }
+	// return maxProp;
 
-		}
+
+	// Goal Zone Detection: prefer pcfs in goal zone
+	bool newInGoal = goalZone->get(newProp);
+    bool maxInGoal = goalZone->get(maxProp);
+	if (newInGoal && !maxInGoal)
 		return newProp;
-	}
+	if (maxInGoal && !newInGoal)
+		return maxProp;
+
+	//Border Detection (BD): Prefer nodes with non zero-cost achievers
+	bool newNoZeroAchiever = !hasZeroAchiever[newProp];
+    bool maxNoZeroAchiever = !hasZeroAchiever[maxProp];
+    if (newNoZeroAchiever && !maxNoZeroAchiever)
+        return newProp;
+    //if (maxNoZeroAchiever && !newNoZeroAchiever)
+    //    return maxProp;
+
+	return maxProp;
+	
 }
 
 int hsLmCut::getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone) {
@@ -303,9 +317,10 @@ int hsLmCut::getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone) {
 		for (int iOp = 0; iOp < m->precToActionSize[prop]; iOp++) {
 			int op = m->precToAction[prop][iOp];
 			if ((maxPrec[op] == UNREACHABLE)
-					|| (hVal[maxPrec[op]] <= hVal[prop])) {
-				//maxPrec[op] = prop;
-				maxPrec[op] = decidePcf(goalZone, prop, maxPrec[op]);
+					|| (hVal[maxPrec[op]] < hVal[prop])) {
+				maxPrec[op] = prop;
+			}else if(hVal[maxPrec[op]] == hVal[prop]){
+				//maxPrec[op] = decidePcf(goalZone, prop, maxPrec[op]);
 			}
 			if (--unsatPrecs[op] == 0) {
 				for (int iF = 0; iF < m->numAdds[op]; iF++) {
@@ -327,10 +342,11 @@ int hsLmCut::getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone) {
 			res = UNREACHABLE;
 			maxPrecG = -1;
 			break;
-		} else if (res <= hVal[f]) {
+		} else if (res < hVal[f]) {
 			res = hVal[f];
-			//maxPrecG = f;
-			maxPrecG=decidePcf(goalZone, f, maxPrecG);
+			maxPrecG = f;			
+		}else if (res == hVal[f]){
+			//maxPrecG=decidePcf(goalZone, f, maxPrecG);
 		}
 	}
 

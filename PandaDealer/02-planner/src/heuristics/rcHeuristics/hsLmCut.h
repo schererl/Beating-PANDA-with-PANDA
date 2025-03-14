@@ -66,6 +66,9 @@ private:
 	int maxPrecG = -1;
     int* maxPrec;
 
+	bool* hasZeroAchiever;
+
+
 	int* numAddToTask;
 	int** addToTask;
 	noDelIntSet* remove;
