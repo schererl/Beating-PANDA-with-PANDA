@@ -4,7 +4,7 @@
 #include "../ProgressionNetwork.h"
 #include <unordered_map>
 #include "../intDataStructures/HashTable.h"
-
+#include <cstdint>
 
 // XXX magic number, restricts number of copies of a task per task net to 255, thereafter the hash becomes incorrect
 // 3 -> up to three bits for (number-1), max is 8, thus whole number is max 225

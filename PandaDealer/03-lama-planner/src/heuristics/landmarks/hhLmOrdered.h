@@ -11,11 +11,14 @@
 #include <landmarks/lmExtraction/LmFdConnector.h>
 #include "../../intDataStructures/bucketSet.h"
 
+#include "../rcHeuristics/hsLmCut.h"  
+
 enum secondH {secNone, secFF, secAdd};
 
 class hhLmOrdered : public Heuristic {
 private:
     Model *model;
+    lmFactoryType lmType;
 
     // returns textual description of the heuristic for output
     string getDescription();
@@ -44,7 +47,7 @@ public:
 
     bool allLmsReachable(searchNode *n, hhLMPayload *myPL);
 
-    lmGraph *getRcLmCLMs(Model *htn) const;
+    lmGraph *getRcLmCLMs(Model *htn, PCFType pcfType) const;
 };
 
 

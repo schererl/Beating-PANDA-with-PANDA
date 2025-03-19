@@ -21,7 +21,7 @@
 
 namespace progression {
 
-enum lmFactoryType {rhw, ao1, ao2, nativeAO, localLMs, lmCutLMs, lmCutLMrecomp, lmDof};
+enum lmFactoryType {rhw, ao1, ao2, nativeAO, localLMs, lmCutLMs, lmGZDCutLMs, lmBDCutLMs, lmVDMCutLMs, lmBDGZDCutLMs, lmCutLMrecomp, lmDof};
 
 class LmFdConnector {
 public:

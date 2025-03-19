@@ -435,7 +435,20 @@ int main(int argc, char *argv[]) {
                     } else if (args["lm"] == "lmc") {
                         lmType = lmCutLMs;
                         cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
-                    } else if (args["lm"] == "lmcrecomp") {
+                    } else if (args["lm"] == "lmc-GZD") {
+                        lmType = lmGZDCutLMs;
+                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
+                    }else if (args["lm"] == "lmc-BD") {
+                        lmType = lmBDCutLMs;
+                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
+                    }else if (args["lm"] == "lmc-BDpGZD") {
+                        lmType = lmBDGZDCutLMs;
+                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
+                    }else if (args["lm"] == "lmc-VDM") {
+                        lmType = lmVDMCutLMs;
+                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
+                    }
+                     else if (args["lm"] == "lmcrecomp") {
                         lmType = lmCutLMrecomp;
                         cout << "- Landmark heuristic uses recomputed LM-Cut landmarks. [lamaLMs=lmcrecomp]" << endl;
                     } else if (args["lm"] == "dof") {

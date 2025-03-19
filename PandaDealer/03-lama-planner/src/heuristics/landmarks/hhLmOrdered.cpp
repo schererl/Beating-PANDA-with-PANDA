@@ -28,7 +28,7 @@ hhLmOrdered::hhLmOrdered(Model *htn, int i, lmFactoryType lmf, bool useOrderings
     }
     this->model = htn;
     this->checkReachability = checkReachability;
-
+    this->lmType= lmf;
     if ((lmf == rhw) || (lmf == ao1) || (lmf == ao2)) {
         if (lmf == rhw) {
             cout << "- Creating RHW LMs using FD landmark generation [lmType=fdrhw]" << endl;
@@ -58,16 +58,30 @@ hhLmOrdered::hhLmOrdered(Model *htn, int i, lmFactoryType lmf, bool useOrderings
         cout << "- Creating local LMs using native implementation [lmType=natlocal]" << endl;
         LmLocalLMs factory;
         lmG = factory.createLMs(htn);
-    }  else if (lmf == lmCutLMs) {
-        cout << "- Creating LMs using LM Cut [lmType=lmCut]" << endl;
-        lmG = getRcLmCLMs(htn);
+    }else if (lmf == lmDof) {
 #ifndef CMAKE_NO_ILP
-    } else if (lmf == lmDof) {
         cout << "- Creating LMs using DOF heuristic [lmType=lmDof]" << endl;
         dofLmFactory factory;
         lmG = factory.createLMs(htn);
 #endif
-    }
+    }else{
+        cout << "- Creating LMs using LM Cut [lmType=lmCut]" << endl;
+        PCFType lmtype;
+        if(lmf == lmBDCutLMs){
+            lmtype = PCFType::BD;
+        }else if(lmf == lmGZDCutLMs){
+            lmtype = PCFType::GZD;
+        }else if(lmf == lmBDGZDCutLMs){
+            lmtype = PCFType::GZDpBD;
+        }else if(lmf == lmVDMCutLMs){
+            lmtype = PCFType::VDM;
+        }
+        else{
+            lmtype = PCFType::NONE;
+        }
+        lmG = getRcLmCLMs(htn, lmtype);
+
+    } 
 
     lmG->gSize = htn->gSize;
     lmG->gList = htn->gList;
@@ -85,10 +99,11 @@ hhLmOrdered::hhLmOrdered(Model *htn, int i, lmFactoryType lmf, bool useOrderings
     //lmG->showDot();
 }
 
-lmGraph *hhLmOrdered::getRcLmCLMs(Model *htn) const {
+lmGraph *hhLmOrdered::getRcLmCLMs(Model *htn, PCFType pcfType) const {
     hhRC2<hsLmCut> *hRC = new hhRC2<hsLmCut>(htn, 0, estDISTANCE, false);
     hRC->storeCuts = true;
     hRC->sasH->storeCuts = true;
+    hRC->sasH->pcfType = pcfType;
     searchNode *tnI = htn->prepareTNi(htn);
     htn->updateReachability(tnI);
     hRC->setHeuristicValue(tnI);

@@ -26,6 +26,8 @@ public:
 	bool operator()(pair<int, int>* n1, pair<int, int>* n2);
 };*/
 
+enum PCFType { NONE, GZD, BD, VDM, GZDpBD };
+
 class hsLmCut {
 public:
 	hsLmCut(Model* sas);
@@ -40,14 +42,23 @@ public:
     list<LMCutLandmark *>* cuts = new list<LMCutLandmark *>();
 
     bool storeCuts = false;
+	PCFType pcfType;
 private:
 	IntUtil iu;
-	int getHMax(bucketSet& s, noDelIntSet& g);
-	int updateHMax(noDelIntSet& g, bucketSet* cut);
-	void calcGoalZone(noDelIntSet* goalZone, bucketSet* cut, bucketSet* precsOfCutNodes);
+	int getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone);
+    
+    int updateHMax(noDelIntSet &g, bucketSet *cut);
+    void calcGoalZone(noDelIntSet* goalZone, bucketSet* cut, bucketSet* precsOfCutNodes);
 	void forwardReachabilityDFS(bucketSet& s0, bucketSet* cut, noDelIntSet* goalZone, bucketSet* testReachability);
 
-	int* costs;
+    int decidePcf(noDelIntSet *goalZone, int newProp, int maxProp);
+
+    int GZD(noDelIntSet *goalZone, int newProp, int maxProp);
+	int BD(noDelIntSet *goalZone, int newProp, int maxProp);
+	int GZDpBD(noDelIntSet *goalZone, int newProp, int maxProp);
+	int VDM(noDelIntSet *goalZone, int newProp, int maxProp);
+
+    int* costs;
 	noDelIntSet* goalZone;
 	bucketSet* cut;
 	bucketSet* precsOfCutNodes;
@@ -55,6 +66,7 @@ private:
     // hMax stuff
 	IntPairHeap<int>* heap;
 	int* hValInit;
+	int* hValReset;
 
 	int* unsatPrecs;
 	int* maxPrecInit;
@@ -62,6 +74,8 @@ private:
 	FlexIntStack stack;
 	int maxPrecG = -1;
     int* maxPrec;
+
+	bool* hasZeroAchiever;
 
 	int* numAddToTask;
 	int** addToTask;

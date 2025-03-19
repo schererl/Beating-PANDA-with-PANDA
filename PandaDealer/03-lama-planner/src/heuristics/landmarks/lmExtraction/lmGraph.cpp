@@ -192,7 +192,28 @@ void lmGraph::printStatistics() {
     int actionLMs = 0;
     int methodLMs = 0;
     int taskLMs = 0;
+    int individualLMs = 0;
+
+    int unaryFactLMs = 0;
+    int unaryMethodLMs = 0;
+    int unaryTaskLMs = 0;
+    int unaryActionLMs = 0;
+    int totalDisjunctions = 0;
     for (int i = 0; i < numLMs; i++) {
+        if(lms[i].lm.size() == 1){
+            individualLMs+=1;
+            if (lms[i].lm[0]->type == fact) {
+                unaryFactLMs++;
+            } else if (lms[i].lm[0]->type == action) {
+                unaryActionLMs++;
+            } else if (lms[i].lm[0]->type == METHOD) {
+                unaryMethodLMs++;
+            } else if (lms[i].lm[0]->type == task) {
+                unaryTaskLMs++;
+            }
+        }else{
+            totalDisjunctions++;
+        }
         for (int j = 0; j < lms[i].lm.size(); j++) {
             if (lms[i].lm[j]->type == fact) {
                 factLMs++;
@@ -206,8 +227,16 @@ void lmGraph::printStatistics() {
         }
     }
     cout << "- LM statistics:" << endl;
-    cout << "  - fact LMs:   " << factLMs <<   " [factLMs=" << factLMs << "]" << endl;
-    cout << "  - action LMs: " << actionLMs << " [actionLMs=" << actionLMs << "]" << endl;
-    cout << "  - method LMs: " << methodLMs << " [methodLMs=" << methodLMs << "]" << endl;
-    cout << "  - task LMs:   " << taskLMs <<   " [taskLMs=" << taskLMs << "]" << endl;
+    cout << "  - individual LMs       " << individualLMs << " [individualLMs=" << individualLMs << "]" << endl;
+    cout << "  - disjunctions         " << totalDisjunctions << " [totalDisjunctions=" << totalDisjunctions << "]" << endl;
+    cout << "  - overall:             " << factLMs + actionLMs + methodLMs + taskLMs << endl;
+    cout << "  - unary fact LMs:      " << unaryFactLMs <<   " [unaryFactLMs=" << unaryFactLMs << "]" << endl;
+    cout << "  - unary action LMs:    " << unaryActionLMs << " [unaryActionLMs=" << unaryActionLMs << "]" << endl;
+    cout << "  - unary method LMs:    " << unaryMethodLMs << " [unaryMethodLMs=" << unaryMethodLMs << "]" << endl;
+    cout << "  - unary task LMs:      " << unaryTaskLMs <<   " [unaryTaskLMs=" << unaryTaskLMs << "]" << endl;
+    cout << "  - overall fact LMs:    " << factLMs <<   " [factLMs=" << factLMs << "]" << endl;
+    cout << "  - overall action LMs:  " << actionLMs << " [actionLMs=" << actionLMs << "]" << endl;
+    cout << "  - overall method LMs:  " << methodLMs << " [methodLMs=" << methodLMs << "]" << endl;
+    cout << "  - overall task LMs:    " << taskLMs <<   " [taskLMs=" << taskLMs << "]" << endl;
+    exit(0);
 }
