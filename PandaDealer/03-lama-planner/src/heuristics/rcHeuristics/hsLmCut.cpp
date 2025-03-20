@@ -279,8 +279,8 @@ int hsLmCut::VDM(noDelIntSet* goalZone, int newProp, int maxProp) {
     if (diffNew < diffMax)
         return newProp;
     else
-        //return maxProp;
-		return GZDpBD(goalZone, newProp, maxProp);
+        return maxProp;
+		//return GZDpBD(goalZone, newProp, maxProp);
 }
 
 int hsLmCut::GZDpBD(noDelIntSet* goalZone, int newProp, int maxProp){

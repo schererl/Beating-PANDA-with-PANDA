@@ -108,22 +108,22 @@ run_planner() {
     
     # Determine the heuristic based on the OPTION parameter
     if [ "$OPTION" -eq 1 ]; then
-        LM_OPTION="lmc"
+        echo "Experiment Name: lmc"
         ./lamaPIengine --heuristic="lama(lazy=false;ha=false;lm=lmc;useLMOrd=false;h=none;search=gbfs)" "$grounded_file" --noPlanOutput #> panda.log
     elif [ "$OPTION" -eq 2 ]; then
-        LM_OPTION="lmc-BD"
+        echo "Experiment Name: lmc-BD"
         ./lamaPIengine --heuristic="lama(lazy=false;ha=false;lm=lmc-BD;useLMOrd=false;h=none;search=gbfs)" \
                    "$grounded_file" --noPlanOutput
     elif [ "$OPTION" -eq 3 ]; then
-        LM_OPTION="lmc-GZD"
+        echo "Experiment Name: lmc-GZD"
         ./lamaPIengine --heuristic="lama(lazy=false;ha=false;lm=lmc-GZD;useLMOrd=false;h=none;search=gbfs)" \
                    "$grounded_file" --noPlanOutput
     elif [ "$OPTION" -eq 4 ]; then
-        LM_OPTION="lmc-BDpGZD"
+        echo "Experiment Name: lmc-BDpGZD"
         ./lamaPIengine --heuristic="lama(lazy=false;ha=false;lm=lmc-BDpGZD;useLMOrd=false;h=none;search=gbfs)" \
                    "$grounded_file" --noPlanOutput
     elif [ "$OPTION" -eq 5 ]; then
-        LM_OPTION="lmc-VDM"
+        echo "Experiment Name: lmc-VDM"
         ./lamaPIengine --heuristic="lama(lazy=false;ha=false;lm=lmc-VDM;useLMOrd=false;h=none;search=gbfs)" \
                    "$grounded_file" --noPlanOutput
     else
