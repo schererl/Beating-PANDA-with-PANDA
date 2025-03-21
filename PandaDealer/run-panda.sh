@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 # Usage message
 usage() {
@@ -7,7 +6,13 @@ usage() {
     echo "  $0 install                    # Install dependencies"
     echo "  $0 build                      # Build the full planner"
     echo "  $0 update                     # Update (rebuild) pandaEngine (02-planner)"
-    echo "  $0 run DOMAINFILE PROBLEMFILE PLANFILE"
+    echo "  $0 run DOMAINFILE PROBLEMFILE OPTION"
+    echo " OPTION:"
+        echo "  1: lmCut (standard)"
+        echo "  2: lmc-BD"
+        echo "  3: lmc-GZD"
+        echo "  4: lmc-BDpGZD"
+        echo "  5: lmc-VDM"
     exit 1
 }
 
@@ -72,12 +77,12 @@ run_planner() {
 
     DOMAINFILE="$1"
     PROBLEMFILE="$2"
-    PLANFILE="$3"
+    OPTION="$3"
 
     echo "Running planner on:"
     echo "  Domain file: $DOMAINFILE"
     echo "  Problem file: $PROBLEMFILE"
-    echo "  Output plan file: $PLANFILE"
+    
 
     # Run parser to create a temporary parsed file
     ./pandaPIparser "$DOMAINFILE" "$PROBLEMFILE" temp.parsed
@@ -100,12 +105,28 @@ run_planner() {
     fi
 
     # Run engine and log to panda.log
-    ./pandaPIengine --heuristic="rc2(lmc;cost)" --gValue=action --pruneDeadEnds "$grounded_file" --noPlanOutput  #>> panda.log
-
+    if [ "$OPTION" -eq 1 ]; then
+        echo "Experiment Name: lmc"
+        ./pandaPIengine --heuristic="rc2(lmc;cost)" --gValue=action --pruneDeadEnds "$grounded_file" --noPlanOutput  #>> panda.log
+    elif [ "$OPTION" -eq 2 ]; then
+        echo "Experiment Name: lmc-BD"
+        ./pandaPIengine --heuristic="rc2(lmc-BD;cost)" --gValue=action --pruneDeadEnds "$grounded_file" --noPlanOutput  #>> panda.log
+    elif [ "$OPTION" -eq 3 ]; then
+        echo "Experiment Name: lmc-GZD"
+        ./pandaPIengine --heuristic="rc2(lmc-GZD;cost)" --gValue=action --pruneDeadEnds "$grounded_file" --noPlanOutput  #>> panda.log
+    elif [ "$OPTION" -eq 4 ]; then
+        echo "Experiment Name: lmc-BDpGZD"
+        ./pandaPIengine --heuristic="rc2(lmc-BDpGZD;cost)" --gValue=action --pruneDeadEnds "$grounded_file" --noPlanOutput  #>> panda.log
+    elif [ "$OPTION" -eq 5 ]; then
+        echo "Experiment Name: lmc-VDM"
+        ./pandaPIengine --heuristic="rc2(lmc-VDM;cost)" --gValue=action --pruneDeadEnds "$grounded_file" --noPlanOutput  #>> panda.log
+    else
+        echo "Invalid OPTION: $OPTION. Choose between 1 (lmc), 2 (lmc-BD), 3 (lmc-GZD), 4 (lmc-BDpGZD)."
+        exit 1
+    fi
     # Run parser again with log file and write final plan to PLANFILE
-    ./pandaPIparser -c panda.log "$PLANFILE"
-
-    echo "Planner finished. Plan is in $PLANFILE."
+    #./pandaPIparser -c panda.log "$PLANFILE"
+    #echo "Planner finished. Plan is in $PLANFILE."
 }
 
 # Main: Check for a valid command

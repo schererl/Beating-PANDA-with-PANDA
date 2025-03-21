@@ -238,5 +238,4 @@ void lmGraph::printStatistics() {
     cout << "  - overall action LMs:  " << actionLMs << " [actionLMs=" << actionLMs << "]" << endl;
     cout << "  - overall method LMs:  " << methodLMs << " [methodLMs=" << methodLMs << "]" << endl;
     cout << "  - overall task LMs:    " << taskLMs <<   " [taskLMs=" << taskLMs << "]" << endl;
-    exit(0);
 }

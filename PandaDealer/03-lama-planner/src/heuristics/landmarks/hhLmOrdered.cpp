@@ -171,7 +171,7 @@ void hhLmOrdered::foo(searchNode *n, int usedMethod) {
     }
     if (n->heuristicValue[index] < bestSeenhVal) {
         bestSeenhVal = n->heuristicValue[index];
-        cout << "Found new best hLMC value: " << bestSeenhVal << endl;
+        //cout << "Found new best hLMC value: " << bestSeenhVal << endl;
     }
 }
 

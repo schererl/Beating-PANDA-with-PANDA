@@ -1,0 +1,4697 @@
+;; #state features
+274
++handempty[]
++on[b1,b2]
++on[b2,b5]
++on[b3,b22]
++ontable[b4]
++on[b5,b8]
++on[b6,b35]
++on[b7,b28]
++on[b8,b9]
++on[b9,b23]
++on[b10,b16]
++ontable[b11]
++on[b12,b32]
++on[b13,b38]
++on[b14,b21]
++on[b15,b25]
++on[b16,b1]
++on[b17,b26]
++on[b18,b6]
++on[b19,b12]
++on[b20,b42]
++on[b21,b10]
++on[b22,b20]
++ontable[b23]
++on[b24,b17]
++ontable[b25]
++on[b26,b13]
++on[b27,b33]
++on[b28,b30]
++on[b29,b34]
++ontable[b30]
++on[b31,b41]
++on[b32,b37]
++on[b33,b40]
++on[b34,b24]
++on[b35,b4]
++on[b36,b14]
++on[b37,b15]
++on[b39,b18]
++ontable[b40]
++on[b41,b43]
++ontable[b43]
++clear[b3]
++clear[b7]
++clear[b11]
++clear[b19]
++clear[b27]
++clear[b29]
++clear[b31]
++clear[b36]
++clear[b39]
+-clear[b1]
+-clear[b10]
+-clear[b12]
+-clear[b13]
+-clear[b14]
+-clear[b15]
+-clear[b16]
+-clear[b17]
+-clear[b18]
+-clear[b2]
+-clear[b20]
+-clear[b21]
+-clear[b22]
+-clear[b23]
+-clear[b24]
+-clear[b25]
+-clear[b26]
+-clear[b28]
+-clear[b30]
+-clear[b32]
+-clear[b33]
+-clear[b34]
+-clear[b35]
+-clear[b37]
+-clear[b38]
+-clear[b4]
+-clear[b40]
+-clear[b41]
+-clear[b42]
+-clear[b43]
+-clear[b5]
+-clear[b6]
+-clear[b8]
+-clear[b9]
+-ontable[b1]
+-ontable[b10]
+-ontable[b12]
+-ontable[b13]
+-ontable[b14]
+-ontable[b15]
+-ontable[b16]
+-ontable[b17]
+-ontable[b18]
+-ontable[b19]
+-ontable[b2]
+-ontable[b20]
+-ontable[b21]
+-ontable[b22]
+-ontable[b24]
+-ontable[b26]
+-ontable[b27]
+-ontable[b28]
+-ontable[b29]
+-ontable[b3]
+-ontable[b31]
+-ontable[b32]
+-ontable[b33]
+-ontable[b34]
+-ontable[b35]
+-ontable[b36]
+-ontable[b37]
+-ontable[b39]
+-ontable[b41]
+-ontable[b5]
+-ontable[b6]
+-ontable[b7]
+-ontable[b8]
+-ontable[b9]
++holding[b3]
++clear[b22]
+-clear[b3]
++holding[b7]
++clear[b28]
+-clear[b7]
+-ontable[b11]
+-clear[b11]
++holding[b11]
++holding[b19]
++clear[b12]
+-clear[b19]
++holding[b27]
++clear[b33]
+-clear[b27]
++holding[b29]
++clear[b34]
+-clear[b29]
++holding[b31]
++clear[b41]
+-clear[b31]
++holding[b36]
++clear[b14]
++holding[b39]
++clear[b18]
+-clear[b39]
++ontable[b3]
++holding[b22]
++clear[b20]
++ontable[b7]
++on[b7,b22]
++holding[b28]
++clear[b30]
++ontable[b19]
++holding[b12]
++clear[b32]
++holding[b33]
++clear[b40]
++ontable[b29]
++holding[b34]
++clear[b24]
++ontable[b31]
++on[b29,b41]
++holding[b41]
++clear[b43]
++ontable[b36]
++holding[b14]
++clear[b21]
++ontable[b39]
++holding[b18]
++clear[b6]
++ontable[b22]
++on[b22,b27]
++holding[b20]
++clear[b42]
++ontable[b28]
+-ontable[b30]
++holding[b30]
++on[b11,b30]
++ontable[b12]
++on[b12,b7]
++holding[b32]
++clear[b37]
++ontable[b33]
+-ontable[b40]
++holding[b40]
++ontable[b34]
++holding[b24]
++clear[b17]
++ontable[b41]
+-ontable[b43]
++holding[b43]
++on[b39,b43]
++holding[b21]
++clear[b10]
++ontable[b18]
++on[b18,b40]
++holding[b6]
++clear[b35]
++ontable[b32]
++on[b32,b12]
++on[b36,b37]
++holding[b37]
++clear[b15]
++ontable[b24]
++on[b24,b11]
++holding[b17]
++clear[b26]
++on[b43,b19]
++ontable[b21]
++on[b21,b14]
++holding[b10]
++clear[b16]
++on[b3,b35]
++holding[b35]
++clear[b4]
++ontable[b37]
++on[b37,b24]
++holding[b15]
++clear[b25]
++ontable[b17]
++on[b17,b42]
++on[b34,b26]
++holding[b26]
++clear[b13]
++ontable[b10]
++on[b10,b17]
++on[b41,b16]
++holding[b16]
++clear[b1]
++ontable[b35]
++on[b35,b20]
+-ontable[b4]
++holding[b4]
++on[b31,b4]
++ontable[b15]
++on[b15,b29]
+-ontable[b25]
++holding[b25]
++holding[b13]
++clear[b38]
++ontable[b16]
++holding[b1]
++clear[b2]
++on[b4,b34]
++on[b25,b32]
++ontable[b13]
++on[b13,b33]
++on[b40,b38]
++ontable[b1]
++on[b1,b18]
++on[b33,b2]
++holding[b2]
++clear[b5]
++ontable[b2]
++on[b2,b31]
++on[b19,b5]
++holding[b5]
++clear[b8]
++ontable[b5]
++on[b5,b15]
++on[b30,b8]
++holding[b8]
++clear[b9]
++ontable[b8]
++on[b8,b3]
++on[b28,b9]
++holding[b9]
++clear[b23]
++ontable[b9]
++on[b9,b39]
+-ontable[b23]
++holding[b23]
++on[b16,b23]
++on[b23,b6]
+
+;; Mutex Groups
+274
+0 0 +handempty[]
+1 1 +on[b1,b2]
+2 2 +on[b2,b5]
+3 3 +on[b3,b22]
+4 4 +ontable[b4]
+5 5 +on[b5,b8]
+6 6 +on[b6,b35]
+7 7 +on[b7,b28]
+8 8 +on[b8,b9]
+9 9 +on[b9,b23]
+10 10 +on[b10,b16]
+11 11 +ontable[b11]
+12 12 +on[b12,b32]
+13 13 +on[b13,b38]
+14 14 +on[b14,b21]
+15 15 +on[b15,b25]
+16 16 +on[b16,b1]
+17 17 +on[b17,b26]
+18 18 +on[b18,b6]
+19 19 +on[b19,b12]
+20 20 +on[b20,b42]
+21 21 +on[b21,b10]
+22 22 +on[b22,b20]
+23 23 +ontable[b23]
+24 24 +on[b24,b17]
+25 25 +ontable[b25]
+26 26 +on[b26,b13]
+27 27 +on[b27,b33]
+28 28 +on[b28,b30]
+29 29 +on[b29,b34]
+30 30 +ontable[b30]
+31 31 +on[b31,b41]
+32 32 +on[b32,b37]
+33 33 +on[b33,b40]
+34 34 +on[b34,b24]
+35 35 +on[b35,b4]
+36 36 +on[b36,b14]
+37 37 +on[b37,b15]
+38 38 +on[b39,b18]
+39 39 +ontable[b40]
+40 40 +on[b41,b43]
+41 41 +ontable[b43]
+42 42 +clear[b3]
+43 43 +clear[b7]
+44 44 +clear[b11]
+45 45 +clear[b19]
+46 46 +clear[b27]
+47 47 +clear[b29]
+48 48 +clear[b31]
+49 49 +clear[b36]
+50 50 +clear[b39]
+51 51 -clear[b1]
+52 52 -clear[b10]
+53 53 -clear[b12]
+54 54 -clear[b13]
+55 55 -clear[b14]
+56 56 -clear[b15]
+57 57 -clear[b16]
+58 58 -clear[b17]
+59 59 -clear[b18]
+60 60 -clear[b2]
+61 61 -clear[b20]
+62 62 -clear[b21]
+63 63 -clear[b22]
+64 64 -clear[b23]
+65 65 -clear[b24]
+66 66 -clear[b25]
+67 67 -clear[b26]
+68 68 -clear[b28]
+69 69 -clear[b30]
+70 70 -clear[b32]
+71 71 -clear[b33]
+72 72 -clear[b34]
+73 73 -clear[b35]
+74 74 -clear[b37]
+75 75 -clear[b38]
+76 76 -clear[b4]
+77 77 -clear[b40]
+78 78 -clear[b41]
+79 79 -clear[b42]
+80 80 -clear[b43]
+81 81 -clear[b5]
+82 82 -clear[b6]
+83 83 -clear[b8]
+84 84 -clear[b9]
+85 85 -ontable[b1]
+86 86 -ontable[b10]
+87 87 -ontable[b12]
+88 88 -ontable[b13]
+89 89 -ontable[b14]
+90 90 -ontable[b15]
+91 91 -ontable[b16]
+92 92 -ontable[b17]
+93 93 -ontable[b18]
+94 94 -ontable[b19]
+95 95 -ontable[b2]
+96 96 -ontable[b20]
+97 97 -ontable[b21]
+98 98 -ontable[b22]
+99 99 -ontable[b24]
+100 100 -ontable[b26]
+101 101 -ontable[b27]
+102 102 -ontable[b28]
+103 103 -ontable[b29]
+104 104 -ontable[b3]
+105 105 -ontable[b31]
+106 106 -ontable[b32]
+107 107 -ontable[b33]
+108 108 -ontable[b34]
+109 109 -ontable[b35]
+110 110 -ontable[b36]
+111 111 -ontable[b37]
+112 112 -ontable[b39]
+113 113 -ontable[b41]
+114 114 -ontable[b5]
+115 115 -ontable[b6]
+116 116 -ontable[b7]
+117 117 -ontable[b8]
+118 118 -ontable[b9]
+119 119 +holding[b3]
+120 120 +clear[b22]
+121 121 -clear[b3]
+122 122 +holding[b7]
+123 123 +clear[b28]
+124 124 -clear[b7]
+125 125 -ontable[b11]
+126 126 -clear[b11]
+127 127 +holding[b11]
+128 128 +holding[b19]
+129 129 +clear[b12]
+130 130 -clear[b19]
+131 131 +holding[b27]
+132 132 +clear[b33]
+133 133 -clear[b27]
+134 134 +holding[b29]
+135 135 +clear[b34]
+136 136 -clear[b29]
+137 137 +holding[b31]
+138 138 +clear[b41]
+139 139 -clear[b31]
+140 140 +holding[b36]
+141 141 +clear[b14]
+142 142 +holding[b39]
+143 143 +clear[b18]
+144 144 -clear[b39]
+145 145 +ontable[b3]
+146 146 +holding[b22]
+147 147 +clear[b20]
+148 148 +ontable[b7]
+149 149 +on[b7,b22]
+150 150 +holding[b28]
+151 151 +clear[b30]
+152 152 +ontable[b19]
+153 153 +holding[b12]
+154 154 +clear[b32]
+155 155 +holding[b33]
+156 156 +clear[b40]
+157 157 +ontable[b29]
+158 158 +holding[b34]
+159 159 +clear[b24]
+160 160 +ontable[b31]
+161 161 +on[b29,b41]
+162 162 +holding[b41]
+163 163 +clear[b43]
+164 164 +ontable[b36]
+165 165 +holding[b14]
+166 166 +clear[b21]
+167 167 +ontable[b39]
+168 168 +holding[b18]
+169 169 +clear[b6]
+170 170 +ontable[b22]
+171 171 +on[b22,b27]
+172 172 +holding[b20]
+173 173 +clear[b42]
+174 174 +ontable[b28]
+175 175 -ontable[b30]
+176 176 +holding[b30]
+177 177 +on[b11,b30]
+178 178 +ontable[b12]
+179 179 +on[b12,b7]
+180 180 +holding[b32]
+181 181 +clear[b37]
+182 182 +ontable[b33]
+183 183 -ontable[b40]
+184 184 +holding[b40]
+185 185 +ontable[b34]
+186 186 +holding[b24]
+187 187 +clear[b17]
+188 188 +ontable[b41]
+189 189 -ontable[b43]
+190 190 +holding[b43]
+191 191 +on[b39,b43]
+192 192 +holding[b21]
+193 193 +clear[b10]
+194 194 +ontable[b18]
+195 195 +on[b18,b40]
+196 196 +holding[b6]
+197 197 +clear[b35]
+198 198 +ontable[b32]
+199 199 +on[b32,b12]
+200 200 +on[b36,b37]
+201 201 +holding[b37]
+202 202 +clear[b15]
+203 203 +ontable[b24]
+204 204 +on[b24,b11]
+205 205 +holding[b17]
+206 206 +clear[b26]
+207 207 +on[b43,b19]
+208 208 +ontable[b21]
+209 209 +on[b21,b14]
+210 210 +holding[b10]
+211 211 +clear[b16]
+212 212 +on[b3,b35]
+213 213 +holding[b35]
+214 214 +clear[b4]
+215 215 +ontable[b37]
+216 216 +on[b37,b24]
+217 217 +holding[b15]
+218 218 +clear[b25]
+219 219 +ontable[b17]
+220 220 +on[b17,b42]
+221 221 +on[b34,b26]
+222 222 +holding[b26]
+223 223 +clear[b13]
+224 224 +ontable[b10]
+225 225 +on[b10,b17]
+226 226 +on[b41,b16]
+227 227 +holding[b16]
+228 228 +clear[b1]
+229 229 +ontable[b35]
+230 230 +on[b35,b20]
+231 231 -ontable[b4]
+232 232 +holding[b4]
+233 233 +on[b31,b4]
+234 234 +ontable[b15]
+235 235 +on[b15,b29]
+236 236 -ontable[b25]
+237 237 +holding[b25]
+238 238 +holding[b13]
+239 239 +clear[b38]
+240 240 +ontable[b16]
+241 241 +holding[b1]
+242 242 +clear[b2]
+243 243 +on[b4,b34]
+244 244 +on[b25,b32]
+245 245 +ontable[b13]
+246 246 +on[b13,b33]
+247 247 +on[b40,b38]
+248 248 +ontable[b1]
+249 249 +on[b1,b18]
+250 250 +on[b33,b2]
+251 251 +holding[b2]
+252 252 +clear[b5]
+253 253 +ontable[b2]
+254 254 +on[b2,b31]
+255 255 +on[b19,b5]
+256 256 +holding[b5]
+257 257 +clear[b8]
+258 258 +ontable[b5]
+259 259 +on[b5,b15]
+260 260 +on[b30,b8]
+261 261 +holding[b8]
+262 262 +clear[b9]
+263 263 +ontable[b8]
+264 264 +on[b8,b3]
+265 265 +on[b28,b9]
+266 266 +holding[b9]
+267 267 +clear[b23]
+268 268 +ontable[b9]
+269 269 +on[b9,b39]
+270 270 -ontable[b23]
+271 271 +holding[b23]
+272 272 +on[b16,b23]
+273 273 +on[b23,b6]
+
+;; further strict Mutex Groups
+0
+
+;; further non strict Mutex Groups
+0
+
+;; known invariants
+0
+
+;; Actions
+440
+0
+200 -1
+-1
+-1
+1
+-1
+-1
+-1
+0
+164 181 49 0 -1
+-1
+-1
+1
+181 140 -1
+0 200  0 0  0 49  0 74  -1
+0 181  0 140  -1
+1
+164 49 0 -1
+0 140  0 110  -1
+0 0  0 49  0 164  -1
+0
+110 181 49 0 -1
+-1
+-1
+1
+36 49 0 -1
+0 141  0 140  -1
+0 0  0 36  0 49  0 55  -1
+1
+200 49 0 -1
+0 181  0 140  -1
+0 200  0 0  0 49  0 74  -1
+0
+181 -1
+-1
+-1
+1
+37 181 0 -1
+0 74  0 202  0 201  -1
+0 37  0 0  0 181  0 56  -1
+1
+216 181 0 -1
+0 74  0 159  0 201  -1
+0 216  0 181  0 0  0 65  -1
+0
+111 181 0 -1
+-1
+-1
+1
+201 -1
+0 215  0 0  0 181  -1
+0 111  0 74  0 201  -1
+0
+32 74 0 -1
+-1
+-1
+1
+32 154 0 -1
+0 70  0 181  0 180  -1
+0 32  0 0  0 154  0 74  -1
+1
+180 -1
+0 198  0 0  0 154  -1
+0 106  0 70  0 180  -1
+0
+154 -1
+-1
+-1
+0
+244 70 0 -1
+-1
+-1
+1
+244 218 0 -1
+0 66  0 154  0 237  -1
+0 0  0 244  0 218  0 70  -1
+1
+237 -1
+0 25  0 0  0 218  -1
+0 236  0 66  0 237  -1
+0
+218 -1
+-1
+-1
+0
+15 66 0 -1
+-1
+-1
+1
+15 202 0 -1
+0 56  0 218  0 217  -1
+0 15  0 0  0 202  0 66  -1
+1
+217 -1
+0 234  0 0  0 202  -1
+0 90  0 56  0 217  -1
+0
+202 -1
+-1
+-1
+0
+259 56 0 -1
+-1
+-1
+1
+259 252 0 -1
+0 81  0 202  0 256  -1
+0 259  0 0  0 252  0 56  -1
+1
+256 -1
+0 258  0 0  0 252  -1
+0 114  0 81  0 256  -1
+0
+252 -1
+-1
+-1
+0
+255 81 0 -1
+-1
+-1
+1
+255 45 0 -1
+0 130  0 252  0 128  -1
+0 255  0 0  0 45  0 81  -1
+1
+128 -1
+0 152  0 0  0 45  -1
+0 94  0 130  0 128  -1
+0
+45 -1
+-1
+-1
+0
+207 130 0 -1
+-1
+-1
+1
+207 163 0 -1
+0 80  0 45  0 190  -1
+0 207  0 163  0 0  0 130  -1
+1
+190 -1
+0 41  0 0  0 163  -1
+0 189  0 80  0 190  -1
+0
+163 -1
+-1
+-1
+0
+40 80 0 -1
+-1
+-1
+1
+40 138 0 -1
+0 78  0 163  0 162  -1
+0 40  0 0  0 138  0 80  -1
+1
+162 -1
+0 188  0 0  0 138  -1
+0 113  0 78  0 162  -1
+0
+138 -1
+-1
+-1
+0
+31 78 0 -1
+-1
+-1
+1
+31 48 0 -1
+0 139  0 138  0 137  -1
+0 31  0 48  0 0  0 78  -1
+1
+137 -1
+0 160  0 0  0 48  -1
+0 105  0 139  0 137  -1
+0
+48 -1
+-1
+-1
+0
+254 139 0 -1
+-1
+-1
+1
+254 242 0 -1
+0 60  0 48  0 251  -1
+0 254  0 0  0 242  0 139  -1
+1
+251 -1
+0 253  0 0  0 242  -1
+0 60  0 95  0 251  -1
+0
+242 -1
+-1
+-1
+0
+250 60 0 -1
+-1
+-1
+1
+250 132 0 -1
+0 71  0 242  0 155  -1
+0 250  0 0  0 132  0 60  -1
+1
+155 -1
+0 182  0 0  0 132  -1
+0 107  0 71  0 155  -1
+0
+132 -1
+-1
+-1
+0
+27 71 0 -1
+-1
+-1
+1
+27 46 0 -1
+0 133  0 132  0 131  -1
+0 27  0 0  0 46  0 71  -1
+1
+131 -1
+0 0  0 46  -1
+0 101  0 133  0 131  -1
+0
+46 -1
+-1
+-1
+0
+171 133 0 -1
+-1
+-1
+1
+171 120 0 -1
+0 63  0 46  0 146  -1
+0 171  0 0  0 120  0 133  -1
+1
+146 -1
+0 170  0 0  0 120  -1
+0 98  0 63  0 146  -1
+0
+120 -1
+-1
+-1
+0
+3 63 0 -1
+-1
+-1
+1
+3 42 0 -1
+0 121  0 120  0 119  -1
+0 0  0 3  0 42  0 63  -1
+1
+119 -1
+0 145  0 0  0 42  -1
+0 104  0 121  0 119  -1
+0
+42 -1
+-1
+-1
+0
+264 121 0 -1
+-1
+-1
+1
+264 257 0 -1
+0 83  0 42  0 261  -1
+0 0  0 257  0 264  0 121  -1
+1
+261 -1
+0 263  0 0  0 257  -1
+0 117  0 83  0 261  -1
+0
+257 -1
+-1
+-1
+0
+83 260 0 -1
+-1
+-1
+1
+151 260 0 -1
+0 69  0 257  0 176  -1
+0 260  0 0  0 151  0 83  -1
+1
+176 -1
+0 30  0 0  0 151  -1
+0 175  0 69  0 176  -1
+0
+151 -1
+-1
+-1
+0
+28 69 0 -1
+-1
+-1
+1
+28 123 0 -1
+0 68  0 151  0 150  -1
+0 28  0 0  0 123  0 69  -1
+1
+150 -1
+0 174  0 0  0 123  -1
+0 102  0 68  0 150  -1
+0
+123 -1
+-1
+-1
+0
+7 68 0 -1
+-1
+-1
+1
+7 43 0 -1
+0 124  0 123  0 122  -1
+0 7  0 0  0 43  0 68  -1
+1
+122 -1
+0 148  0 0  0 43  -1
+0 116  0 124  0 122  -1
+0
+43 -1
+-1
+-1
+0
+179 124 0 -1
+-1
+-1
+1
+179 129 0 -1
+0 53  0 43  0 153  -1
+0 179  0 0  0 129  0 124  -1
+1
+153 -1
+0 178  0 0  0 129  -1
+0 87  0 53  0 153  -1
+0
+129 -1
+-1
+-1
+0
+199 53 0 -1
+-1
+-1
+1
+199 154 0 -1
+0 70  0 129  0 180  -1
+0 199  0 0  0 154  0 53  -1
+0
+19 53 0 -1
+-1
+-1
+1
+19 45 0 -1
+0 130  0 129  0 128  -1
+0 0  0 19  0 45  0 53  -1
+0
+177 69 0 -1
+-1
+-1
+1
+177 44 0 -1
+0 126  0 151  0 127  -1
+0 177  0 0  0 44  0 69  -1
+1
+127 -1
+0 11  0 0  0 44  -1
+0 125  0 126  0 127  -1
+0
+44 -1
+-1
+-1
+0
+204 126 0 -1
+-1
+-1
+1
+204 159 0 -1
+0 65  0 44  0 186  -1
+0 0  0 159  0 204  0 126  -1
+1
+186 -1
+0 203  0 0  0 159  -1
+0 99  0 65  0 186  -1
+0
+159 -1
+-1
+-1
+0
+34 65 0 -1
+-1
+-1
+1
+34 135 0 -1
+0 72  0 159  0 158  -1
+0 34  0 135  0 0  0 65  -1
+1
+158 -1
+0 185  0 0  0 135  -1
+0 108  0 72  0 158  -1
+0
+135 -1
+-1
+-1
+0
+243 72 0 -1
+-1
+-1
+1
+243 214 0 -1
+0 135  0 76  0 232  -1
+0 243  0 0  0 214  0 72  -1
+1
+232 -1
+0 4  0 0  0 214  -1
+0 231  0 76  0 232  -1
+0
+214 -1
+-1
+-1
+0
+35 76 0 -1
+-1
+-1
+1
+35 197 0 -1
+0 73  0 214  0 213  -1
+0 35  0 0  0 197  0 76  -1
+1
+213 -1
+0 229  0 0  0 197  -1
+0 73  0 109  0 213  -1
+0
+197 -1
+-1
+-1
+0
+212 73 0 -1
+-1
+-1
+1
+212 42 0 -1
+0 121  0 197  0 119  -1
+0 212  0 0  0 42  0 73  -1
+0
+6 73 0 -1
+-1
+-1
+1
+6 169 0 -1
+0 82  0 197  0 196  -1
+0 6  0 0  0 169  0 73  -1
+1
+196 -1
+0 0  0 169  -1
+0 115  0 82  0 196  -1
+0
+169 -1
+-1
+-1
+0
+18 82 0 -1
+-1
+-1
+1
+18 143 0 -1
+0 59  0 169  0 168  -1
+0 18  0 0  0 143  0 82  -1
+1
+168 -1
+0 194  0 0  0 143  -1
+0 93  0 59  0 168  -1
+0
+143 -1
+-1
+-1
+0
+38 59 0 -1
+-1
+-1
+1
+38 50 0 -1
+0 144  0 143  0 142  -1
+0 38  0 0  0 50  0 59  -1
+1
+142 -1
+0 0  0 167  0 50  -1
+0 112  0 144  0 142  -1
+0
+50 -1
+-1
+-1
+0
+269 144 0 -1
+-1
+-1
+1
+269 262 0 -1
+0 50  0 84  0 266  -1
+0 269  0 0  0 262  0 144  -1
+1
+266 -1
+0 268  0 0  0 262  -1
+0 118  0 84  0 266  -1
+0
+262 -1
+-1
+-1
+0
+265 84 0 -1
+-1
+-1
+1
+265 123 0 -1
+0 68  0 262  0 150  -1
+0 265  0 0  0 123  0 84  -1
+0
+8 84 0 -1
+-1
+-1
+1
+8 257 0 -1
+0 83  0 262  0 261  -1
+0 8  0 0  0 257  0 84  -1
+0
+249 59 0 -1
+-1
+-1
+1
+249 228 0 -1
+0 51  0 143  0 241  -1
+0 249  0 0  0 228  0 59  -1
+1
+241 -1
+0 248  0 0  0 228  -1
+0 51  0 85  0 241  -1
+0
+228 -1
+-1
+-1
+0
+16 51 0 -1
+-1
+-1
+1
+16 211 0 -1
+0 57  0 228  0 227  -1
+0 0  0 16  0 211  0 51  -1
+1
+227 -1
+0 240  0 0  0 211  -1
+0 91  0 57  0 227  -1
+0
+211 -1
+-1
+-1
+0
+226 57 0 -1
+-1
+-1
+1
+226 138 0 -1
+0 78  0 211  0 162  -1
+0 0  0 138  0 226  0 57  -1
+0
+10 57 0 -1
+-1
+-1
+1
+10 193 0 -1
+0 52  0 211  0 210  -1
+0 10  0 0  0 193  0 57  -1
+1
+210 -1
+0 224  0 0  0 193  -1
+0 86  0 52  0 210  -1
+0
+193 -1
+-1
+-1
+0
+21 52 0 -1
+-1
+-1
+1
+21 166 0 -1
+0 193  0 62  0 192  -1
+0 21  0 166  0 0  0 52  -1
+1
+192 -1
+0 208  0 0  0 166  -1
+0 97  0 62  0 192  -1
+0
+166 -1
+-1
+-1
+0
+14 62 0 -1
+-1
+-1
+1
+14 141 0 -1
+0 55  0 166  0 165  -1
+0 14  0 0  0 141  0 62  -1
+1
+165 -1
+0 0  0 141  -1
+0 89  0 55  0 165  -1
+0
+141 -1
+-1
+-1
+0
+36 55 0 -1
+-1
+-1
+1
+140 -1
+0 164  0 0  0 49  -1
+0 110  0 140  -1
+0
+49 -1
+-1
+-1
+0
+209 55 0 -1
+-1
+-1
+1
+209 166 0 -1
+0 141  0 62  0 192  -1
+0 209  0 0  0 166  0 55  -1
+0
+82 273 0 -1
+-1
+-1
+1
+267 273 0 -1
+0 64  0 169  0 271  -1
+0 273  0 0  0 267  0 82  -1
+1
+271 -1
+0 23  0 0  0 267  -1
+0 270  0 64  0 271  -1
+0
+267 -1
+-1
+-1
+0
+272 64 0 -1
+-1
+-1
+1
+272 211 0 -1
+0 57  0 267  0 227  -1
+0 0  0 211  0 272  0 64  -1
+0
+9 64 0 -1
+-1
+-1
+1
+9 262 0 -1
+0 267  0 84  0 266  -1
+0 9  0 0  0 262  0 64  -1
+0
+233 76 0 -1
+-1
+-1
+1
+233 48 0 -1
+0 139  0 214  0 137  -1
+0 233  0 0  0 48  0 76  -1
+0
+29 72 0 -1
+-1
+-1
+1
+29 47 0 -1
+0 136  0 135  0 134  -1
+0 29  0 0  0 47  0 72  -1
+1
+134 -1
+0 157  0 0  0 47  -1
+0 103  0 136  0 134  -1
+0
+47 -1
+-1
+-1
+0
+235 136 0 -1
+-1
+-1
+1
+235 202 0 -1
+0 56  0 47  0 217  -1
+0 235  0 0  0 202  0 136  -1
+0
+216 65 0 -1
+-1
+-1
+0
+5 83 0 -1
+-1
+-1
+1
+5 252 0 -1
+0 81  0 257  0 256  -1
+0 0  0 5  0 252  0 83  -1
+0
+149 63 0 -1
+-1
+-1
+1
+149 43 0 -1
+0 124  0 120  0 122  -1
+0 149  0 0  0 43  0 63  -1
+0
+246 71 0 -1
+-1
+-1
+1
+246 223 0 -1
+0 54  0 132  0 238  -1
+0 246  0 0  0 223  0 71  -1
+1
+238 -1
+0 245  0 0  0 223  -1
+0 88  0 54  0 238  -1
+0
+223 -1
+-1
+-1
+0
+54 26 0 -1
+-1
+-1
+1
+206 26 0 -1
+0 67  0 223  0 222  -1
+0 26  0 0  0 206  0 54  -1
+1
+222 -1
+0 0  0 206  -1
+0 100  0 67  0 222  -1
+0
+206 -1
+-1
+-1
+0
+67 221 0 -1
+-1
+-1
+1
+135 221 0 -1
+0 72  0 206  0 158  -1
+0 221  0 0  0 135  0 67  -1
+0
+17 67 0 -1
+-1
+-1
+1
+17 187 0 -1
+0 58  0 206  0 205  -1
+0 17  0 0  0 187  0 67  -1
+1
+205 -1
+0 219  0 0  0 187  -1
+0 92  0 58  0 205  -1
+0
+187 -1
+-1
+-1
+0
+225 58 0 -1
+-1
+-1
+1
+225 193 0 -1
+0 52  0 187  0 210  -1
+0 225  0 0  0 193  0 58  -1
+0
+24 58 0 -1
+-1
+-1
+1
+24 159 0 -1
+0 65  0 187  0 186  -1
+0 24  0 0  0 159  0 58  -1
+0
+1 60 0 -1
+-1
+-1
+1
+1 228 0 -1
+0 51  0 242  0 241  -1
+0 1  0 0  0 228  0 60  -1
+0
+161 78 0 -1
+-1
+-1
+1
+161 47 0 -1
+0 136  0 138  0 134  -1
+0 161  0 47  0 0  0 78  -1
+0
+191 80 0 -1
+-1
+-1
+1
+191 50 0 -1
+0 144  0 163  0 142  -1
+0 191  0 0  0 50  0 80  -1
+0
+2 81 0 -1
+-1
+-1
+1
+2 242 0 -1
+0 60  0 252  0 251  -1
+0 2  0 0  0 242  0 81  -1
+0
+37 56 0 -1
+-1
+-1
+0
+12 70 0 -1
+-1
+-1
+1
+12 129 0 -1
+0 53  0 154  0 153  -1
+0 0  0 12  0 129  0 70  -1
+0
+200 74 0 -1
+-1
+-1
+0
+0 -1
+-1
+-1
+0
+216 -1
+-1
+-1
+0
+215 159 181 0 -1
+-1
+-1
+1
+159 201 -1
+0 216  0 181  0 0  0 65  -1
+0 74  0 159  0 201  -1
+1
+215 181 0 -1
+0 201  0 74  0 111  -1
+0 0  0 181  0 215  -1
+0
+111 159 181 0 -1
+-1
+-1
+0
+99 159 0 -1
+-1
+-1
+0
+204 -1
+-1
+-1
+0
+203 44 159 0 -1
+-1
+-1
+1
+44 186 -1
+0 0  0 159  0 204  0 126  -1
+0 65  0 44  0 186  -1
+1
+203 159 0 -1
+0 186  0 65  0 99  -1
+0 0  0 159  0 203  -1
+0
+99 44 159 0 -1
+-1
+-1
+0
+125 44 0 -1
+-1
+-1
+0
+177 -1
+-1
+-1
+0
+11 151 44 0 -1
+-1
+-1
+1
+151 127 -1
+0 177  0 0  0 44  0 69  -1
+0 126  0 151  0 127  -1
+1
+11 44 0 -1
+0 127  0 126  0 125  -1
+0 0  0 44  0 11  -1
+0
+125 151 44 0 -1
+-1
+-1
+0
+175 151 0 -1
+-1
+-1
+0
+260 -1
+-1
+-1
+0
+30 257 151 0 -1
+-1
+-1
+1
+257 176 -1
+0 260  0 0  0 151  0 83  -1
+0 69  0 257  0 176  -1
+1
+30 151 0 -1
+0 176  0 69  0 175  -1
+0 0  0 151  0 30  -1
+0
+175 257 151 0 -1
+-1
+-1
+0
+257 117 0 -1
+-1
+-1
+0
+264 -1
+-1
+-1
+0
+263 42 257 0 -1
+-1
+-1
+1
+42 261 -1
+0 0  0 257  0 264  0 121  -1
+0 83  0 42  0 261  -1
+1
+263 257 0 -1
+0 261  0 83  0 117  -1
+0 0  0 257  0 263  -1
+0
+42 257 117 0 -1
+-1
+-1
+0
+42 104 0 -1
+-1
+-1
+0
+212 -1
+-1
+-1
+0
+145 197 42 0 -1
+-1
+-1
+1
+197 119 -1
+0 212  0 0  0 42  0 73  -1
+0 121  0 197  0 119  -1
+1
+145 42 0 -1
+0 119  0 121  0 104  -1
+0 0  0 42  0 145  -1
+0
+197 42 104 0 -1
+-1
+-1
+1
+230 197 0 -1
+0 73  0 147  0 213  -1
+0 0  0 197  0 230  0 61  -1
+0
+109 197 0 -1
+-1
+-1
+0
+230 -1
+-1
+-1
+0
+229 147 197 0 -1
+-1
+-1
+1
+147 213 -1
+0 0  0 197  0 230  0 61  -1
+0 73  0 147  0 213  -1
+1
+229 197 0 -1
+0 73  0 213  0 109  -1
+0 0  0 197  0 229  -1
+0
+109 147 197 0 -1
+-1
+-1
+0
+147 -1
+-1
+-1
+1
+20 147 0 -1
+0 61  0 173  0 172  -1
+0 20  0 0  0 147  0 79  -1
+0
+96 147 0 -1
+-1
+-1
+1
+172 -1
+0 0  0 147  -1
+0 96  0 61  0 172  -1
+0
+22 61 0 -1
+-1
+-1
+1
+22 120 0 -1
+0 63  0 147  0 146  -1
+0 0  0 120  0 22  0 61  -1
+0
+230 61 0 -1
+-1
+-1
+0
+244 -1
+-1
+-1
+0
+25 154 218 0 -1
+-1
+-1
+1
+154 237 -1
+0 0  0 244  0 218  0 70  -1
+0 66  0 154  0 237  -1
+1
+25 218 0 -1
+0 237  0 66  0 236  -1
+0 0  0 218  0 25  -1
+0
+236 154 218 0 -1
+-1
+-1
+0
+106 154 0 -1
+-1
+-1
+0
+199 -1
+-1
+-1
+0
+198 129 154 0 -1
+-1
+-1
+1
+129 180 -1
+0 199  0 0  0 154  0 53  -1
+0 70  0 129  0 180  -1
+1
+198 154 0 -1
+0 180  0 70  0 106  -1
+0 0  0 154  0 198  -1
+0
+106 129 154 0 -1
+-1
+-1
+0
+87 129 0 -1
+-1
+-1
+0
+179 -1
+-1
+-1
+0
+178 43 129 0 -1
+-1
+-1
+1
+43 153 -1
+0 179  0 0  0 129  0 124  -1
+0 53  0 43  0 153  -1
+1
+178 129 0 -1
+0 153  0 53  0 87  -1
+0 0  0 129  0 178  -1
+0
+87 43 129 0 -1
+-1
+-1
+0
+116 43 0 -1
+-1
+-1
+0
+149 -1
+-1
+-1
+0
+148 120 43 0 -1
+-1
+-1
+1
+120 122 -1
+0 149  0 0  0 43  0 63  -1
+0 124  0 120  0 122  -1
+1
+148 43 0 -1
+0 122  0 124  0 116  -1
+0 0  0 43  0 148  -1
+0
+116 120 43 0 -1
+-1
+-1
+0
+98 120 0 -1
+-1
+-1
+0
+171 -1
+-1
+-1
+0
+170 46 120 0 -1
+-1
+-1
+1
+46 146 -1
+0 171  0 0  0 120  0 133  -1
+0 63  0 46  0 146  -1
+1
+170 120 0 -1
+0 146  0 63  0 98  -1
+0 0  0 120  0 170  -1
+0
+98 46 120 0 -1
+-1
+-1
+0
+101 46 0 -1
+-1
+-1
+0
+209 -1
+-1
+-1
+0
+141 166 208 0 -1
+-1
+-1
+1
+141 192 -1
+0 209  0 0  0 166  0 55  -1
+0 141  0 62  0 192  -1
+1
+166 208 0 -1
+0 192  0 62  0 97  -1
+0 166  0 0  0 208  -1
+0
+97 141 166 0 -1
+-1
+-1
+0
+89 141 0 -1
+-1
+-1
+0
+246 -1
+-1
+-1
+0
+245 132 223 0 -1
+-1
+-1
+1
+132 238 -1
+0 246  0 0  0 223  0 71  -1
+0 54  0 132  0 238  -1
+1
+245 223 0 -1
+0 238  0 54  0 88  -1
+0 0  0 223  0 245  -1
+0
+88 132 223 0 -1
+-1
+-1
+1
+223 13 0 -1
+0 54  0 239  0 238  -1
+0 13  0 0  0 223  0 75  -1
+1
+33 132 0 -1
+0 71  0 156  0 155  -1
+0 33  0 0  0 132  0 77  -1
+0
+107 132 0 -1
+-1
+-1
+0
+250 -1
+-1
+-1
+0
+242 132 182 0 -1
+-1
+-1
+1
+242 155 -1
+0 250  0 0  0 132  0 60  -1
+0 71  0 242  0 155  -1
+1
+132 182 0 -1
+0 155  0 71  0 107  -1
+0 132  0 0  0 182  -1
+0
+107 242 132 0 -1
+-1
+-1
+0
+95 242 0 -1
+-1
+-1
+0
+254 -1
+-1
+-1
+0
+253 48 242 0 -1
+-1
+-1
+1
+48 251 -1
+0 254  0 0  0 242  0 139  -1
+0 60  0 48  0 251  -1
+1
+253 242 0 -1
+0 60  0 251  0 95  -1
+0 0  0 242  0 253  -1
+0
+95 48 242 0 -1
+-1
+-1
+0
+105 48 0 -1
+-1
+-1
+0
+233 -1
+-1
+-1
+0
+160 214 48 0 -1
+-1
+-1
+1
+214 137 -1
+0 233  0 0  0 48  0 76  -1
+0 139  0 214  0 137  -1
+1
+160 48 0 -1
+0 137  0 139  0 105  -1
+0 0  0 48  0 160  -1
+0
+105 214 48 0 -1
+-1
+-1
+0
+231 214 0 -1
+-1
+-1
+0
+243 -1
+-1
+-1
+0
+4 135 214 0 -1
+-1
+-1
+1
+135 232 -1
+0 243  0 0  0 214  0 72  -1
+0 135  0 76  0 232  -1
+1
+4 214 0 -1
+0 232  0 76  0 231  -1
+0 0  0 214  0 4  -1
+0
+231 135 214 0 -1
+-1
+-1
+0
+108 135 0 -1
+-1
+-1
+0
+221 -1
+-1
+-1
+0
+185 206 135 0 -1
+-1
+-1
+1
+206 158 -1
+0 221  0 0  0 135  0 67  -1
+0 72  0 206  0 158  -1
+1
+185 135 0 -1
+0 158  0 72  0 108  -1
+0 0  0 135  0 185  -1
+0
+108 206 135 0 -1
+-1
+-1
+0
+100 206 0 -1
+-1
+-1
+0
+225 -1
+-1
+-1
+0
+224 187 193 0 -1
+-1
+-1
+1
+187 210 -1
+0 225  0 0  0 193  0 58  -1
+0 52  0 187  0 210  -1
+1
+224 193 0 -1
+0 210  0 52  0 86  -1
+0 0  0 193  0 224  -1
+0
+86 187 193 0 -1
+-1
+-1
+1
+220 187 0 -1
+0 58  0 173  0 205  -1
+0 220  0 0  0 187  0 79  -1
+0
+92 187 0 -1
+-1
+-1
+0
+220 -1
+-1
+-1
+0
+219 173 187 0 -1
+-1
+-1
+1
+173 205 -1
+0 220  0 0  0 187  0 79  -1
+0 58  0 173  0 205  -1
+1
+219 187 0 -1
+0 205  0 58  0 92  -1
+0 0  0 187  0 219  -1
+0
+92 173 187 0 -1
+-1
+-1
+0
+173 -1
+-1
+-1
+0
+20 79 0 -1
+-1
+-1
+0
+220 79 0 -1
+-1
+-1
+0
+265 -1
+-1
+-1
+0
+174 262 123 0 -1
+-1
+-1
+1
+262 150 -1
+0 265  0 0  0 123  0 84  -1
+0 68  0 262  0 150  -1
+1
+174 123 0 -1
+0 150  0 68  0 102  -1
+0 0  0 123  0 174  -1
+0
+102 262 123 0 -1
+-1
+-1
+0
+118 262 0 -1
+-1
+-1
+0
+269 -1
+-1
+-1
+0
+268 50 262 0 -1
+-1
+-1
+1
+50 266 -1
+0 269  0 0  0 262  0 144  -1
+0 50  0 84  0 266  -1
+1
+268 262 0 -1
+0 266  0 84  0 118  -1
+0 0  0 262  0 268  -1
+0
+118 50 262 0 -1
+-1
+-1
+0
+112 50 0 -1
+-1
+-1
+0
+191 -1
+-1
+-1
+0
+163 167 50 0 -1
+-1
+-1
+1
+163 142 -1
+0 191  0 0  0 50  0 80  -1
+0 144  0 163  0 142  -1
+1
+167 50 0 -1
+0 142  0 144  0 112  -1
+0 0  0 50  0 167  -1
+0
+112 163 50 0 -1
+-1
+-1
+0
+189 163 0 -1
+-1
+-1
+0
+207 -1
+-1
+-1
+0
+41 45 163 0 -1
+-1
+-1
+1
+45 190 -1
+0 207  0 163  0 0  0 130  -1
+0 80  0 45  0 190  -1
+1
+41 163 0 -1
+0 190  0 80  0 189  -1
+0 0  0 163  0 41  -1
+0
+45 189 163 0 -1
+-1
+-1
+0
+94 45 0 -1
+-1
+-1
+0
+255 -1
+-1
+-1
+0
+152 252 45 0 -1
+-1
+-1
+1
+252 128 -1
+0 255  0 0  0 45  0 81  -1
+0 130  0 252  0 128  -1
+1
+152 45 0 -1
+0 128  0 130  0 94  -1
+0 0  0 45  0 152  -1
+0
+94 252 45 0 -1
+-1
+-1
+0
+114 252 0 -1
+-1
+-1
+0
+259 -1
+-1
+-1
+0
+258 202 252 0 -1
+-1
+-1
+1
+202 256 -1
+0 259  0 0  0 252  0 56  -1
+0 81  0 202  0 256  -1
+1
+258 252 0 -1
+0 256  0 81  0 114  -1
+0 0  0 252  0 258  -1
+0
+114 202 252 0 -1
+-1
+-1
+0
+90 202 0 -1
+-1
+-1
+0
+235 -1
+-1
+-1
+0
+47 202 234 0 -1
+-1
+-1
+1
+47 217 -1
+0 235  0 0  0 202  0 136  -1
+0 56  0 47  0 217  -1
+1
+202 234 0 -1
+0 217  0 56  0 90  -1
+0 202  0 0  0 234  -1
+0
+90 47 202 0 -1
+-1
+-1
+0
+103 47 0 -1
+-1
+-1
+0
+161 -1
+-1
+-1
+0
+157 138 47 0 -1
+-1
+-1
+1
+138 134 -1
+0 161  0 47  0 0  0 78  -1
+0 136  0 138  0 134  -1
+1
+157 47 0 -1
+0 134  0 136  0 103  -1
+0 0  0 47  0 157  -1
+0
+103 138 47 0 -1
+-1
+-1
+0
+113 138 0 -1
+-1
+-1
+0
+226 -1
+-1
+-1
+0
+188 211 138 0 -1
+-1
+-1
+1
+211 162 -1
+0 0  0 138  0 226  0 57  -1
+0 78  0 211  0 162  -1
+1
+188 138 0 -1
+0 162  0 78  0 113  -1
+0 0  0 138  0 188  -1
+0
+113 211 138 0 -1
+-1
+-1
+0
+211 91 0 -1
+-1
+-1
+0
+272 -1
+-1
+-1
+0
+240 267 211 0 -1
+-1
+-1
+1
+267 227 -1
+0 0  0 211  0 272  0 64  -1
+0 57  0 267  0 227  -1
+1
+240 211 0 -1
+0 227  0 57  0 91  -1
+0 0  0 211  0 240  -1
+0
+267 211 91 0 -1
+-1
+-1
+0
+270 267 0 -1
+-1
+-1
+0
+273 -1
+-1
+-1
+0
+23 267 169 0 -1
+-1
+-1
+1
+169 271 -1
+0 273  0 0  0 267  0 82  -1
+0 64  0 169  0 271  -1
+1
+23 267 0 -1
+0 271  0 64  0 270  -1
+0 0  0 267  0 23  -1
+0
+270 267 169 0 -1
+-1
+-1
+0
+115 169 0 -1
+-1
+-1
+0
+249 -1
+-1
+-1
+0
+248 228 143 0 -1
+-1
+-1
+1
+143 241 -1
+0 249  0 0  0 228  0 59  -1
+0 51  0 143  0 241  -1
+1
+248 228 0 -1
+0 51  0 241  0 85  -1
+0 0  0 228  0 248  -1
+0
+85 228 143 0 -1
+-1
+-1
+1
+195 143 0 -1
+0 59  0 156  0 168  -1
+0 195  0 0  0 143  0 77  -1
+0
+93 143 0 -1
+-1
+-1
+0
+195 -1
+-1
+-1
+0
+194 156 143 0 -1
+-1
+-1
+1
+156 168 -1
+0 195  0 0  0 143  0 77  -1
+0 59  0 156  0 168  -1
+1
+194 143 0 -1
+0 168  0 59  0 93  -1
+0 0  0 143  0 194  -1
+0
+93 156 143 0 -1
+-1
+-1
+0
+156 -1
+-1
+-1
+1
+247 156 0 -1
+0 77  0 239  0 184  -1
+0 247  0 0  0 156  0 75  -1
+0
+183 156 0 -1
+-1
+-1
+1
+184 -1
+0 39  0 0  0 156  -1
+0 183  0 77  0 184  -1
+0
+33 77 0 -1
+-1
+-1
+0
+77 195 0 -1
+-1
+-1
+0
+247 -1
+-1
+-1
+0
+239 39 156 0 -1
+-1
+-1
+1
+239 184 -1
+0 247  0 0  0 156  0 75  -1
+0 77  0 239  0 184  -1
+1
+39 156 0 -1
+0 184  0 77  0 183  -1
+0 0  0 156  0 39  -1
+0
+183 239 156 0 -1
+-1
+-1
+0
+239 -1
+-1
+-1
+0
+75 247 0 -1
+-1
+-1
+0
+75 13 0 -1
+-1
+-1
+
+;; initial state
+118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 99 98 97 96 95 94 93 92 91 90 89 88 87 86 85 84 83 82 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 0 57 1 58 2 3 4 5 6 7 8 9 10 11 12 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 -1
+
+;; goal
+249 254 212 243 259 149 264 269 225 177 179 246 235 272 220 195 255 209 171 273 204 244 265 161 260 233 199 250 221 230 200 216 191 247 226 -1
+
+;; tasks (primitive and abstract)
+641
+0 __method_precondition_m0_do_put_on[b36,b37]
+0 nop[]
+0 __method_precondition_m4_do_move[b36,b37]
+0 stack[b36,b37]
+0 pick-up[b36]
+0 __method_precondition_m5_do_move[b36,b37]
+0 unstack[b36,b14]
+0 unstack[b36,b37]
+0 __method_precondition_m3_do_on_table[b37]
+0 unstack[b37,b15]
+0 unstack[b37,b24]
+0 __method_precondition_m2_do_on_table[b37]
+0 put-down[b37]
+0 __method_precondition_m7_do_clear[b37,b32]
+0 unstack[b32,b37]
+0 put-down[b32]
+0 __method_precondition_m6_do_clear[b32]
+0 __method_precondition_m7_do_clear[b32,b25]
+0 unstack[b25,b32]
+0 put-down[b25]
+0 __method_precondition_m6_do_clear[b25]
+0 __method_precondition_m7_do_clear[b25,b15]
+0 unstack[b15,b25]
+0 put-down[b15]
+0 __method_precondition_m6_do_clear[b15]
+0 __method_precondition_m7_do_clear[b15,b5]
+0 unstack[b5,b15]
+0 put-down[b5]
+0 __method_precondition_m6_do_clear[b5]
+0 __method_precondition_m7_do_clear[b5,b19]
+0 unstack[b19,b5]
+0 put-down[b19]
+0 __method_precondition_m6_do_clear[b19]
+0 __method_precondition_m7_do_clear[b19,b43]
+0 unstack[b43,b19]
+0 put-down[b43]
+0 __method_precondition_m6_do_clear[b43]
+0 __method_precondition_m7_do_clear[b43,b41]
+0 unstack[b41,b43]
+0 put-down[b41]
+0 __method_precondition_m6_do_clear[b41]
+0 __method_precondition_m7_do_clear[b41,b31]
+0 unstack[b31,b41]
+0 put-down[b31]
+0 __method_precondition_m6_do_clear[b31]
+0 __method_precondition_m7_do_clear[b31,b2]
+0 unstack[b2,b31]
+0 put-down[b2]
+0 __method_precondition_m6_do_clear[b2]
+0 __method_precondition_m7_do_clear[b2,b33]
+0 unstack[b33,b2]
+0 put-down[b33]
+0 __method_precondition_m6_do_clear[b33]
+0 __method_precondition_m7_do_clear[b33,b27]
+0 unstack[b27,b33]
+0 put-down[b27]
+0 __method_precondition_m6_do_clear[b27]
+0 __method_precondition_m7_do_clear[b27,b22]
+0 unstack[b22,b27]
+0 put-down[b22]
+0 __method_precondition_m6_do_clear[b22]
+0 __method_precondition_m7_do_clear[b22,b3]
+0 unstack[b3,b22]
+0 put-down[b3]
+0 __method_precondition_m6_do_clear[b3]
+0 __method_precondition_m7_do_clear[b3,b8]
+0 unstack[b8,b3]
+0 put-down[b8]
+0 __method_precondition_m6_do_clear[b8]
+0 __method_precondition_m7_do_clear[b8,b30]
+0 unstack[b30,b8]
+0 put-down[b30]
+0 __method_precondition_m6_do_clear[b30]
+0 __method_precondition_m7_do_clear[b30,b28]
+0 unstack[b28,b30]
+0 put-down[b28]
+0 __method_precondition_m6_do_clear[b28]
+0 __method_precondition_m7_do_clear[b28,b7]
+0 unstack[b7,b28]
+0 put-down[b7]
+0 __method_precondition_m6_do_clear[b7]
+0 __method_precondition_m7_do_clear[b7,b12]
+0 unstack[b12,b7]
+0 put-down[b12]
+0 __method_precondition_m6_do_clear[b12]
+0 __method_precondition_m7_do_clear[b12,b32]
+0 unstack[b32,b12]
+0 __method_precondition_m7_do_clear[b12,b19]
+0 unstack[b19,b12]
+0 __method_precondition_m7_do_clear[b30,b11]
+0 unstack[b11,b30]
+0 put-down[b11]
+0 __method_precondition_m6_do_clear[b11]
+0 __method_precondition_m7_do_clear[b11,b24]
+0 unstack[b24,b11]
+0 put-down[b24]
+0 __method_precondition_m6_do_clear[b24]
+0 __method_precondition_m7_do_clear[b24,b34]
+0 unstack[b34,b24]
+0 put-down[b34]
+0 __method_precondition_m6_do_clear[b34]
+0 __method_precondition_m7_do_clear[b34,b4]
+0 unstack[b4,b34]
+0 put-down[b4]
+0 __method_precondition_m6_do_clear[b4]
+0 __method_precondition_m7_do_clear[b4,b35]
+0 unstack[b35,b4]
+0 put-down[b35]
+0 __method_precondition_m6_do_clear[b35]
+0 __method_precondition_m7_do_clear[b35,b3]
+0 unstack[b3,b35]
+0 __method_precondition_m7_do_clear[b35,b6]
+0 unstack[b6,b35]
+0 put-down[b6]
+0 __method_precondition_m6_do_clear[b6]
+0 __method_precondition_m7_do_clear[b6,b18]
+0 unstack[b18,b6]
+0 put-down[b18]
+0 __method_precondition_m6_do_clear[b18]
+0 __method_precondition_m7_do_clear[b18,b39]
+0 unstack[b39,b18]
+0 put-down[b39]
+0 __method_precondition_m6_do_clear[b39]
+0 __method_precondition_m7_do_clear[b39,b9]
+0 unstack[b9,b39]
+0 put-down[b9]
+0 __method_precondition_m6_do_clear[b9]
+0 __method_precondition_m7_do_clear[b9,b28]
+0 unstack[b28,b9]
+0 __method_precondition_m7_do_clear[b9,b8]
+0 unstack[b8,b9]
+0 __method_precondition_m7_do_clear[b18,b1]
+0 unstack[b1,b18]
+0 put-down[b1]
+0 __method_precondition_m6_do_clear[b1]
+0 __method_precondition_m7_do_clear[b1,b16]
+0 unstack[b16,b1]
+0 put-down[b16]
+0 __method_precondition_m6_do_clear[b16]
+0 __method_precondition_m7_do_clear[b16,b41]
+0 unstack[b41,b16]
+0 __method_precondition_m7_do_clear[b16,b10]
+0 unstack[b10,b16]
+0 put-down[b10]
+0 __method_precondition_m6_do_clear[b10]
+0 __method_precondition_m7_do_clear[b10,b21]
+0 unstack[b21,b10]
+0 put-down[b21]
+0 __method_precondition_m6_do_clear[b21]
+0 __method_precondition_m7_do_clear[b21,b14]
+0 unstack[b14,b21]
+0 put-down[b14]
+0 __method_precondition_m6_do_clear[b14]
+0 __method_precondition_m7_do_clear[b14,b36]
+0 put-down[b36]
+0 __method_precondition_m6_do_clear[b36]
+0 __method_precondition_m7_do_clear[b14,b21]
+0 unstack[b21,b14]
+0 __method_precondition_m7_do_clear[b6,b23]
+0 unstack[b23,b6]
+0 put-down[b23]
+0 __method_precondition_m6_do_clear[b23]
+0 __method_precondition_m7_do_clear[b23,b16]
+0 unstack[b16,b23]
+0 __method_precondition_m7_do_clear[b23,b9]
+0 unstack[b9,b23]
+0 __method_precondition_m7_do_clear[b4,b31]
+0 unstack[b31,b4]
+0 __method_precondition_m7_do_clear[b34,b29]
+0 unstack[b29,b34]
+0 put-down[b29]
+0 __method_precondition_m6_do_clear[b29]
+0 __method_precondition_m7_do_clear[b29,b15]
+0 unstack[b15,b29]
+0 __method_precondition_m7_do_clear[b24,b37]
+0 __method_precondition_m7_do_clear[b8,b5]
+0 unstack[b5,b8]
+0 __method_precondition_m7_do_clear[b22,b7]
+0 unstack[b7,b22]
+0 __method_precondition_m7_do_clear[b33,b13]
+0 unstack[b13,b33]
+0 put-down[b13]
+0 __method_precondition_m6_do_clear[b13]
+0 __method_precondition_m7_do_clear[b13,b26]
+0 unstack[b26,b13]
+0 put-down[b26]
+0 __method_precondition_m6_do_clear[b26]
+0 __method_precondition_m7_do_clear[b26,b34]
+0 unstack[b34,b26]
+0 __method_precondition_m7_do_clear[b26,b17]
+0 unstack[b17,b26]
+0 put-down[b17]
+0 __method_precondition_m6_do_clear[b17]
+0 __method_precondition_m7_do_clear[b17,b10]
+0 unstack[b10,b17]
+0 __method_precondition_m7_do_clear[b17,b24]
+0 unstack[b24,b17]
+0 __method_precondition_m7_do_clear[b2,b1]
+0 unstack[b1,b2]
+0 __method_precondition_m7_do_clear[b41,b29]
+0 unstack[b29,b41]
+0 __method_precondition_m7_do_clear[b43,b39]
+0 unstack[b39,b43]
+0 __method_precondition_m7_do_clear[b5,b2]
+0 unstack[b2,b5]
+0 __method_precondition_m7_do_clear[b15,b37]
+0 __method_precondition_m7_do_clear[b32,b12]
+0 unstack[b12,b32]
+0 __method_precondition_m7_do_clear[b37,b36]
+0 __method_precondition_m1_do_put_on[]
+0 __method_precondition_m0_do_put_on[b37,b24]
+0 __method_precondition_m4_do_move[b37,b24]
+0 stack[b37,b24]
+0 pick-up[b37]
+0 __method_precondition_m5_do_move[b37,b24]
+0 __method_precondition_m2_do_on_table[b24]
+0 __method_precondition_m0_do_put_on[b24,b11]
+0 __method_precondition_m4_do_move[b24,b11]
+0 stack[b24,b11]
+0 pick-up[b24]
+0 __method_precondition_m5_do_move[b24,b11]
+0 __method_precondition_m2_do_on_table[b11]
+0 __method_precondition_m0_do_put_on[b11,b30]
+0 __method_precondition_m4_do_move[b11,b30]
+0 stack[b11,b30]
+0 pick-up[b11]
+0 __method_precondition_m5_do_move[b11,b30]
+0 __method_precondition_m2_do_on_table[b30]
+0 __method_precondition_m0_do_put_on[b30,b8]
+0 __method_precondition_m4_do_move[b30,b8]
+0 stack[b30,b8]
+0 pick-up[b30]
+0 __method_precondition_m5_do_move[b30,b8]
+0 __method_precondition_m2_do_on_table[b8]
+0 __method_precondition_m0_do_put_on[b8,b3]
+0 __method_precondition_m4_do_move[b8,b3]
+0 stack[b8,b3]
+0 pick-up[b8]
+0 __method_precondition_m5_do_move[b8,b3]
+0 __method_precondition_m2_do_on_table[b3]
+0 __method_precondition_m0_do_put_on[b3,b35]
+0 __method_precondition_m4_do_move[b3,b35]
+0 stack[b3,b35]
+0 pick-up[b3]
+0 __method_precondition_m5_do_move[b3,b35]
+0 unstack[b35,b20]
+0 __method_precondition_m2_do_on_table[b35]
+0 __method_precondition_m0_do_put_on[b35,b20]
+0 __method_precondition_m4_do_move[b35,b20]
+0 stack[b35,b20]
+0 pick-up[b35]
+0 __method_precondition_m5_do_move[b35,b20]
+0 __method_precondition_m3_do_on_table[b20]
+0 unstack[b20,b42]
+0 __method_precondition_m2_do_on_table[b20]
+0 put-down[b20]
+0 __method_precondition_m7_do_clear[b20,b22]
+0 unstack[b22,b20]
+0 __method_precondition_m7_do_clear[b20,b35]
+0 __method_precondition_m0_do_put_on[b25,b32]
+0 __method_precondition_m4_do_move[b25,b32]
+0 stack[b25,b32]
+0 pick-up[b25]
+0 __method_precondition_m5_do_move[b25,b32]
+0 __method_precondition_m2_do_on_table[b32]
+0 __method_precondition_m0_do_put_on[b32,b12]
+0 __method_precondition_m4_do_move[b32,b12]
+0 stack[b32,b12]
+0 pick-up[b32]
+0 __method_precondition_m5_do_move[b32,b12]
+0 __method_precondition_m2_do_on_table[b12]
+0 __method_precondition_m0_do_put_on[b12,b7]
+0 __method_precondition_m4_do_move[b12,b7]
+0 stack[b12,b7]
+0 pick-up[b12]
+0 __method_precondition_m5_do_move[b12,b7]
+0 __method_precondition_m2_do_on_table[b7]
+0 __method_precondition_m0_do_put_on[b7,b22]
+0 __method_precondition_m4_do_move[b7,b22]
+0 stack[b7,b22]
+0 pick-up[b7]
+0 __method_precondition_m5_do_move[b7,b22]
+0 __method_precondition_m2_do_on_table[b22]
+0 __method_precondition_m0_do_put_on[b22,b27]
+0 __method_precondition_m4_do_move[b22,b27]
+0 stack[b22,b27]
+0 pick-up[b22]
+0 __method_precondition_m5_do_move[b22,b27]
+0 __method_precondition_m2_do_on_table[b27]
+0 __method_precondition_m0_do_put_on[b21,b14]
+0 __method_precondition_m4_do_move[b21,b14]
+0 stack[b21,b14]
+0 pick-up[b21]
+0 __method_precondition_m5_do_move[b21,b14]
+0 __method_precondition_m2_do_on_table[b14]
+0 __method_precondition_m0_do_put_on[b13,b33]
+0 __method_precondition_m4_do_move[b13,b33]
+0 stack[b13,b33]
+0 pick-up[b13]
+0 __method_precondition_m5_do_move[b13,b33]
+0 unstack[b13,b38]
+0 unstack[b33,b40]
+0 __method_precondition_m2_do_on_table[b33]
+0 __method_precondition_m0_do_put_on[b33,b2]
+0 __method_precondition_m4_do_move[b33,b2]
+0 stack[b33,b2]
+0 pick-up[b33]
+0 __method_precondition_m5_do_move[b33,b2]
+0 __method_precondition_m2_do_on_table[b2]
+0 __method_precondition_m0_do_put_on[b2,b31]
+0 __method_precondition_m4_do_move[b2,b31]
+0 stack[b2,b31]
+0 pick-up[b2]
+0 __method_precondition_m5_do_move[b2,b31]
+0 __method_precondition_m2_do_on_table[b31]
+0 __method_precondition_m0_do_put_on[b31,b4]
+0 __method_precondition_m4_do_move[b31,b4]
+0 stack[b31,b4]
+0 pick-up[b31]
+0 __method_precondition_m5_do_move[b31,b4]
+0 __method_precondition_m2_do_on_table[b4]
+0 __method_precondition_m0_do_put_on[b4,b34]
+0 __method_precondition_m4_do_move[b4,b34]
+0 stack[b4,b34]
+0 pick-up[b4]
+0 __method_precondition_m5_do_move[b4,b34]
+0 __method_precondition_m2_do_on_table[b34]
+0 __method_precondition_m0_do_put_on[b34,b26]
+0 __method_precondition_m4_do_move[b34,b26]
+0 stack[b34,b26]
+0 pick-up[b34]
+0 __method_precondition_m5_do_move[b34,b26]
+0 __method_precondition_m2_do_on_table[b26]
+0 __method_precondition_m0_do_put_on[b10,b17]
+0 __method_precondition_m4_do_move[b10,b17]
+0 stack[b10,b17]
+0 pick-up[b10]
+0 __method_precondition_m5_do_move[b10,b17]
+0 unstack[b17,b42]
+0 __method_precondition_m2_do_on_table[b17]
+0 __method_precondition_m0_do_put_on[b17,b42]
+0 __method_precondition_m4_do_move[b17,b42]
+0 stack[b17,b42]
+0 pick-up[b17]
+0 __method_precondition_m5_do_move[b17,b42]
+0 __method_precondition_m3_do_on_table[b42]
+0 __method_precondition_m7_do_clear[b42,b20]
+0 __method_precondition_m7_do_clear[b42,b17]
+0 __method_precondition_m0_do_put_on[b28,b9]
+0 __method_precondition_m4_do_move[b28,b9]
+0 stack[b28,b9]
+0 pick-up[b28]
+0 __method_precondition_m5_do_move[b28,b9]
+0 __method_precondition_m2_do_on_table[b9]
+0 __method_precondition_m0_do_put_on[b9,b39]
+0 __method_precondition_m4_do_move[b9,b39]
+0 stack[b9,b39]
+0 pick-up[b9]
+0 __method_precondition_m5_do_move[b9,b39]
+0 __method_precondition_m2_do_on_table[b39]
+0 __method_precondition_m0_do_put_on[b39,b43]
+0 __method_precondition_m4_do_move[b39,b43]
+0 stack[b39,b43]
+0 pick-up[b39]
+0 __method_precondition_m5_do_move[b39,b43]
+0 __method_precondition_m2_do_on_table[b43]
+0 __method_precondition_m0_do_put_on[b43,b19]
+0 __method_precondition_m4_do_move[b43,b19]
+0 stack[b43,b19]
+0 pick-up[b43]
+0 __method_precondition_m5_do_move[b43,b19]
+0 __method_precondition_m2_do_on_table[b19]
+0 __method_precondition_m0_do_put_on[b19,b5]
+0 __method_precondition_m4_do_move[b19,b5]
+0 stack[b19,b5]
+0 pick-up[b19]
+0 __method_precondition_m5_do_move[b19,b5]
+0 __method_precondition_m2_do_on_table[b5]
+0 __method_precondition_m0_do_put_on[b5,b15]
+0 __method_precondition_m4_do_move[b5,b15]
+0 stack[b5,b15]
+0 pick-up[b5]
+0 __method_precondition_m5_do_move[b5,b15]
+0 __method_precondition_m2_do_on_table[b15]
+0 __method_precondition_m0_do_put_on[b15,b29]
+0 __method_precondition_m4_do_move[b15,b29]
+0 stack[b15,b29]
+0 pick-up[b15]
+0 __method_precondition_m5_do_move[b15,b29]
+0 __method_precondition_m2_do_on_table[b29]
+0 __method_precondition_m0_do_put_on[b29,b41]
+0 __method_precondition_m4_do_move[b29,b41]
+0 stack[b29,b41]
+0 pick-up[b29]
+0 __method_precondition_m5_do_move[b29,b41]
+0 __method_precondition_m2_do_on_table[b41]
+0 __method_precondition_m0_do_put_on[b41,b16]
+0 __method_precondition_m4_do_move[b41,b16]
+0 stack[b41,b16]
+0 pick-up[b41]
+0 __method_precondition_m5_do_move[b41,b16]
+0 __method_precondition_m2_do_on_table[b16]
+0 __method_precondition_m0_do_put_on[b16,b23]
+0 __method_precondition_m4_do_move[b16,b23]
+0 stack[b16,b23]
+0 pick-up[b16]
+0 __method_precondition_m5_do_move[b16,b23]
+0 __method_precondition_m2_do_on_table[b23]
+0 __method_precondition_m0_do_put_on[b23,b6]
+0 __method_precondition_m4_do_move[b23,b6]
+0 stack[b23,b6]
+0 pick-up[b23]
+0 __method_precondition_m5_do_move[b23,b6]
+0 __method_precondition_m2_do_on_table[b6]
+0 __method_precondition_m0_do_put_on[b1,b18]
+0 __method_precondition_m4_do_move[b1,b18]
+0 stack[b1,b18]
+0 pick-up[b1]
+0 __method_precondition_m5_do_move[b1,b18]
+0 unstack[b18,b40]
+0 __method_precondition_m2_do_on_table[b18]
+0 __method_precondition_m0_do_put_on[b18,b40]
+0 __method_precondition_m4_do_move[b18,b40]
+0 stack[b18,b40]
+0 pick-up[b18]
+0 __method_precondition_m5_do_move[b18,b40]
+0 __method_precondition_m3_do_on_table[b40]
+0 unstack[b40,b38]
+0 __method_precondition_m2_do_on_table[b40]
+0 put-down[b40]
+0 __method_precondition_m7_do_clear[b40,b33]
+0 __method_precondition_m7_do_clear[b40,b18]
+0 __method_precondition_m0_do_put_on[b40,b38]
+0 __method_precondition_m4_do_move[b40,b38]
+0 stack[b40,b38]
+0 pick-up[b40]
+0 __method_precondition_m5_do_move[b40,b38]
+0 __method_precondition_m3_do_on_table[b38]
+0 __method_precondition_m7_do_clear[b38,b40]
+0 __method_precondition_m7_do_clear[b38,b13]
+1 __top[]
+1 do_put_on[b36,b37]
+1 do_move[b36,b37]
+1 m5_do_move_splitted_1[b36]
+1 do_on_table[b37]
+1 m2_do_on_table_splitted_2[b37]
+1 do_clear[b37]
+1 do_clear[b32]
+1 do_clear[b25]
+1 do_clear[b15]
+1 do_clear[b5]
+1 do_clear[b19]
+1 do_clear[b43]
+1 do_clear[b41]
+1 do_clear[b31]
+1 do_clear[b2]
+1 do_clear[b33]
+1 do_clear[b27]
+1 do_clear[b22]
+1 do_clear[b3]
+1 do_clear[b8]
+1 do_clear[b30]
+1 do_clear[b28]
+1 do_clear[b7]
+1 do_clear[b12]
+1 do_clear[b11]
+1 do_clear[b24]
+1 do_clear[b34]
+1 do_clear[b4]
+1 do_clear[b35]
+1 do_clear[b6]
+1 do_clear[b18]
+1 do_clear[b39]
+1 do_clear[b9]
+1 do_clear[b1]
+1 do_clear[b16]
+1 do_clear[b10]
+1 do_clear[b21]
+1 do_clear[b14]
+1 do_clear[b23]
+1 do_clear[b29]
+1 do_clear[b13]
+1 do_clear[b26]
+1 do_clear[b17]
+1 do_put_on[b37,b24]
+1 do_move[b37,b24]
+1 m5_do_move_splitted_1[b37]
+1 do_on_table[b24]
+1 m2_do_on_table_splitted_2[b24]
+1 do_put_on[b24,b11]
+1 do_move[b24,b11]
+1 m5_do_move_splitted_1[b24]
+1 do_on_table[b11]
+1 do_put_on[b11,b30]
+1 do_move[b11,b30]
+1 do_on_table[b30]
+1 do_put_on[b30,b8]
+1 do_move[b30,b8]
+1 do_on_table[b8]
+1 m2_do_on_table_splitted_2[b8]
+1 do_put_on[b8,b3]
+1 do_move[b8,b3]
+1 m5_do_move_splitted_1[b8]
+1 do_on_table[b3]
+1 m2_do_on_table_splitted_2[b3]
+1 do_put_on[b3,b35]
+1 do_move[b3,b35]
+1 m5_do_move_splitted_1[b3]
+1 do_on_table[b35]
+1 m2_do_on_table_splitted_2[b35]
+1 do_put_on[b35,b20]
+1 do_move[b35,b20]
+1 m5_do_move_splitted_1[b35]
+1 do_on_table[b20]
+1 do_clear[b20]
+1 do_put_on[b25,b32]
+1 do_move[b25,b32]
+1 do_on_table[b32]
+1 m2_do_on_table_splitted_2[b32]
+1 do_put_on[b32,b12]
+1 do_move[b32,b12]
+1 m5_do_move_splitted_1[b32]
+1 do_on_table[b12]
+1 m2_do_on_table_splitted_2[b12]
+1 do_put_on[b12,b7]
+1 do_move[b12,b7]
+1 m5_do_move_splitted_1[b12]
+1 do_on_table[b7]
+1 m2_do_on_table_splitted_2[b7]
+1 do_put_on[b7,b22]
+1 do_move[b7,b22]
+1 m5_do_move_splitted_1[b7]
+1 do_on_table[b22]
+1 m2_do_on_table_splitted_2[b22]
+1 do_put_on[b22,b27]
+1 do_move[b22,b27]
+1 m5_do_move_splitted_1[b22]
+1 do_on_table[b27]
+1 do_put_on[b21,b14]
+1 do_move[b21,b14]
+1 m5_do_move_splitted_1[b21]
+1 do_on_table[b14]
+1 do_put_on[b13,b33]
+1 do_move[b13,b33]
+1 m5_do_move_splitted_1[b13]
+1 do_on_table[b33]
+1 m2_do_on_table_splitted_2[b33]
+1 do_put_on[b33,b2]
+1 do_move[b33,b2]
+1 m5_do_move_splitted_1[b33]
+1 do_on_table[b2]
+1 m2_do_on_table_splitted_2[b2]
+1 do_put_on[b2,b31]
+1 do_move[b2,b31]
+1 m5_do_move_splitted_1[b2]
+1 do_on_table[b31]
+1 m2_do_on_table_splitted_2[b31]
+1 do_put_on[b31,b4]
+1 do_move[b31,b4]
+1 m5_do_move_splitted_1[b31]
+1 do_on_table[b4]
+1 do_put_on[b4,b34]
+1 do_move[b4,b34]
+1 do_on_table[b34]
+1 m2_do_on_table_splitted_2[b34]
+1 do_put_on[b34,b26]
+1 do_move[b34,b26]
+1 m5_do_move_splitted_1[b34]
+1 do_on_table[b26]
+1 do_put_on[b10,b17]
+1 do_move[b10,b17]
+1 m5_do_move_splitted_1[b10]
+1 do_on_table[b17]
+1 m2_do_on_table_splitted_2[b17]
+1 do_put_on[b17,b42]
+1 do_move[b17,b42]
+1 m5_do_move_splitted_1[b17]
+1 do_clear[b42]
+1 do_put_on[b28,b9]
+1 do_move[b28,b9]
+1 m5_do_move_splitted_1[b28]
+1 do_on_table[b9]
+1 m2_do_on_table_splitted_2[b9]
+1 do_put_on[b9,b39]
+1 do_move[b9,b39]
+1 m5_do_move_splitted_1[b9]
+1 do_on_table[b39]
+1 m2_do_on_table_splitted_2[b39]
+1 do_put_on[b39,b43]
+1 do_move[b39,b43]
+1 m5_do_move_splitted_1[b39]
+1 do_on_table[b43]
+1 do_put_on[b43,b19]
+1 do_move[b43,b19]
+1 do_on_table[b19]
+1 m2_do_on_table_splitted_2[b19]
+1 do_put_on[b19,b5]
+1 do_move[b19,b5]
+1 m5_do_move_splitted_1[b19]
+1 do_on_table[b5]
+1 m2_do_on_table_splitted_2[b5]
+1 do_put_on[b5,b15]
+1 do_move[b5,b15]
+1 m5_do_move_splitted_1[b5]
+1 do_on_table[b15]
+1 m2_do_on_table_splitted_2[b15]
+1 do_put_on[b15,b29]
+1 do_move[b15,b29]
+1 m5_do_move_splitted_1[b15]
+1 do_on_table[b29]
+1 m2_do_on_table_splitted_2[b29]
+1 do_put_on[b29,b41]
+1 do_move[b29,b41]
+1 m5_do_move_splitted_1[b29]
+1 do_on_table[b41]
+1 m2_do_on_table_splitted_2[b41]
+1 do_put_on[b41,b16]
+1 do_move[b41,b16]
+1 m5_do_move_splitted_1[b41]
+1 do_on_table[b16]
+1 m2_do_on_table_splitted_2[b16]
+1 do_put_on[b16,b23]
+1 do_move[b16,b23]
+1 m5_do_move_splitted_1[b16]
+1 do_on_table[b23]
+1 do_put_on[b23,b6]
+1 do_move[b23,b6]
+1 do_on_table[b6]
+1 do_put_on[b1,b18]
+1 do_move[b1,b18]
+1 m5_do_move_splitted_1[b1]
+1 do_on_table[b18]
+1 m2_do_on_table_splitted_2[b18]
+1 do_put_on[b18,b40]
+1 do_move[b18,b40]
+1 m5_do_move_splitted_1[b18]
+1 do_on_table[b40]
+1 do_clear[b40]
+1 do_put_on[b40,b38]
+1 do_move[b40,b38]
+1 do_clear[b38]
+
+;; initial abstract task
+440
+
+;; methods
+429
+__top_method
+440
+638 633 628 625 621 616 611 606 601 596 592 588 583 578 574 569 565 561 557 552 547 542 538 534 529 524 519 515 510 505 500 496 493 489 484 441 -1
+34 35 33 34 32 33 31 32 30 31 29 30 28 29 27 28 26 27 25 26 24 25 23 24 22 23 21 22 20 21 19 20 18 19 17 18 16 17 15 16 14 15 13 14 12 13 11 12 10 11 9 10 8 9 7 8 6 7 5 6 4 5 3 4 2 3 1 2 0 1 -1
+m0_do_put_on
+441
+0 1 -1
+0 1 -1
+<m1_do_put_on;do_clear[b36];m6_do_clear;1;0,-1,-2,2,3,4>
+441
+209 155 1 446 444 442 -1
+4 5 3 4 1 3 1 2 0 5 0 4 0 3 0 1 0 2 2 3 -1
+m4_do_move
+442
+2 4 3 -1
+0 2 0 1 1 2 -1
+m5_do_move
+442
+5 443 3 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+443
+6 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+443
+7 -1
+-1
+m3_do_on_table
+444
+8 1 -1
+0 1 -1
+m2_do_on_table
+444
+11 445 12 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+445
+9 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+445
+10 -1
+-1
+m6_do_clear
+446
+8 1 -1
+0 1 -1
+m7_do_clear
+446
+13 447 14 15 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+447
+16 1 -1
+0 1 -1
+m7_do_clear
+447
+17 448 18 19 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+448
+20 1 -1
+0 1 -1
+m7_do_clear
+448
+21 449 22 23 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+449
+24 1 -1
+0 1 -1
+m7_do_clear
+449
+25 450 26 27 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+450
+28 1 -1
+0 1 -1
+m7_do_clear
+450
+29 451 30 31 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+451
+32 1 -1
+0 1 -1
+m7_do_clear
+451
+33 452 34 35 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+452
+36 1 -1
+0 1 -1
+m7_do_clear
+452
+37 453 38 39 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+453
+40 1 -1
+0 1 -1
+m7_do_clear
+453
+41 454 42 43 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+454
+44 1 -1
+0 1 -1
+m7_do_clear
+454
+45 455 46 47 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+455
+48 1 -1
+0 1 -1
+m7_do_clear
+455
+49 456 50 51 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+456
+52 1 -1
+0 1 -1
+m7_do_clear
+456
+53 457 54 55 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+457
+56 1 -1
+0 1 -1
+m7_do_clear
+457
+57 458 58 59 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+458
+60 1 -1
+0 1 -1
+m7_do_clear
+458
+61 459 62 63 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+459
+64 1 -1
+0 1 -1
+m7_do_clear
+459
+65 460 66 67 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+460
+68 1 -1
+0 1 -1
+m7_do_clear
+460
+69 461 70 71 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+461
+72 1 -1
+0 1 -1
+m7_do_clear
+461
+73 462 74 75 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+462
+76 1 -1
+0 1 -1
+m7_do_clear
+462
+77 463 78 79 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+463
+80 1 -1
+0 1 -1
+m7_do_clear
+463
+81 464 82 83 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+464
+84 1 -1
+0 1 -1
+m7_do_clear
+464
+85 447 86 15 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+464
+87 451 88 31 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+461
+89 465 90 91 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+465
+92 1 -1
+0 1 -1
+m7_do_clear
+465
+93 466 94 95 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+466
+96 1 -1
+0 1 -1
+m7_do_clear
+466
+97 467 98 99 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+467
+100 1 -1
+0 1 -1
+m7_do_clear
+467
+101 468 102 103 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+468
+104 1 -1
+0 1 -1
+m7_do_clear
+468
+105 469 106 107 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+469
+108 1 -1
+0 1 -1
+m7_do_clear
+469
+109 459 110 63 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+469
+111 470 112 113 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+470
+114 1 -1
+0 1 -1
+m7_do_clear
+470
+115 471 116 117 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+471
+118 1 -1
+0 1 -1
+m7_do_clear
+471
+119 472 120 121 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+472
+122 1 -1
+0 1 -1
+m7_do_clear
+472
+123 473 124 125 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+473
+126 1 -1
+0 1 -1
+m7_do_clear
+473
+127 462 128 75 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+473
+129 460 130 67 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+471
+131 474 132 133 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+474
+134 1 -1
+0 1 -1
+m7_do_clear
+474
+135 475 136 137 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+475
+138 1 -1
+0 1 -1
+m7_do_clear
+475
+139 453 140 39 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+475
+141 476 142 143 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+476
+144 1 -1
+0 1 -1
+m7_do_clear
+476
+145 477 146 147 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+477
+148 1 -1
+0 1 -1
+m7_do_clear
+477
+149 478 150 151 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+478
+152 1 -1
+0 1 -1
+<m7_do_clear;do_clear[b36];m6_do_clear;1;0,-1,-2,2,3>
+478
+153 155 1 6 154 -1
+0 3 0 4 0 1 0 2 3 4 1 3 1 2 2 3 -1
+m7_do_clear
+478
+156 477 157 147 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+470
+158 479 159 160 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+479
+161 1 -1
+0 1 -1
+m7_do_clear
+479
+162 475 163 137 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+479
+164 473 165 125 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+468
+166 454 167 43 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+467
+168 480 169 170 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+480
+171 1 -1
+0 1 -1
+m7_do_clear
+480
+172 449 173 23 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+466
+174 446 10 12 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+460
+175 450 176 27 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+458
+177 463 178 79 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+456
+179 481 180 181 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+481
+182 1 -1
+0 1 -1
+m7_do_clear
+481
+183 482 184 185 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+482
+186 1 -1
+0 1 -1
+m7_do_clear
+482
+187 467 188 99 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+482
+189 483 190 191 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m6_do_clear
+483
+192 1 -1
+0 1 -1
+m7_do_clear
+483
+193 476 194 143 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+483
+195 466 196 95 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+455
+197 474 198 133 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+453
+199 480 200 170 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+452
+201 472 202 121 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+450
+203 455 204 47 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+449
+205 446 9 12 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+447
+206 464 207 83 -1
+0 2 0 3 0 1 2 3 1 2 -1
+<m7_do_clear;do_clear[b36];m6_do_clear;1;0,-1,-2,2,3>
+446
+208 155 1 7 154 -1
+0 3 0 4 0 1 0 2 3 4 1 3 1 2 2 3 -1
+m0_do_put_on
+484
+210 1 -1
+0 1 -1
+m1_do_put_on
+484
+209 446 466 487 485 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+485
+211 213 212 -1
+0 2 0 1 1 2 -1
+m5_do_move
+485
+214 486 212 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+486
+9 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+486
+10 -1
+-1
+m3_do_on_table
+487
+96 1 -1
+0 1 -1
+m2_do_on_table
+487
+215 488 95 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+488
+196 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+488
+94 -1
+-1
+m0_do_put_on
+489
+216 1 -1
+0 1 -1
+m1_do_put_on
+489
+209 466 465 492 490 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+490
+217 219 218 -1
+0 2 0 1 1 2 -1
+m5_do_move
+490
+220 491 218 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+491
+196 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+491
+94 -1
+-1
+m3_do_on_table
+492
+92 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b11];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+492
+221 90 91 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+493
+222 1 -1
+0 1 -1
+m1_do_put_on
+493
+209 465 461 495 494 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+494
+223 225 224 -1
+0 2 0 1 1 2 -1
+<m5_do_move;m5_do_move_splitted_1[b11];_splitting_method_m5_do_move_splitted_1;1;0,-1,2>
+494
+226 90 224 -1
+0 2 0 1 1 2 -1
+m3_do_on_table
+495
+72 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b30];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+495
+227 70 71 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+496
+228 1 -1
+0 1 -1
+m1_do_put_on
+496
+209 461 460 498 497 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+497
+229 231 230 -1
+0 2 0 1 1 2 -1
+<m5_do_move;m5_do_move_splitted_1[b30];_splitting_method_m5_do_move_splitted_1;1;0,-1,2>
+497
+232 70 230 -1
+0 2 0 1 1 2 -1
+m3_do_on_table
+498
+68 1 -1
+0 1 -1
+m2_do_on_table
+498
+233 499 67 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+499
+66 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+499
+130 -1
+-1
+m0_do_put_on
+500
+234 1 -1
+0 1 -1
+m1_do_put_on
+500
+209 460 459 503 501 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+501
+235 237 236 -1
+0 2 0 1 1 2 -1
+m5_do_move
+501
+238 502 236 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+502
+66 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+502
+130 -1
+-1
+m3_do_on_table
+503
+64 1 -1
+0 1 -1
+m2_do_on_table
+503
+239 504 63 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+504
+62 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+504
+110 -1
+-1
+m0_do_put_on
+505
+240 1 -1
+0 1 -1
+m1_do_put_on
+505
+209 459 469 508 506 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+506
+241 243 242 -1
+0 2 0 1 1 2 -1
+m5_do_move
+506
+244 507 242 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+507
+62 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+507
+110 -1
+-1
+m3_do_on_table
+508
+108 1 -1
+0 1 -1
+m2_do_on_table
+508
+246 509 107 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+509
+245 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+509
+106 -1
+-1
+m0_do_put_on
+510
+247 1 -1
+0 1 -1
+m1_do_put_on
+510
+209 469 514 513 511 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+511
+248 250 249 -1
+0 2 0 1 1 2 -1
+m5_do_move
+511
+251 512 249 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+512
+245 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+512
+106 -1
+-1
+m3_do_on_table
+513
+252 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b20];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+513
+254 253 255 -1
+1 2 0 1 0 2 -1
+m6_do_clear
+514
+252 1 -1
+0 1 -1
+m7_do_clear
+514
+256 458 257 59 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+514
+258 469 245 107 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m0_do_put_on
+515
+259 1 -1
+0 1 -1
+m1_do_put_on
+515
+209 448 447 517 516 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+516
+260 262 261 -1
+0 2 0 1 1 2 -1
+<m5_do_move;m5_do_move_splitted_1[b25];_splitting_method_m5_do_move_splitted_1;1;0,-1,2>
+516
+263 18 261 -1
+0 2 0 1 1 2 -1
+m3_do_on_table
+517
+16 1 -1
+0 1 -1
+m2_do_on_table
+517
+264 518 15 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+518
+14 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+518
+86 -1
+-1
+m0_do_put_on
+519
+265 1 -1
+0 1 -1
+m1_do_put_on
+519
+209 447 464 522 520 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+520
+266 268 267 -1
+0 2 0 1 1 2 -1
+m5_do_move
+520
+269 521 267 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+521
+14 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+521
+86 -1
+-1
+m3_do_on_table
+522
+84 1 -1
+0 1 -1
+m2_do_on_table
+522
+270 523 83 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+523
+82 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+523
+207 -1
+-1
+m0_do_put_on
+524
+271 1 -1
+0 1 -1
+m1_do_put_on
+524
+209 464 463 527 525 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+525
+272 274 273 -1
+0 2 0 1 1 2 -1
+m5_do_move
+525
+275 526 273 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+526
+82 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+526
+207 -1
+-1
+m3_do_on_table
+527
+80 1 -1
+0 1 -1
+m2_do_on_table
+527
+276 528 79 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+528
+78 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+528
+178 -1
+-1
+m0_do_put_on
+529
+277 1 -1
+0 1 -1
+m1_do_put_on
+529
+209 463 458 532 530 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+530
+278 280 279 -1
+0 2 0 1 1 2 -1
+m5_do_move
+530
+281 531 279 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+531
+78 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+531
+178 -1
+-1
+m3_do_on_table
+532
+60 1 -1
+0 1 -1
+m2_do_on_table
+532
+282 533 59 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+533
+58 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+533
+257 -1
+-1
+m0_do_put_on
+534
+283 1 -1
+0 1 -1
+m1_do_put_on
+534
+209 458 457 537 535 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+535
+284 286 285 -1
+0 2 0 1 1 2 -1
+m5_do_move
+535
+287 536 285 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+536
+58 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+536
+257 -1
+-1
+m3_do_on_table
+537
+56 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b27];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+537
+288 54 55 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+538
+289 1 -1
+0 1 -1
+m1_do_put_on
+538
+209 477 478 541 539 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+539
+290 292 291 -1
+0 2 0 1 1 2 -1
+m5_do_move
+539
+293 540 291 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+540
+146 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+540
+157 -1
+-1
+m3_do_on_table
+541
+152 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b14];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+541
+294 150 151 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+542
+295 1 -1
+0 1 -1
+m1_do_put_on
+542
+209 481 456 545 543 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+543
+296 298 297 -1
+0 2 0 1 1 2 -1
+m5_do_move
+543
+299 544 297 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+544
+180 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+544
+300 -1
+-1
+m3_do_on_table
+545
+52 1 -1
+0 1 -1
+m2_do_on_table
+545
+302 546 51 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+546
+50 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+546
+301 -1
+-1
+m0_do_put_on
+547
+303 1 -1
+0 1 -1
+m1_do_put_on
+547
+209 456 455 550 548 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+548
+304 306 305 -1
+0 2 0 1 1 2 -1
+m5_do_move
+548
+307 549 305 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+549
+50 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+549
+301 -1
+-1
+m3_do_on_table
+550
+48 1 -1
+0 1 -1
+m2_do_on_table
+550
+308 551 47 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+551
+46 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+551
+204 -1
+-1
+m0_do_put_on
+552
+309 1 -1
+0 1 -1
+m1_do_put_on
+552
+209 455 454 555 553 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+553
+310 312 311 -1
+0 2 0 1 1 2 -1
+m5_do_move
+553
+313 554 311 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+554
+46 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+554
+204 -1
+-1
+m3_do_on_table
+555
+44 1 -1
+0 1 -1
+m2_do_on_table
+555
+314 556 43 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+556
+42 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+556
+167 -1
+-1
+m0_do_put_on
+557
+315 1 -1
+0 1 -1
+m1_do_put_on
+557
+209 454 468 560 558 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+558
+316 318 317 -1
+0 2 0 1 1 2 -1
+m5_do_move
+558
+319 559 317 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+559
+42 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+559
+167 -1
+-1
+m3_do_on_table
+560
+104 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b4];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+560
+320 102 103 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+561
+321 1 -1
+0 1 -1
+m1_do_put_on
+561
+209 468 467 563 562 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+562
+322 324 323 -1
+0 2 0 1 1 2 -1
+<m5_do_move;m5_do_move_splitted_1[b4];_splitting_method_m5_do_move_splitted_1;1;0,-1,2>
+562
+325 102 323 -1
+0 2 0 1 1 2 -1
+m3_do_on_table
+563
+100 1 -1
+0 1 -1
+m2_do_on_table
+563
+326 564 99 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+564
+98 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+564
+188 -1
+-1
+m0_do_put_on
+565
+327 1 -1
+0 1 -1
+m1_do_put_on
+565
+209 467 482 568 566 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+566
+328 330 329 -1
+0 2 0 1 1 2 -1
+m5_do_move
+566
+331 567 329 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+567
+98 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+567
+188 -1
+-1
+m3_do_on_table
+568
+186 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b26];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+568
+332 184 185 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+569
+333 1 -1
+0 1 -1
+m1_do_put_on
+569
+209 476 483 572 570 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+570
+334 336 335 -1
+0 2 0 1 1 2 -1
+m5_do_move
+570
+337 571 335 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+571
+142 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+571
+194 -1
+-1
+m3_do_on_table
+572
+192 1 -1
+0 1 -1
+m2_do_on_table
+572
+339 573 191 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+573
+190 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+573
+338 -1
+-1
+m0_do_put_on
+574
+340 1 -1
+0 1 -1
+<m1_do_put_on;do_on_table[b42];m3_do_on_table;3;0,1,2,-1,-2,4>
+574
+209 483 577 345 1 575 -1
+3 5 3 4 2 3 2 4 1 2 0 5 0 3 0 2 0 1 0 4 4 5 -1
+m4_do_move
+575
+341 343 342 -1
+0 2 0 1 1 2 -1
+m5_do_move
+575
+344 576 342 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+576
+190 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+576
+338 -1
+-1
+m6_do_clear
+577
+345 1 -1
+0 1 -1
+m7_do_clear
+577
+346 514 253 255 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+577
+347 483 338 191 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m0_do_put_on
+578
+348 1 -1
+0 1 -1
+m1_do_put_on
+578
+209 462 473 581 579 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+579
+349 351 350 -1
+0 2 0 1 1 2 -1
+m5_do_move
+579
+352 580 350 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+580
+128 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+580
+74 -1
+-1
+m3_do_on_table
+581
+126 1 -1
+0 1 -1
+m2_do_on_table
+581
+353 582 125 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+582
+165 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+582
+124 -1
+-1
+m0_do_put_on
+583
+354 1 -1
+0 1 -1
+m1_do_put_on
+583
+209 473 472 586 584 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+584
+355 357 356 -1
+0 2 0 1 1 2 -1
+m5_do_move
+584
+358 585 356 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+585
+165 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+585
+124 -1
+-1
+m3_do_on_table
+586
+122 1 -1
+0 1 -1
+m2_do_on_table
+586
+359 587 121 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+587
+120 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+587
+202 -1
+-1
+m0_do_put_on
+588
+360 1 -1
+0 1 -1
+m1_do_put_on
+588
+209 472 452 591 589 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+589
+361 363 362 -1
+0 2 0 1 1 2 -1
+m5_do_move
+589
+364 590 362 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+590
+120 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+590
+202 -1
+-1
+m3_do_on_table
+591
+36 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b43];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+591
+365 34 35 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+592
+366 1 -1
+0 1 -1
+m1_do_put_on
+592
+209 452 451 594 593 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+593
+367 369 368 -1
+0 2 0 1 1 2 -1
+<m5_do_move;m5_do_move_splitted_1[b43];_splitting_method_m5_do_move_splitted_1;1;0,-1,2>
+593
+370 34 368 -1
+0 2 0 1 1 2 -1
+m3_do_on_table
+594
+32 1 -1
+0 1 -1
+m2_do_on_table
+594
+371 595 31 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+595
+88 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+595
+30 -1
+-1
+m0_do_put_on
+596
+372 1 -1
+0 1 -1
+m1_do_put_on
+596
+209 451 450 599 597 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+597
+373 375 374 -1
+0 2 0 1 1 2 -1
+m5_do_move
+597
+376 598 374 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+598
+88 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+598
+30 -1
+-1
+m3_do_on_table
+599
+28 1 -1
+0 1 -1
+m2_do_on_table
+599
+377 600 27 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+600
+176 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+600
+26 -1
+-1
+m0_do_put_on
+601
+378 1 -1
+0 1 -1
+m1_do_put_on
+601
+209 450 449 604 602 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+602
+379 381 380 -1
+0 2 0 1 1 2 -1
+m5_do_move
+602
+382 603 380 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+603
+176 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+603
+26 -1
+-1
+m3_do_on_table
+604
+24 1 -1
+0 1 -1
+m2_do_on_table
+604
+383 605 23 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+605
+22 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+605
+173 -1
+-1
+m0_do_put_on
+606
+384 1 -1
+0 1 -1
+m1_do_put_on
+606
+209 449 480 609 607 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+607
+385 387 386 -1
+0 2 0 1 1 2 -1
+m5_do_move
+607
+388 608 386 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+608
+22 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+608
+173 -1
+-1
+m3_do_on_table
+609
+171 1 -1
+0 1 -1
+m2_do_on_table
+609
+389 610 170 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+610
+200 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+610
+169 -1
+-1
+m0_do_put_on
+611
+390 1 -1
+0 1 -1
+m1_do_put_on
+611
+209 480 453 614 612 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+612
+391 393 392 -1
+0 2 0 1 1 2 -1
+m5_do_move
+612
+394 613 392 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+613
+200 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+613
+169 -1
+-1
+m3_do_on_table
+614
+40 1 -1
+0 1 -1
+m2_do_on_table
+614
+395 615 39 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+615
+38 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+615
+140 -1
+-1
+m0_do_put_on
+616
+396 1 -1
+0 1 -1
+m1_do_put_on
+616
+209 453 475 619 617 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+617
+397 399 398 -1
+0 2 0 1 1 2 -1
+m5_do_move
+617
+400 618 398 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+618
+38 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+618
+140 -1
+-1
+m3_do_on_table
+619
+138 1 -1
+0 1 -1
+m2_do_on_table
+619
+401 620 137 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+620
+163 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+620
+136 -1
+-1
+m0_do_put_on
+621
+402 1 -1
+0 1 -1
+m1_do_put_on
+621
+209 475 479 624 622 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+622
+403 405 404 -1
+0 2 0 1 1 2 -1
+m5_do_move
+622
+406 623 404 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+623
+163 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+623
+136 -1
+-1
+m3_do_on_table
+624
+161 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b23];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+624
+407 159 160 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+625
+408 1 -1
+0 1 -1
+m1_do_put_on
+625
+209 479 470 627 626 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+626
+409 411 410 -1
+0 2 0 1 1 2 -1
+<m5_do_move;m5_do_move_splitted_1[b23];_splitting_method_m5_do_move_splitted_1;1;0,-1,2>
+626
+412 159 410 -1
+0 2 0 1 1 2 -1
+m3_do_on_table
+627
+114 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b6];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+627
+413 112 113 -1
+1 2 0 1 0 2 -1
+m0_do_put_on
+628
+414 1 -1
+0 1 -1
+m1_do_put_on
+628
+209 474 471 631 629 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+629
+415 417 416 -1
+0 2 0 1 1 2 -1
+m5_do_move
+629
+418 630 416 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+630
+132 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+630
+198 -1
+-1
+m3_do_on_table
+631
+118 1 -1
+0 1 -1
+m2_do_on_table
+631
+420 632 117 -1
+1 2 0 1 0 2 -1
+_splitting_method_m2_do_on_table_splitted_2
+632
+116 -1
+-1
+_splitting_method_m2_do_on_table_splitted_2
+632
+419 -1
+-1
+m0_do_put_on
+633
+421 1 -1
+0 1 -1
+m1_do_put_on
+633
+209 471 637 636 634 -1
+3 4 2 3 1 2 0 4 0 3 0 2 0 1 -1
+m4_do_move
+634
+422 424 423 -1
+0 2 0 1 1 2 -1
+m5_do_move
+634
+425 635 423 -1
+0 2 0 1 1 2 -1
+_splitting_method_m5_do_move_splitted_1
+635
+116 -1
+-1
+_splitting_method_m5_do_move_splitted_1
+635
+419 -1
+-1
+m3_do_on_table
+636
+426 1 -1
+0 1 -1
+<m2_do_on_table;m2_do_on_table_splitted_2[b40];_splitting_method_m2_do_on_table_splitted_2;1;0,-1,2>
+636
+428 427 429 -1
+1 2 0 1 0 2 -1
+m6_do_clear
+637
+426 1 -1
+0 1 -1
+m7_do_clear
+637
+430 456 301 51 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+637
+431 471 419 117 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m0_do_put_on
+638
+432 1 -1
+0 1 -1
+<m1_do_put_on;do_on_table[b38];m3_do_on_table;3;0,1,2,-1,-2,4>
+638
+209 637 640 437 1 639 -1
+3 5 3 4 2 3 2 4 1 2 0 5 0 3 0 2 0 1 0 4 4 5 -1
+m4_do_move
+639
+433 435 434 -1
+0 2 0 1 1 2 -1
+<m5_do_move;m5_do_move_splitted_1[b40];_splitting_method_m5_do_move_splitted_1;1;0,-1,2>
+639
+436 427 434 -1
+0 2 0 1 1 2 -1
+m6_do_clear
+640
+437 1 -1
+0 1 -1
+m7_do_clear
+640
+438 637 427 429 -1
+0 2 0 3 0 1 2 3 1 2 -1
+m7_do_clear
+640
+439 481 300 181 -1
+0 2 0 3 0 1 2 3 1 2 -1

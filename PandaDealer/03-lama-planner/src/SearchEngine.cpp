@@ -437,18 +437,18 @@ int main(int argc, char *argv[]) {
                         cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
                     } else if (args["lm"] == "lmc-GZD") {
                         lmType = lmGZDCutLMs;
-                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
+                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmcGZD]" << endl;
                     }else if (args["lm"] == "lmc-BD") {
                         lmType = lmBDCutLMs;
-                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
+                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmcBD]" << endl;
                     }else if (args["lm"] == "lmc-BDpGZD") {
                         lmType = lmBDGZDCutLMs;
-                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
+                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmcBDGZD]" << endl;
                     }else if (args["lm"] == "lmc-VDM") {
                         lmType = lmVDMCutLMs;
-                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmc]" << endl;
+                        cout << "- Landmark heuristic uses stored LM-Cut landmarks. [lamaLMs=lmcVDM]" << endl;
                     }
-                     else if (args["lm"] == "lmcrecomp") {
+                    else if (args["lm"] == "lmcrecomp") {
                         lmType = lmCutLMrecomp;
                         cout << "- Landmark heuristic uses recomputed LM-Cut landmarks. [lamaLMs=lmcrecomp]" << endl;
                     } else if (args["lm"] == "dof") {

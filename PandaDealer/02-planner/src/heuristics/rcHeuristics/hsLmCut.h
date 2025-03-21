@@ -26,6 +26,8 @@ public:
 	bool operator()(pair<int, int>* n1, pair<int, int>* n2);
 };*/
 
+enum PCFType { NONE, GZD, BD, VDM, GZDpBD };
+
 class hsLmCut {
 public:
 	hsLmCut(Model* sas);
@@ -38,7 +40,7 @@ public:
 
 	//list<LMCutLandmark*> cuts;
     list<LMCutLandmark *>* cuts = new list<LMCutLandmark *>();
-
+	PCFType pcfType;
 private:
 	IntUtil iu;
 	int getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone);
@@ -47,6 +49,10 @@ private:
 	void forwardReachabilityDFS(bucketSet& s0, bucketSet* cut, noDelIntSet* goalZone, bucketSet* testReachability);
 
     int decidePcf(noDelIntSet *goalZone, int newProp, int maxProp);
+	int GZD(noDelIntSet *goalZone, int newProp, int maxProp);
+	int BD(noDelIntSet *goalZone, int newProp, int maxProp);
+	int GZDpBD(noDelIntSet *goalZone, int newProp, int maxProp);
+	int VDM(noDelIntSet *goalZone, int newProp, int maxProp);
 
     int* costs;
 	noDelIntSet* goalZone;
@@ -54,10 +60,11 @@ private:
 	bucketSet* precsOfCutNodes;
 
 	const bool storeCuts = true;
-
+	
 	// hMax stuff
 	IntPairHeap<int>* heap;
 	int* hValInit;
+	int* hValReset;
 
 	int* unsatPrecs;
 	int* maxPrecInit;

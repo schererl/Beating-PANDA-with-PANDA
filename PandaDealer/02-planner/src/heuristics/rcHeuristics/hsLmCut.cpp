@@ -16,13 +16,15 @@ hsLmCut::hsLmCut(Model* sas) {
 	assert(!sas->isHtnModel);
 	m = sas;
 	hValInit = new int[m->numStateBits];
+	hValReset = new int[m->numStateBits];
 	for (int i = 0; i < m->numStateBits; i++) {
 		hValInit[i] = UNREACHABLE;
+		hValReset[i] = UNREACHABLE;
+		
 	}
 	heap = new IntPairHeap<int>(m->numStateBits * 2);
 	unsatPrecs = new int[m->numActions];
 	hVal = new int[m->numStateBits];
-
 	hasZeroAchiever = new bool[m->numStateBits];
 
 	maxPrecInit = new int[m->numActions];
@@ -76,6 +78,8 @@ hsLmCut::hsLmCut(Model* sas) {
 }
 
 hsLmCut::~hsLmCut() {
+	delete[] hValReset;
+	delete[] hasZeroAchiever;
 	delete[] hValInit;
 	delete[] unsatPrecs;
 	delete[] hVal;
@@ -98,6 +102,7 @@ hsLmCut::~hsLmCut() {
 int hsLmCut::getHeuristicValue(bucketSet& s, noDelIntSet& g) {
 	int hLmCut = 0;
 
+	//std::cout << "PCF TYPE: " << this->pcfType << std::endl;
 	// clean up stored cuts
 
 	if(storeCuts) {
@@ -112,8 +117,8 @@ int hsLmCut::getHeuristicValue(bucketSet& s, noDelIntSet& g) {
 	int hMax = getHMax(s, g, goalZone);
 	if ((hMax == 0) || (hMax == UNREACHABLE))
 		return hMax;
+	memcpy(hValInit, hVal, sizeof(int) * m->numStateBits);
 	//cout << endl << "start" << endl;
-
 
 	for (int i = 0; i < m->numStateBits; i++) {
 		hasZeroAchiever[i] = false;
@@ -167,8 +172,8 @@ int hsLmCut::getHeuristicValue(bucketSet& s, noDelIntSet& g) {
 #ifdef LMCINCHMAX
 		hMax = updateHMax(g, cut);
 #else
-		hMax = getHMax(s, g, goalZone);
-		//hMax = updateHMax(g, cut);
+		//hMax = getHMax(s, g, goalZone);
+		hMax = updateHMax(g, cut);
 #endif
 		
 	}
@@ -249,22 +254,46 @@ void hsLmCut::forwardReachabilityDFS(bucketSet& s0, bucketSet* cut,
 }
 
 int hsLmCut::decidePcf(noDelIntSet* goalZone, int newProp, int maxProp){
-	
-	
-	// // Goal Zone Detection: prefer pcfs in goal zone
-	// if(!goalZone->get(maxProp)){
-	// 	//Border Detection (BD): Prefer nodes with non zero-cost achievers
-	// 	for (int i = 0; i < numAddToTask[newProp]; i++) {
-	// 		int op = addToTask[newProp][i];
-	// 		if(costs[op]==0){
-	// 			return maxProp;
-	// 		}
-	// 	}
-	// 	return newProp;
-	// }
-	// return maxProp;
+	if(this->pcfType == PCFType::NONE) return maxProp;
+	else if(this->pcfType == PCFType::GZDpBD) return GZDpBD(goalZone, newProp, maxProp);
+	else if(this->pcfType == PCFType::GZD) return GZD(goalZone, newProp, maxProp);
+	else if(this->pcfType == PCFType::BD) return BD(goalZone, newProp, maxProp);
+	else if(this->pcfType == PCFType::VDM) return VDM(goalZone, newProp, maxProp);
+}
 
+int hsLmCut::GZD(noDelIntSet* goalZone, int newProp, int maxProp){
+	// Goal Zone Detection: prefer pcfs in goal zone
+	bool newInGoal = goalZone->get(newProp);
+    bool maxInGoal = goalZone->get(maxProp);
+	if (newInGoal && !maxInGoal)
+		return newProp;
+	return maxProp;
+}
 
+int hsLmCut::BD(noDelIntSet* goalZone, int newProp, int maxProp){
+	//Border Detection (BD): Prefer nodes with non zero-cost achievers
+	bool newNoZeroAchiever = !hasZeroAchiever[newProp];
+    bool maxNoZeroAchiever = !hasZeroAchiever[maxProp];
+    if (newNoZeroAchiever && !maxNoZeroAchiever)
+        return newProp;
+    return maxProp;
+}
+
+int hsLmCut::VDM(noDelIntSet* goalZone, int newProp, int maxProp) {
+    // Compute the decrease in hmax for both candidate preconditions.
+    // A smaller decrease means the candidate’s current hmax is closer to its initial value,
+    // which in turn suggests fewer zero-cost actions between the initial state and this fact.
+    int diffNew = hValInit[newProp] - hVal[newProp];
+    int diffMax = hValInit[maxProp] - hVal[maxProp];
+	// Prefer the candidate with the smaller difference.
+    if (diffNew < diffMax)
+        return newProp;
+    else
+        return maxProp;
+		//return GZDpBD(goalZone, newProp, maxProp);
+}
+
+int hsLmCut::GZDpBD(noDelIntSet* goalZone, int newProp, int maxProp){
 	// Goal Zone Detection: prefer pcfs in goal zone
 	bool newInGoal = goalZone->get(newProp);
     bool maxInGoal = goalZone->get(maxProp);
@@ -278,22 +307,16 @@ int hsLmCut::decidePcf(noDelIntSet* goalZone, int newProp, int maxProp){
     bool maxNoZeroAchiever = !hasZeroAchiever[maxProp];
     if (newNoZeroAchiever && !maxNoZeroAchiever)
         return newProp;
-    //if (maxNoZeroAchiever && !newNoZeroAchiever)
-    //    return maxProp;
-
-	return maxProp;
-	
+    return maxProp;
 }
 
 int hsLmCut::getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone) {
 	if (g.getSize() == 0)
 		return 0;
-
 	memcpy(unsatPrecs, m->numPrecs, sizeof(int) * m->numActions);
 	memcpy(maxPrec, maxPrecInit, sizeof(int) * m->numActions);
-	memcpy(hVal, hValInit, sizeof(int) * m->numStateBits);
+	memcpy(hVal, hValReset, sizeof(int) * m->numStateBits);
 	maxPrecG = -1;
-
 	heap->clear();
 	for (int f = s.getFirst(); f >= 0; f = s.getNext()) {
 		heap->add(0, f);
@@ -319,8 +342,9 @@ int hsLmCut::getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone) {
 			if ((maxPrec[op] == UNREACHABLE)
 					|| (hVal[maxPrec[op]] < hVal[prop])) {
 				maxPrec[op] = prop;
-			}else if(hVal[maxPrec[op]] == hVal[prop]){
-				//maxPrec[op] = decidePcf(goalZone, prop, maxPrec[op]);
+			}
+			else if(hVal[maxPrec[op]] == hVal[prop]){
+				maxPrec[op] = decidePcf(goalZone, prop, maxPrec[op]);
 			}
 			if (--unsatPrecs[op] == 0) {
 				for (int iF = 0; iF < m->numAdds[op]; iF++) {
@@ -345,11 +369,11 @@ int hsLmCut::getHMax(bucketSet& s, noDelIntSet& g, noDelIntSet* goalZone) {
 		} else if (res < hVal[f]) {
 			res = hVal[f];
 			maxPrecG = f;			
-		}else if (res == hVal[f]){
-			//maxPrecG=decidePcf(goalZone, f, maxPrecG);
+		}
+		else if (res == hVal[f]){
+			maxPrecG=decidePcf(goalZone, f, maxPrecG);
 		}
 	}
-
 	return res;
 }
 
@@ -386,32 +410,37 @@ int hsLmCut::updateHMax(noDelIntSet& g, bucketSet* cut) {
                 continue;
 
             // recompute the best precondition cost for operator op.
-            int best = hVal[f];
-			int pcf =  f;
+            //int best = hVal[f];
+			//int pcf =  f;
+			int initialPcf = maxPrec[op];
 			for (int j = 0; j < m->numPrecs[op]; j++) {
                 int p = m->precLists[op][j];
-                if (hVal[p] > best) {
-                    best = hVal[p];
-					pcf = p;
+                if (hVal[p] > hVal[maxPrec[op]]) {
+                    //best = hVal[p];
+					maxPrec[op] = p;
                 }
+				else if (hVal[maxPrec[op]] == hVal[p]){
+					maxPrec[op]=decidePcf(goalZone, p, maxPrec[op]);
+				}
             }
 			
             // if the new hmax F is different (is lower) than hmax of operator
-			if(best != hVal[f]){
-				maxPrec[op] = pcf;
-			}
+			// if(hVal[pcf] != hVal[f]){
+			// 	maxPrec[op] = pcf;
+			// }
 			// if the pcf remains f, the value decreased
-			if(pcf == f){
+			//if(maxPrec[op] == f){
+			if (initialPcf == maxPrec[op]){
 				for (int iF = 0; iF < m->numAdds[op]; iF++) {
 					int fprime = m->addLists[op][iF];
 					// if the decreased value is lower than fprime, fprime must chang value
-					if(best + costs[op] < hVal[fprime]){
-						hVal[fprime] = best + costs[op];
+					if(hVal[maxPrec[op]] + costs[op] < hVal[fprime]){
+						hVal[fprime] = hVal[maxPrec[op]] + costs[op];
 						updateQueue.push_back(fprime);
 					}
 					
 				}
-			}
+			//}
 		}
     }
 
@@ -428,6 +457,9 @@ int hsLmCut::updateHMax(noDelIntSet& g, bucketSet* cut) {
 		    res = hVal[f];
             maxPrecG = f;
         }
+		// else if (res == hVal[f]){
+		// 	maxPrecG=decidePcf(goalZone, f, maxPrecG);
+		// }
     }
 	return res;
 }

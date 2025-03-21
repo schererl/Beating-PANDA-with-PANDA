@@ -319,11 +319,9 @@ int main(int argc, char *argv[]) {
 				string invertString = (args.count("invert"))?args["invert"]:args["arg1"];
 				bool invert = false;
 				if (invertString == "true" || invertString == "invert") invert = true;
-
-    			heuristics[i] = new hhCost(htn, i, invert);
+				heuristics[i] = new hhCost(htn, i, invert);
 			} else if (hName == "rc2"){
 				string subName = (args.count("h"))?args["h"]:args["arg1"];
-			
 				string estimate_string = (args.count("est"))?args["est"]:args["arg2"];
 				eEstimate estimate = estDISTANCE;
 				if (estimate_string == "cost")
@@ -335,9 +333,22 @@ int main(int argc, char *argv[]) {
 				bool correctTaskCount = true;
 				if (correct_task_count_string == "no")
 					correctTaskCount = false;
-
-				if (subName == "lmc")
-		    		heuristics[i] = new hhRC2<hsLmCut>(htn, i, estimate, correctTaskCount);
+				if (subName == "lmc"){
+					heuristics[i] = new hhRC2<hsLmCut>(htn, i, estimate, correctTaskCount);
+					((hhRC2<hsLmCut>*)heuristics[i])->sasH->pcfType = PCFType::NONE;
+				}else if (subName == "lmc-GZD"){
+					heuristics[i] = new hhRC2<hsLmCut>(htn, i, estimate, correctTaskCount);
+					((hhRC2<hsLmCut>*)heuristics[i])->sasH->pcfType = PCFType::GZD;
+				}else if (subName == "lmc-BD") {
+					heuristics[i] = new hhRC2<hsLmCut>(htn, i, estimate, correctTaskCount);
+					((hhRC2<hsLmCut>*)heuristics[i])->sasH->pcfType = PCFType::BD;
+				}else if (subName == "lmc-BDpGZD") {
+					heuristics[i] = new hhRC2<hsLmCut>(htn, i, estimate, correctTaskCount);
+					((hhRC2<hsLmCut>*)heuristics[i])->sasH->pcfType = PCFType::GZDpBD;
+				}else if (subName == "lmc-VDM"){
+					heuristics[i] = new hhRC2<hsLmCut>(htn, i, estimate, correctTaskCount);
+					((hhRC2<hsLmCut>*)heuristics[i])->sasH->pcfType = PCFType::VDM;
+				}
 				else if (subName == "add"){
 		    		heuristics[i] = new hhRC2<hsAddFF>(htn, i, estimate, correctTaskCount);
 					((hhRC2<hsAddFF>*)heuristics[i])->sasH->heuristic = sasAdd;

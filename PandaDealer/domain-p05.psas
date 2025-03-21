@@ -1,0 +1,4278 @@
+;; #state features
+87
++at_soil_sample[waypoint1]
++at_soil_sample[waypoint3]
++at_soil_sample[waypoint4]
++at_rock_sample[waypoint4]
++at_rock_sample[waypoint5]
++at[rover0,waypoint2]
++empty[rover0store]
++at[rover1,waypoint2]
++empty[rover1store]
++at[rover2,waypoint2]
++empty[rover2store]
++at[rover3,waypoint3]
++empty[rover3store]
+-visited[waypoint0]
+-visited[waypoint1]
+-visited[waypoint2]
+-visited[waypoint3]
+-visited[waypoint4]
+-visited[waypoint5]
++visited[waypoint1]
++visited[waypoint3]
++visited[waypoint4]
++visited[waypoint5]
++visited[waypoint0]
++visited[waypoint2]
++at[rover0,waypoint0]
++at[rover0,waypoint3]
++at[rover0,waypoint4]
++at[rover1,waypoint0]
++at[rover1,waypoint3]
++at[rover1,waypoint5]
++at[rover2,waypoint0]
++at[rover2,waypoint1]
++at[rover2,waypoint4]
++at[rover2,waypoint5]
+-empty[rover3store]
++full[rover3store]
++have_soil_analysis[rover3,waypoint3]
++at[rover3,waypoint0]
++at[rover3,waypoint2]
++at[rover3,waypoint4]
++calibrated[camera2,rover1]
++at[rover0,waypoint1]
++at[rover0,waypoint5]
+-empty[rover0store]
++full[rover0store]
++have_soil_analysis[rover0,waypoint3]
++have_soil_analysis[rover0,waypoint4]
++have_rock_analysis[rover0,waypoint4]
++at[rover1,waypoint1]
++at[rover1,waypoint4]
+-empty[rover1store]
++full[rover1store]
++have_rock_analysis[rover1,waypoint5]
++at[rover2,waypoint3]
++calibrated[camera3,rover2]
+-empty[rover2store]
++full[rover2store]
++have_rock_analysis[rover2,waypoint4]
++have_rock_analysis[rover2,waypoint5]
++communicated_soil_data[waypoint3]
++at[rover3,waypoint1]
++calibrated[camera0,rover3]
++calibrated[camera1,rover3]
++at[rover3,waypoint5]
++have_soil_analysis[rover3,waypoint4]
++have_rock_analysis[rover3,waypoint4]
++have_image[rover1,objective0,high_res]
++have_image[rover1,objective0,low_res]
++have_image[rover1,objective2,low_res]
++have_soil_analysis[rover0,waypoint1]
++have_rock_analysis[rover0,waypoint5]
++communicated_soil_data[waypoint4]
++communicated_rock_data[waypoint4]
++have_rock_analysis[rover1,waypoint4]
++communicated_rock_data[waypoint5]
++have_image[rover2,objective0,low_res]
++have_image[rover2,objective2,low_res]
++have_soil_analysis[rover3,waypoint1]
++have_image[rover3,objective0,high_res]
++have_image[rover3,objective0,low_res]
++have_image[rover3,objective2,low_res]
++have_rock_analysis[rover3,waypoint5]
++communicated_image_data[objective0,high_res]
++communicated_image_data[objective0,low_res]
++communicated_image_data[objective2,low_res]
++communicated_soil_data[waypoint1]
+
+;; Mutex Groups
+87
+0 0 +at_soil_sample[waypoint1]
+1 1 +at_soil_sample[waypoint3]
+2 2 +at_soil_sample[waypoint4]
+3 3 +at_rock_sample[waypoint4]
+4 4 +at_rock_sample[waypoint5]
+5 5 +at[rover0,waypoint2]
+6 6 +empty[rover0store]
+7 7 +at[rover1,waypoint2]
+8 8 +empty[rover1store]
+9 9 +at[rover2,waypoint2]
+10 10 +empty[rover2store]
+11 11 +at[rover3,waypoint3]
+12 12 +empty[rover3store]
+13 13 -visited[waypoint0]
+14 14 -visited[waypoint1]
+15 15 -visited[waypoint2]
+16 16 -visited[waypoint3]
+17 17 -visited[waypoint4]
+18 18 -visited[waypoint5]
+19 19 +visited[waypoint1]
+20 20 +visited[waypoint3]
+21 21 +visited[waypoint4]
+22 22 +visited[waypoint5]
+23 23 +visited[waypoint0]
+24 24 +visited[waypoint2]
+25 25 +at[rover0,waypoint0]
+26 26 +at[rover0,waypoint3]
+27 27 +at[rover0,waypoint4]
+28 28 +at[rover1,waypoint0]
+29 29 +at[rover1,waypoint3]
+30 30 +at[rover1,waypoint5]
+31 31 +at[rover2,waypoint0]
+32 32 +at[rover2,waypoint1]
+33 33 +at[rover2,waypoint4]
+34 34 +at[rover2,waypoint5]
+35 35 -empty[rover3store]
+36 36 +full[rover3store]
+37 37 +have_soil_analysis[rover3,waypoint3]
+38 38 +at[rover3,waypoint0]
+39 39 +at[rover3,waypoint2]
+40 40 +at[rover3,waypoint4]
+41 41 +calibrated[camera2,rover1]
+42 42 +at[rover0,waypoint1]
+43 43 +at[rover0,waypoint5]
+44 44 -empty[rover0store]
+45 45 +full[rover0store]
+46 46 +have_soil_analysis[rover0,waypoint3]
+47 47 +have_soil_analysis[rover0,waypoint4]
+48 48 +have_rock_analysis[rover0,waypoint4]
+49 49 +at[rover1,waypoint1]
+50 50 +at[rover1,waypoint4]
+51 51 -empty[rover1store]
+52 52 +full[rover1store]
+53 53 +have_rock_analysis[rover1,waypoint5]
+54 54 +at[rover2,waypoint3]
+55 55 +calibrated[camera3,rover2]
+56 56 -empty[rover2store]
+57 57 +full[rover2store]
+58 58 +have_rock_analysis[rover2,waypoint4]
+59 59 +have_rock_analysis[rover2,waypoint5]
+60 60 +communicated_soil_data[waypoint3]
+61 61 +at[rover3,waypoint1]
+62 62 +calibrated[camera0,rover3]
+63 63 +calibrated[camera1,rover3]
+64 64 +at[rover3,waypoint5]
+65 65 +have_soil_analysis[rover3,waypoint4]
+66 66 +have_rock_analysis[rover3,waypoint4]
+67 67 +have_image[rover1,objective0,high_res]
+68 68 +have_image[rover1,objective0,low_res]
+69 69 +have_image[rover1,objective2,low_res]
+70 70 +have_soil_analysis[rover0,waypoint1]
+71 71 +have_rock_analysis[rover0,waypoint5]
+72 72 +communicated_soil_data[waypoint4]
+73 73 +communicated_rock_data[waypoint4]
+74 74 +have_rock_analysis[rover1,waypoint4]
+75 75 +communicated_rock_data[waypoint5]
+76 76 +have_image[rover2,objective0,low_res]
+77 77 +have_image[rover2,objective2,low_res]
+78 78 +have_soil_analysis[rover3,waypoint1]
+79 79 +have_image[rover3,objective0,high_res]
+80 80 +have_image[rover3,objective0,low_res]
+81 81 +have_image[rover3,objective2,low_res]
+82 82 +have_rock_analysis[rover3,waypoint5]
+83 83 +communicated_image_data[objective0,high_res]
+84 84 +communicated_image_data[objective0,low_res]
+85 85 +communicated_image_data[objective2,low_res]
+86 86 +communicated_soil_data[waypoint1]
+
+;; further strict Mutex Groups
+0
+
+;; further non strict Mutex Groups
+0
+
+;; known invariants
+0
+
+;; Actions
+242
+1
+28 41 -1
+0 69  -1
+0 41  -1
+0
+28 -1
+-1
+-1
+1
+-1
+-1
+-1
+1
+49 -1
+0 28  -1
+0 49  -1
+0
+49 -1
+-1
+-1
+1
+19 -1
+0 14  -1
+0 19  -1
+1
+-1
+0 19  -1
+0 14  -1
+0
+17 -1
+-1
+-1
+0
+16 -1
+-1
+-1
+1
+50 -1
+0 29  -1
+0 50  -1
+1
+20 -1
+0 16  -1
+0 20  -1
+1
+-1
+0 20  -1
+0 16  -1
+1
+29 -1
+0 50  -1
+0 29  -1
+1
+21 -1
+0 17  -1
+0 21  -1
+1
+-1
+0 21  -1
+0 17  -1
+0
+15 -1
+-1
+-1
+1
+7 -1
+0 28  -1
+0 7  -1
+1
+29 -1
+0 7  -1
+0 29  -1
+1
+24 -1
+0 15  -1
+0 24  -1
+1
+-1
+0 24  -1
+0 15  -1
+0
+29 -1
+-1
+-1
+0
+50 -1
+-1
+-1
+1
+30 -1
+0 7  -1
+0 30  -1
+0
+30 -1
+-1
+-1
+1
+22 -1
+0 18  -1
+0 22  -1
+1
+-1
+0 22  -1
+0 18  -1
+0
+14 -1
+-1
+-1
+1
+28 -1
+0 49  -1
+0 28  -1
+1
+28 -1
+0 7  -1
+0 28  -1
+1
+23 -1
+0 13  -1
+0 23  -1
+1
+-1
+0 23  -1
+0 13  -1
+0
+7 -1
+-1
+-1
+1
+7 41 -1
+0 69  -1
+0 41  -1
+0
+13 -1
+-1
+-1
+1
+7 -1
+0 29  -1
+0 7  -1
+0
+18 -1
+-1
+-1
+1
+7 -1
+0 30  -1
+0 7  -1
+1
+49 41 -1
+0 69  -1
+0 41  -1
+1
+28 -1
+0 41  -1
+-1
+1
+7 -1
+0 41  -1
+-1
+1
+49 -1
+0 41  -1
+-1
+1
+49 69 -1
+0 85  -1
+-1
+1
+29 69 -1
+0 85  -1
+-1
+1
+7 69 -1
+0 85  -1
+-1
+1
+50 69 -1
+0 85  -1
+-1
+1
+38 62 -1
+0 81  -1
+0 62  -1
+0
+38 -1
+-1
+-1
+1
+61 -1
+0 38  -1
+0 61  -1
+0
+61 -1
+-1
+-1
+1
+11 -1
+0 38  -1
+0 11  -1
+0
+11 -1
+-1
+-1
+1
+40 -1
+0 11  -1
+0 40  -1
+0
+40 -1
+-1
+-1
+1
+39 -1
+0 11  -1
+0 39  -1
+1
+39 -1
+0 64  -1
+0 39  -1
+1
+64 -1
+0 39  -1
+0 64  -1
+0
+64 -1
+-1
+-1
+1
+38 -1
+0 61  -1
+0 38  -1
+1
+38 -1
+0 11  -1
+0 38  -1
+0
+39 -1
+-1
+-1
+1
+39 62 -1
+0 81  -1
+0 62  -1
+1
+11 -1
+0 39  -1
+0 11  -1
+1
+61 62 -1
+0 81  -1
+0 62  -1
+1
+11 -1
+0 40  -1
+0 11  -1
+1
+38 -1
+0 62  -1
+-1
+1
+61 81 -1
+0 85  -1
+-1
+1
+11 81 -1
+0 85  -1
+-1
+1
+39 81 -1
+0 85  -1
+-1
+1
+40 81 -1
+0 85  -1
+-1
+1
+31 55 -1
+0 77  -1
+0 55  -1
+0
+31 -1
+-1
+-1
+1
+9 -1
+0 31  -1
+0 9  -1
+1
+32 -1
+0 9  -1
+0 32  -1
+0
+32 -1
+-1
+-1
+1
+54 -1
+0 31  -1
+0 54  -1
+0
+54 -1
+-1
+-1
+1
+33 -1
+0 9  -1
+0 33  -1
+0
+33 -1
+-1
+-1
+1
+34 -1
+0 9  -1
+0 34  -1
+0
+34 -1
+-1
+-1
+1
+31 -1
+0 54  -1
+0 31  -1
+1
+31 -1
+0 9  -1
+0 31  -1
+0
+9 -1
+-1
+-1
+1
+32 55 -1
+0 77  -1
+0 55  -1
+1
+9 -1
+0 32  -1
+0 9  -1
+1
+9 55 -1
+0 77  -1
+0 55  -1
+1
+9 -1
+0 33  -1
+0 9  -1
+1
+9 -1
+0 34  -1
+0 9  -1
+1
+31 -1
+0 55  -1
+-1
+1
+32 77 -1
+0 85  -1
+-1
+1
+54 77 -1
+0 85  -1
+-1
+1
+9 77 -1
+0 85  -1
+-1
+1
+33 77 -1
+0 85  -1
+-1
+1
+28 41 -1
+0 67  -1
+0 41  -1
+1
+7 41 -1
+0 67  -1
+0 41  -1
+1
+49 41 -1
+0 67  -1
+0 41  -1
+1
+49 67 -1
+0 83  -1
+-1
+1
+29 67 -1
+0 83  -1
+-1
+1
+7 67 -1
+0 83  -1
+-1
+1
+50 67 -1
+0 83  -1
+-1
+1
+38 63 -1
+0 79  -1
+0 63  -1
+1
+39 63 -1
+0 79  -1
+0 63  -1
+1
+61 63 -1
+0 79  -1
+0 63  -1
+1
+38 -1
+0 63  -1
+-1
+1
+39 -1
+0 63  -1
+-1
+1
+61 -1
+0 63  -1
+-1
+1
+38 62 -1
+0 79  -1
+0 62  -1
+1
+39 62 -1
+0 79  -1
+0 62  -1
+1
+61 62 -1
+0 79  -1
+0 62  -1
+1
+61 79 -1
+0 83  -1
+-1
+1
+11 79 -1
+0 83  -1
+-1
+1
+39 79 -1
+0 83  -1
+-1
+1
+40 79 -1
+0 83  -1
+-1
+1
+28 41 -1
+0 68  -1
+0 41  -1
+1
+7 41 -1
+0 68  -1
+0 41  -1
+1
+49 41 -1
+0 68  -1
+0 41  -1
+1
+49 68 -1
+0 84  -1
+-1
+1
+29 68 -1
+0 84  -1
+-1
+1
+7 68 -1
+0 84  -1
+-1
+1
+50 68 -1
+0 84  -1
+-1
+1
+38 62 -1
+0 80  -1
+0 62  -1
+1
+39 62 -1
+0 80  -1
+0 62  -1
+1
+61 62 -1
+0 80  -1
+0 62  -1
+1
+61 80 -1
+0 84  -1
+-1
+1
+11 80 -1
+0 84  -1
+-1
+1
+39 80 -1
+0 84  -1
+-1
+1
+40 80 -1
+0 84  -1
+-1
+1
+31 55 -1
+0 76  -1
+0 55  -1
+1
+32 55 -1
+0 76  -1
+0 55  -1
+1
+9 55 -1
+0 76  -1
+0 55  -1
+1
+32 76 -1
+0 84  -1
+-1
+1
+54 76 -1
+0 84  -1
+-1
+1
+9 76 -1
+0 84  -1
+-1
+1
+33 76 -1
+0 84  -1
+-1
+1
+12 3 40 -1
+0 66  0 36  0 35  -1
+0 3  0 12  -1
+0
+12 -1
+-1
+-1
+1
+36 -1
+0 12  -1
+0 35  0 36  -1
+0
+35 -1
+-1
+-1
+1
+40 66 -1
+0 73  -1
+-1
+1
+40 66 -1
+0 73  -1
+-1
+1
+61 66 -1
+0 73  -1
+-1
+1
+11 66 -1
+0 73  -1
+-1
+1
+39 66 -1
+0 73  -1
+-1
+1
+8 3 50 -1
+0 74  0 52  0 51  -1
+0 3  0 8  -1
+0
+8 -1
+-1
+-1
+1
+52 -1
+0 8  -1
+0 51  0 52  -1
+0
+51 -1
+-1
+-1
+1
+50 74 -1
+0 73  -1
+-1
+1
+50 74 -1
+0 73  -1
+-1
+1
+49 74 -1
+0 73  -1
+-1
+1
+29 74 -1
+0 73  -1
+-1
+1
+7 74 -1
+0 73  -1
+-1
+1
+10 3 33 -1
+0 58  0 57  0 56  -1
+0 3  0 10  -1
+0
+10 -1
+-1
+-1
+1
+57 -1
+0 10  -1
+0 56  0 57  -1
+0
+56 -1
+-1
+-1
+1
+33 58 -1
+0 73  -1
+-1
+1
+33 58 -1
+0 73  -1
+-1
+1
+32 58 -1
+0 73  -1
+-1
+1
+54 58 -1
+0 73  -1
+-1
+1
+9 58 -1
+0 73  -1
+-1
+1
+6 3 27 -1
+0 48  0 45  0 44  -1
+0 3  0 6  -1
+0
+6 -1
+-1
+-1
+1
+45 -1
+0 6  -1
+0 44  0 45  -1
+0
+44 -1
+-1
+-1
+0
+27 -1
+-1
+-1
+1
+27 48 -1
+0 73  -1
+-1
+1
+27 48 -1
+0 73  -1
+-1
+1
+25 -1
+0 42  -1
+0 25  -1
+1
+5 -1
+0 27  -1
+0 5  -1
+1
+25 -1
+0 5  -1
+0 25  -1
+1
+42 -1
+0 25  -1
+0 42  -1
+0
+42 -1
+-1
+-1
+1
+43 -1
+0 26  -1
+0 43  -1
+1
+26 -1
+0 43  -1
+0 26  -1
+1
+26 -1
+0 5  -1
+0 26  -1
+0
+26 -1
+-1
+-1
+1
+27 -1
+0 5  -1
+0 27  -1
+0
+43 -1
+-1
+-1
+0
+25 -1
+-1
+-1
+0
+5 -1
+-1
+-1
+1
+42 48 -1
+0 73  -1
+-1
+1
+5 -1
+0 26  -1
+0 5  -1
+1
+5 -1
+0 25  -1
+0 5  -1
+1
+26 48 -1
+0 73  -1
+-1
+1
+5 48 -1
+0 73  -1
+-1
+1
+10 4 34 -1
+0 59  0 57  0 56  -1
+0 4  0 10  -1
+1
+33 59 -1
+0 75  -1
+-1
+1
+32 59 -1
+0 75  -1
+-1
+1
+54 59 -1
+0 75  -1
+-1
+1
+9 59 -1
+0 75  -1
+-1
+1
+4 12 64 -1
+0 82  0 36  0 35  -1
+0 4  0 12  -1
+1
+40 82 -1
+0 75  -1
+-1
+1
+61 82 -1
+0 75  -1
+-1
+1
+11 82 -1
+0 75  -1
+-1
+1
+39 82 -1
+0 75  -1
+-1
+1
+6 4 43 -1
+0 71  0 45  0 44  -1
+0 4  0 6  -1
+1
+27 71 -1
+0 75  -1
+-1
+1
+42 71 -1
+0 75  -1
+-1
+1
+26 71 -1
+0 75  -1
+-1
+1
+5 71 -1
+0 75  -1
+-1
+1
+8 4 30 -1
+0 53  0 52  0 51  -1
+0 4  0 8  -1
+1
+50 53 -1
+0 75  -1
+-1
+1
+49 53 -1
+0 75  -1
+-1
+1
+29 53 -1
+0 75  -1
+-1
+1
+7 53 -1
+0 75  -1
+-1
+1
+12 40 2 -1
+0 65  0 36  0 35  -1
+0 2  0 12  -1
+1
+40 65 -1
+0 72  -1
+-1
+1
+61 65 -1
+0 72  -1
+-1
+1
+11 65 -1
+0 72  -1
+-1
+1
+39 65 -1
+0 72  -1
+-1
+1
+40 65 -1
+0 72  -1
+-1
+1
+6 27 2 -1
+0 47  0 45  0 44  -1
+0 2  0 6  -1
+1
+27 47 -1
+0 72  -1
+-1
+1
+42 47 -1
+0 72  -1
+-1
+1
+26 47 -1
+0 72  -1
+-1
+1
+5 47 -1
+0 72  -1
+-1
+1
+27 47 -1
+0 72  -1
+-1
+1
+12 11 1 -1
+0 37  0 36  0 35  -1
+0 1  0 12  -1
+1
+11 37 -1
+0 60  -1
+-1
+1
+61 37 -1
+0 60  -1
+-1
+1
+11 37 -1
+0 60  -1
+-1
+1
+39 37 -1
+0 60  -1
+-1
+1
+40 37 -1
+0 60  -1
+-1
+1
+6 26 1 -1
+0 46  0 45  0 44  -1
+0 1  0 6  -1
+1
+26 46 -1
+0 60  -1
+-1
+1
+42 46 -1
+0 60  -1
+-1
+1
+26 46 -1
+0 60  -1
+-1
+1
+5 46 -1
+0 60  -1
+-1
+1
+27 46 -1
+0 60  -1
+-1
+1
+12 61 0 -1
+0 78  0 36  0 35  -1
+0 0  0 12  -1
+1
+61 78 -1
+0 86  -1
+-1
+1
+61 78 -1
+0 86  -1
+-1
+1
+11 78 -1
+0 86  -1
+-1
+1
+39 78 -1
+0 86  -1
+-1
+1
+40 78 -1
+0 86  -1
+-1
+1
+6 42 0 -1
+0 45  0 70  0 44  -1
+0 0  0 6  -1
+1
+42 70 -1
+0 86  -1
+-1
+1
+42 70 -1
+0 86  -1
+-1
+1
+26 70 -1
+0 86  -1
+-1
+1
+5 70 -1
+0 86  -1
+-1
+1
+27 70 -1
+0 86  -1
+-1
+
+;; initial state
+16 14 13 0 17 2 18 3 10 8 11 4 5 9 6 7 15 1 12 -1
+
+;; goal
+86 60 72 75 73 84 83 85 -1
+
+;; tasks (primitive and abstract)
+460
+0 take_image[rover1,waypoint0,objective2,camera2,low_res]
+0 __method_precondition_m0_do_navigate1[rover1,waypoint0]
+0 nop[]
+0 navigate[rover1,waypoint1,waypoint0]
+0 __method_precondition_m1_do_navigate1[rover1,waypoint1]
+0 unvisit[waypoint1]
+0 visit[waypoint1]
+0 __method_precondition_m4_do_navigate2[rover1,waypoint3,waypoint0,waypoint4]
+0 __method_precondition_m4_do_navigate2[rover1,waypoint4,waypoint0,waypoint3]
+0 navigate[rover1,waypoint4,waypoint3]
+0 unvisit[waypoint3]
+0 visit[waypoint3]
+0 navigate[rover1,waypoint3,waypoint4]
+0 unvisit[waypoint4]
+0 visit[waypoint4]
+0 __method_precondition_m4_do_navigate2[rover1,waypoint3,waypoint0,waypoint2]
+0 navigate[rover1,waypoint2,waypoint0]
+0 navigate[rover1,waypoint3,waypoint2]
+0 unvisit[waypoint2]
+0 visit[waypoint2]
+0 __method_precondition_m1_do_navigate1[rover1,waypoint3]
+0 __method_precondition_m1_do_navigate1[rover1,waypoint4]
+0 navigate[rover1,waypoint5,waypoint2]
+0 __method_precondition_m1_do_navigate1[rover1,waypoint5]
+0 unvisit[waypoint5]
+0 visit[waypoint5]
+0 __method_precondition_m4_do_navigate2[rover1,waypoint0,waypoint0,waypoint1]
+0 navigate[rover1,waypoint0,waypoint1]
+0 navigate[rover1,waypoint0,waypoint2]
+0 unvisit[waypoint0]
+0 visit[waypoint0]
+0 __method_precondition_m1_do_navigate1[rover1,waypoint2]
+0 take_image[rover1,waypoint2,objective2,camera2,low_res]
+0 __method_precondition_m4_do_navigate2[rover1,waypoint1,waypoint2,waypoint0]
+0 navigate[rover1,waypoint2,waypoint3]
+0 __method_precondition_m4_do_navigate2[rover1,waypoint2,waypoint2,waypoint5]
+0 navigate[rover1,waypoint2,waypoint5]
+0 take_image[rover1,waypoint1,objective2,camera2,low_res]
+0 calibrate[rover1,camera2,objective0,waypoint0]
+0 calibrate[rover1,camera2,objective0,waypoint2]
+0 calibrate[rover1,camera2,objective0,waypoint1]
+0 communicate_image_data[rover1,general,objective2,low_res,waypoint1,waypoint0]
+0 communicate_image_data[rover1,general,objective2,low_res,waypoint3,waypoint0]
+0 communicate_image_data[rover1,general,objective2,low_res,waypoint2,waypoint0]
+0 communicate_image_data[rover1,general,objective2,low_res,waypoint4,waypoint0]
+0 take_image[rover3,waypoint0,objective2,camera0,low_res]
+0 __method_precondition_m0_do_navigate1[rover3,waypoint0]
+0 navigate[rover3,waypoint1,waypoint0]
+0 __method_precondition_m1_do_navigate1[rover3,waypoint1]
+0 navigate[rover3,waypoint3,waypoint0]
+0 __method_precondition_m1_do_navigate1[rover3,waypoint3]
+0 navigate[rover3,waypoint4,waypoint3]
+0 __method_precondition_m1_do_navigate1[rover3,waypoint4]
+0 navigate[rover3,waypoint2,waypoint3]
+0 navigate[rover3,waypoint2,waypoint5]
+0 navigate[rover3,waypoint5,waypoint2]
+0 __method_precondition_m1_do_navigate1[rover3,waypoint5]
+0 navigate[rover3,waypoint0,waypoint1]
+0 navigate[rover3,waypoint0,waypoint3]
+0 __method_precondition_m1_do_navigate1[rover3,waypoint2]
+0 take_image[rover3,waypoint2,objective2,camera0,low_res]
+0 navigate[rover3,waypoint3,waypoint2]
+0 take_image[rover3,waypoint1,objective2,camera0,low_res]
+0 navigate[rover3,waypoint3,waypoint4]
+0 calibrate[rover3,camera0,objective1,waypoint0]
+0 communicate_image_data[rover3,general,objective2,low_res,waypoint1,waypoint0]
+0 communicate_image_data[rover3,general,objective2,low_res,waypoint3,waypoint0]
+0 communicate_image_data[rover3,general,objective2,low_res,waypoint2,waypoint0]
+0 communicate_image_data[rover3,general,objective2,low_res,waypoint4,waypoint0]
+0 take_image[rover2,waypoint0,objective2,camera3,low_res]
+0 __method_precondition_m0_do_navigate1[rover2,waypoint0]
+0 navigate[rover2,waypoint2,waypoint0]
+0 navigate[rover2,waypoint1,waypoint2]
+0 __method_precondition_m1_do_navigate1[rover2,waypoint1]
+0 navigate[rover2,waypoint3,waypoint0]
+0 __method_precondition_m1_do_navigate1[rover2,waypoint3]
+0 navigate[rover2,waypoint4,waypoint2]
+0 __method_precondition_m1_do_navigate1[rover2,waypoint4]
+0 navigate[rover2,waypoint5,waypoint2]
+0 __method_precondition_m1_do_navigate1[rover2,waypoint5]
+0 navigate[rover2,waypoint0,waypoint3]
+0 navigate[rover2,waypoint0,waypoint2]
+0 __method_precondition_m1_do_navigate1[rover2,waypoint2]
+0 take_image[rover2,waypoint1,objective2,camera3,low_res]
+0 navigate[rover2,waypoint2,waypoint1]
+0 take_image[rover2,waypoint2,objective2,camera3,low_res]
+0 navigate[rover2,waypoint2,waypoint4]
+0 navigate[rover2,waypoint2,waypoint5]
+0 calibrate[rover2,camera3,objective1,waypoint0]
+0 communicate_image_data[rover2,general,objective2,low_res,waypoint1,waypoint0]
+0 communicate_image_data[rover2,general,objective2,low_res,waypoint3,waypoint0]
+0 communicate_image_data[rover2,general,objective2,low_res,waypoint2,waypoint0]
+0 communicate_image_data[rover2,general,objective2,low_res,waypoint4,waypoint0]
+0 take_image[rover1,waypoint0,objective0,camera2,high_res]
+0 take_image[rover1,waypoint2,objective0,camera2,high_res]
+0 take_image[rover1,waypoint1,objective0,camera2,high_res]
+0 communicate_image_data[rover1,general,objective0,high_res,waypoint1,waypoint0]
+0 communicate_image_data[rover1,general,objective0,high_res,waypoint3,waypoint0]
+0 communicate_image_data[rover1,general,objective0,high_res,waypoint2,waypoint0]
+0 communicate_image_data[rover1,general,objective0,high_res,waypoint4,waypoint0]
+0 take_image[rover3,waypoint0,objective0,camera1,high_res]
+0 take_image[rover3,waypoint2,objective0,camera1,high_res]
+0 take_image[rover3,waypoint1,objective0,camera1,high_res]
+0 calibrate[rover3,camera1,objective0,waypoint0]
+0 calibrate[rover3,camera1,objective0,waypoint2]
+0 calibrate[rover3,camera1,objective0,waypoint1]
+0 take_image[rover3,waypoint0,objective0,camera0,high_res]
+0 take_image[rover3,waypoint2,objective0,camera0,high_res]
+0 take_image[rover3,waypoint1,objective0,camera0,high_res]
+0 communicate_image_data[rover3,general,objective0,high_res,waypoint1,waypoint0]
+0 communicate_image_data[rover3,general,objective0,high_res,waypoint3,waypoint0]
+0 communicate_image_data[rover3,general,objective0,high_res,waypoint2,waypoint0]
+0 communicate_image_data[rover3,general,objective0,high_res,waypoint4,waypoint0]
+0 take_image[rover1,waypoint0,objective0,camera2,low_res]
+0 take_image[rover1,waypoint2,objective0,camera2,low_res]
+0 take_image[rover1,waypoint1,objective0,camera2,low_res]
+0 communicate_image_data[rover1,general,objective0,low_res,waypoint1,waypoint0]
+0 communicate_image_data[rover1,general,objective0,low_res,waypoint3,waypoint0]
+0 communicate_image_data[rover1,general,objective0,low_res,waypoint2,waypoint0]
+0 communicate_image_data[rover1,general,objective0,low_res,waypoint4,waypoint0]
+0 take_image[rover3,waypoint0,objective0,camera0,low_res]
+0 take_image[rover3,waypoint2,objective0,camera0,low_res]
+0 take_image[rover3,waypoint1,objective0,camera0,low_res]
+0 communicate_image_data[rover3,general,objective0,low_res,waypoint1,waypoint0]
+0 communicate_image_data[rover3,general,objective0,low_res,waypoint3,waypoint0]
+0 communicate_image_data[rover3,general,objective0,low_res,waypoint2,waypoint0]
+0 communicate_image_data[rover3,general,objective0,low_res,waypoint4,waypoint0]
+0 take_image[rover2,waypoint0,objective0,camera3,low_res]
+0 take_image[rover2,waypoint1,objective0,camera3,low_res]
+0 take_image[rover2,waypoint2,objective0,camera3,low_res]
+0 communicate_image_data[rover2,general,objective0,low_res,waypoint1,waypoint0]
+0 communicate_image_data[rover2,general,objective0,low_res,waypoint3,waypoint0]
+0 communicate_image_data[rover2,general,objective0,low_res,waypoint2,waypoint0]
+0 communicate_image_data[rover2,general,objective0,low_res,waypoint4,waypoint0]
+0 sample_rock[rover3,rover3store,waypoint4]
+0 __method_precondition_m5_empty_store[rover3store]
+0 drop[rover3,rover3store]
+0 __method_precondition_m6_empty_store[rover3store]
+0 communicate_rock_data2[rover3,general,waypoint4,waypoint0]
+0 communicate_rock_data1[rover3,general,waypoint4,waypoint4,waypoint0]
+0 communicate_rock_data1[rover3,general,waypoint4,waypoint1,waypoint0]
+0 communicate_rock_data1[rover3,general,waypoint4,waypoint3,waypoint0]
+0 communicate_rock_data1[rover3,general,waypoint4,waypoint2,waypoint0]
+0 sample_rock[rover1,rover1store,waypoint4]
+0 __method_precondition_m5_empty_store[rover1store]
+0 drop[rover1,rover1store]
+0 __method_precondition_m6_empty_store[rover1store]
+0 communicate_rock_data2[rover1,general,waypoint4,waypoint0]
+0 communicate_rock_data1[rover1,general,waypoint4,waypoint4,waypoint0]
+0 communicate_rock_data1[rover1,general,waypoint4,waypoint1,waypoint0]
+0 communicate_rock_data1[rover1,general,waypoint4,waypoint3,waypoint0]
+0 communicate_rock_data1[rover1,general,waypoint4,waypoint2,waypoint0]
+0 sample_rock[rover2,rover2store,waypoint4]
+0 __method_precondition_m5_empty_store[rover2store]
+0 drop[rover2,rover2store]
+0 __method_precondition_m6_empty_store[rover2store]
+0 communicate_rock_data2[rover2,general,waypoint4,waypoint0]
+0 communicate_rock_data1[rover2,general,waypoint4,waypoint4,waypoint0]
+0 communicate_rock_data1[rover2,general,waypoint4,waypoint1,waypoint0]
+0 communicate_rock_data1[rover2,general,waypoint4,waypoint3,waypoint0]
+0 communicate_rock_data1[rover2,general,waypoint4,waypoint2,waypoint0]
+0 sample_rock[rover0,rover0store,waypoint4]
+0 __method_precondition_m5_empty_store[rover0store]
+0 drop[rover0,rover0store]
+0 __method_precondition_m6_empty_store[rover0store]
+0 __method_precondition_m12_send_rock_data[rover0,waypoint4,general,waypoint0]
+0 communicate_rock_data2[rover0,general,waypoint4,waypoint0]
+0 communicate_rock_data1[rover0,general,waypoint4,waypoint4,waypoint0]
+0 navigate[rover0,waypoint0,waypoint1]
+0 navigate[rover0,waypoint2,waypoint4]
+0 navigate[rover0,waypoint0,waypoint2]
+0 navigate[rover0,waypoint1,waypoint0]
+0 __method_precondition_m1_do_navigate1[rover0,waypoint1]
+0 navigate[rover0,waypoint5,waypoint3]
+0 navigate[rover0,waypoint3,waypoint5]
+0 navigate[rover0,waypoint3,waypoint2]
+0 __method_precondition_m1_do_navigate1[rover0,waypoint3]
+0 navigate[rover0,waypoint4,waypoint2]
+0 __method_precondition_m1_do_navigate1[rover0,waypoint5]
+0 __method_precondition_m1_do_navigate1[rover0,waypoint0]
+0 __method_precondition_m1_do_navigate1[rover0,waypoint2]
+0 communicate_rock_data1[rover0,general,waypoint4,waypoint1,waypoint0]
+0 navigate[rover0,waypoint2,waypoint3]
+0 navigate[rover0,waypoint2,waypoint0]
+0 communicate_rock_data1[rover0,general,waypoint4,waypoint3,waypoint0]
+0 communicate_rock_data1[rover0,general,waypoint4,waypoint2,waypoint0]
+0 sample_rock[rover2,rover2store,waypoint5]
+0 communicate_rock_data1[rover2,general,waypoint5,waypoint4,waypoint0]
+0 communicate_rock_data1[rover2,general,waypoint5,waypoint1,waypoint0]
+0 communicate_rock_data1[rover2,general,waypoint5,waypoint3,waypoint0]
+0 communicate_rock_data1[rover2,general,waypoint5,waypoint2,waypoint0]
+0 sample_rock[rover3,rover3store,waypoint5]
+0 communicate_rock_data1[rover3,general,waypoint5,waypoint4,waypoint0]
+0 communicate_rock_data1[rover3,general,waypoint5,waypoint1,waypoint0]
+0 communicate_rock_data1[rover3,general,waypoint5,waypoint3,waypoint0]
+0 communicate_rock_data1[rover3,general,waypoint5,waypoint2,waypoint0]
+0 sample_rock[rover0,rover0store,waypoint5]
+0 communicate_rock_data1[rover0,general,waypoint5,waypoint4,waypoint0]
+0 communicate_rock_data1[rover0,general,waypoint5,waypoint1,waypoint0]
+0 communicate_rock_data1[rover0,general,waypoint5,waypoint3,waypoint0]
+0 communicate_rock_data1[rover0,general,waypoint5,waypoint2,waypoint0]
+0 sample_rock[rover1,rover1store,waypoint5]
+0 communicate_rock_data1[rover1,general,waypoint5,waypoint4,waypoint0]
+0 communicate_rock_data1[rover1,general,waypoint5,waypoint1,waypoint0]
+0 communicate_rock_data1[rover1,general,waypoint5,waypoint3,waypoint0]
+0 communicate_rock_data1[rover1,general,waypoint5,waypoint2,waypoint0]
+0 sample_soil[rover3,rover3store,waypoint4]
+0 communicate_soil_data2[rover3,general,waypoint4,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint4,waypoint1,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint4,waypoint3,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint4,waypoint2,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint4,waypoint4,waypoint0]
+0 sample_soil[rover0,rover0store,waypoint4]
+0 communicate_soil_data2[rover0,general,waypoint4,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint4,waypoint1,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint4,waypoint3,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint4,waypoint2,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint4,waypoint4,waypoint0]
+0 sample_soil[rover3,rover3store,waypoint3]
+0 communicate_soil_data2[rover3,general,waypoint3,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint3,waypoint1,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint3,waypoint3,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint3,waypoint2,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint3,waypoint4,waypoint0]
+0 sample_soil[rover0,rover0store,waypoint3]
+0 communicate_soil_data2[rover0,general,waypoint3,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint3,waypoint1,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint3,waypoint3,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint3,waypoint2,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint3,waypoint4,waypoint0]
+0 sample_soil[rover3,rover3store,waypoint1]
+0 communicate_soil_data2[rover3,general,waypoint1,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint1,waypoint1,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint1,waypoint3,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint1,waypoint2,waypoint0]
+0 communicate_soil_data1[rover3,general,waypoint1,waypoint4,waypoint0]
+0 sample_soil[rover0,rover0store,waypoint1]
+0 communicate_soil_data2[rover0,general,waypoint1,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint1,waypoint1,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint1,waypoint3,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint1,waypoint2,waypoint0]
+0 communicate_soil_data1[rover0,general,waypoint1,waypoint4,waypoint0]
+1 __top[]
+1 get_image_data[objective2,low_res]
+1 m13_get_image_data_splitted_2[rover1,objective2,camera2,low_res]
+1 do_navigate1[rover1,waypoint0]
+1 do_navigate2[rover1,waypoint1,waypoint0]
+1 do_navigate2[rover1,waypoint3,waypoint0]
+1 do_navigate2[rover1,waypoint4,waypoint0]
+1 do_navigate2[rover1,waypoint2,waypoint0]
+1 do_navigate2[rover1,waypoint5,waypoint0]
+1 do_navigate2[rover1,waypoint0,waypoint0]
+1 do_navigate1[rover1,waypoint2]
+1 do_navigate2[rover1,waypoint1,waypoint2]
+1 do_navigate2[rover1,waypoint0,waypoint2]
+1 do_navigate2[rover1,waypoint3,waypoint2]
+1 do_navigate2[rover1,waypoint4,waypoint2]
+1 do_navigate2[rover1,waypoint5,waypoint2]
+1 do_navigate2[rover1,waypoint2,waypoint2]
+1 do_navigate1[rover1,waypoint1]
+1 do_navigate2[rover1,waypoint1,waypoint1]
+1 do_navigate2[rover1,waypoint0,waypoint1]
+1 do_navigate2[rover1,waypoint3,waypoint1]
+1 do_navigate2[rover1,waypoint4,waypoint1]
+1 do_navigate2[rover1,waypoint2,waypoint1]
+1 do_navigate2[rover1,waypoint5,waypoint1]
+1 m15_do_calibrate_splitted_8[rover1,camera2]
+1 m14_send_image_data_splitted_10[rover1,general,objective2,low_res]
+1 do_navigate1[rover1,waypoint3]
+1 do_navigate2[rover1,waypoint1,waypoint3]
+1 do_navigate2[rover1,waypoint0,waypoint3]
+1 do_navigate2[rover1,waypoint2,waypoint3]
+1 do_navigate2[rover1,waypoint3,waypoint3]
+1 do_navigate2[rover1,waypoint4,waypoint3]
+1 do_navigate2[rover1,waypoint5,waypoint3]
+1 do_navigate1[rover1,waypoint4]
+1 do_navigate2[rover1,waypoint1,waypoint4]
+1 do_navigate2[rover1,waypoint0,waypoint4]
+1 do_navigate2[rover1,waypoint2,waypoint4]
+1 do_navigate2[rover1,waypoint3,waypoint4]
+1 do_navigate2[rover1,waypoint5,waypoint4]
+1 do_navigate2[rover1,waypoint4,waypoint4]
+1 m13_get_image_data_splitted_2[rover3,objective2,camera0,low_res]
+1 do_navigate1[rover3,waypoint0]
+1 do_navigate2[rover3,waypoint1,waypoint0]
+1 do_navigate2[rover3,waypoint3,waypoint0]
+1 do_navigate2[rover3,waypoint4,waypoint0]
+1 do_navigate2[rover3,waypoint5,waypoint0]
+1 do_navigate2[rover3,waypoint2,waypoint0]
+1 do_navigate2[rover3,waypoint0,waypoint0]
+1 do_navigate1[rover3,waypoint2]
+1 do_navigate2[rover3,waypoint1,waypoint2]
+1 do_navigate2[rover3,waypoint0,waypoint2]
+1 do_navigate2[rover3,waypoint3,waypoint2]
+1 do_navigate2[rover3,waypoint4,waypoint2]
+1 do_navigate2[rover3,waypoint5,waypoint2]
+1 do_navigate2[rover3,waypoint2,waypoint2]
+1 do_navigate1[rover3,waypoint1]
+1 do_navigate2[rover3,waypoint1,waypoint1]
+1 do_navigate2[rover3,waypoint0,waypoint1]
+1 do_navigate2[rover3,waypoint3,waypoint1]
+1 do_navigate2[rover3,waypoint4,waypoint1]
+1 do_navigate2[rover3,waypoint2,waypoint1]
+1 do_navigate2[rover3,waypoint5,waypoint1]
+1 m14_send_image_data_splitted_10[rover3,general,objective2,low_res]
+1 do_navigate1[rover3,waypoint3]
+1 do_navigate2[rover3,waypoint1,waypoint3]
+1 do_navigate2[rover3,waypoint0,waypoint3]
+1 do_navigate2[rover3,waypoint3,waypoint3]
+1 do_navigate2[rover3,waypoint4,waypoint3]
+1 do_navigate2[rover3,waypoint2,waypoint3]
+1 do_navigate2[rover3,waypoint5,waypoint3]
+1 do_navigate1[rover3,waypoint4]
+1 do_navigate2[rover3,waypoint1,waypoint4]
+1 do_navigate2[rover3,waypoint0,waypoint4]
+1 do_navigate2[rover3,waypoint3,waypoint4]
+1 do_navigate2[rover3,waypoint4,waypoint4]
+1 do_navigate2[rover3,waypoint5,waypoint4]
+1 do_navigate2[rover3,waypoint2,waypoint4]
+1 m13_get_image_data_splitted_2[rover2,objective2,camera3,low_res]
+1 do_navigate1[rover2,waypoint0]
+1 do_navigate2[rover2,waypoint1,waypoint0]
+1 do_navigate2[rover2,waypoint2,waypoint0]
+1 do_navigate2[rover2,waypoint3,waypoint0]
+1 do_navigate2[rover2,waypoint4,waypoint0]
+1 do_navigate2[rover2,waypoint5,waypoint0]
+1 do_navigate2[rover2,waypoint0,waypoint0]
+1 do_navigate1[rover2,waypoint1]
+1 do_navigate2[rover2,waypoint1,waypoint1]
+1 do_navigate2[rover2,waypoint2,waypoint1]
+1 do_navigate2[rover2,waypoint3,waypoint1]
+1 do_navigate2[rover2,waypoint0,waypoint1]
+1 do_navigate2[rover2,waypoint4,waypoint1]
+1 do_navigate2[rover2,waypoint5,waypoint1]
+1 do_navigate1[rover2,waypoint2]
+1 do_navigate2[rover2,waypoint1,waypoint2]
+1 do_navigate2[rover2,waypoint3,waypoint2]
+1 do_navigate2[rover2,waypoint0,waypoint2]
+1 do_navigate2[rover2,waypoint4,waypoint2]
+1 do_navigate2[rover2,waypoint5,waypoint2]
+1 do_navigate2[rover2,waypoint2,waypoint2]
+1 m14_send_image_data_splitted_10[rover2,general,objective2,low_res]
+1 do_navigate1[rover2,waypoint3]
+1 do_navigate2[rover2,waypoint1,waypoint3]
+1 do_navigate2[rover2,waypoint2,waypoint3]
+1 do_navigate2[rover2,waypoint4,waypoint3]
+1 do_navigate2[rover2,waypoint5,waypoint3]
+1 do_navigate2[rover2,waypoint0,waypoint3]
+1 do_navigate2[rover2,waypoint3,waypoint3]
+1 do_navigate1[rover2,waypoint4]
+1 do_navigate2[rover2,waypoint1,waypoint4]
+1 do_navigate2[rover2,waypoint2,waypoint4]
+1 do_navigate2[rover2,waypoint3,waypoint4]
+1 do_navigate2[rover2,waypoint0,waypoint4]
+1 do_navigate2[rover2,waypoint4,waypoint4]
+1 do_navigate2[rover2,waypoint5,waypoint4]
+1 get_image_data[objective0,high_res]
+1 m13_get_image_data_splitted_2[rover1,objective0,camera2,high_res]
+1 m14_send_image_data_splitted_10[rover1,general,objective0,high_res]
+1 m13_get_image_data_splitted_9[rover3,high_res,objective0]
+1 m13_get_image_data_splitted_2[rover3,objective0,camera1,high_res]
+1 m15_do_calibrate_splitted_8[rover3,camera1]
+1 m13_get_image_data_splitted_2[rover3,objective0,camera0,high_res]
+1 m14_send_image_data_splitted_10[rover3,general,objective0,high_res]
+1 get_image_data[objective0,low_res]
+1 m13_get_image_data_splitted_2[rover1,objective0,camera2,low_res]
+1 m14_send_image_data_splitted_10[rover1,general,objective0,low_res]
+1 m13_get_image_data_splitted_2[rover3,objective0,camera0,low_res]
+1 m14_send_image_data_splitted_10[rover3,general,objective0,low_res]
+1 m13_get_image_data_splitted_2[rover2,objective0,camera3,low_res]
+1 m14_send_image_data_splitted_10[rover2,general,objective0,low_res]
+1 get_rock_data[waypoint4]
+1 empty_store[rover3store,rover3]
+1 send_rock_data[rover3,waypoint4]
+1 m11_send_rock_data_splitted_11[rover3,general,waypoint4]
+1 empty_store[rover1store,rover1]
+1 send_rock_data[rover1,waypoint4]
+1 m11_send_rock_data_splitted_11[rover1,general,waypoint4]
+1 empty_store[rover2store,rover2]
+1 send_rock_data[rover2,waypoint4]
+1 m11_send_rock_data_splitted_11[rover2,general,waypoint4]
+1 empty_store[rover0store,rover0]
+1 send_rock_data[rover0,waypoint4]
+1 m11_send_rock_data_splitted_11[rover0,general,waypoint4]
+1 do_navigate1[rover0,waypoint4]
+1 do_navigate2[rover0,waypoint1,waypoint4]
+1 do_navigate2[rover0,waypoint0,waypoint4]
+1 do_navigate2[rover0,waypoint2,waypoint4]
+1 do_navigate2[rover0,waypoint3,waypoint4]
+1 do_navigate2[rover0,waypoint5,waypoint4]
+1 do_navigate2[rover0,waypoint4,waypoint4]
+1 do_navigate1[rover0,waypoint1]
+1 do_navigate2[rover0,waypoint1,waypoint1]
+1 do_navigate2[rover0,waypoint0,waypoint1]
+1 do_navigate2[rover0,waypoint3,waypoint1]
+1 do_navigate2[rover0,waypoint5,waypoint1]
+1 do_navigate2[rover0,waypoint2,waypoint1]
+1 do_navigate2[rover0,waypoint4,waypoint1]
+1 do_navigate1[rover0,waypoint3]
+1 do_navigate2[rover0,waypoint1,waypoint3]
+1 do_navigate2[rover0,waypoint0,waypoint3]
+1 do_navigate2[rover0,waypoint2,waypoint3]
+1 do_navigate2[rover0,waypoint3,waypoint3]
+1 do_navigate2[rover0,waypoint5,waypoint3]
+1 do_navigate2[rover0,waypoint4,waypoint3]
+1 do_navigate1[rover0,waypoint2]
+1 do_navigate2[rover0,waypoint1,waypoint2]
+1 do_navigate2[rover0,waypoint0,waypoint2]
+1 do_navigate2[rover0,waypoint3,waypoint2]
+1 do_navigate2[rover0,waypoint4,waypoint2]
+1 do_navigate2[rover0,waypoint5,waypoint2]
+1 do_navigate2[rover0,waypoint2,waypoint2]
+1 get_rock_data[waypoint5]
+1 m11_send_rock_data_splitted_11[rover2,general,waypoint5]
+1 do_navigate1[rover2,waypoint5]
+1 do_navigate2[rover2,waypoint1,waypoint5]
+1 do_navigate2[rover2,waypoint2,waypoint5]
+1 do_navigate2[rover2,waypoint3,waypoint5]
+1 do_navigate2[rover2,waypoint0,waypoint5]
+1 do_navigate2[rover2,waypoint4,waypoint5]
+1 do_navigate2[rover2,waypoint5,waypoint5]
+1 m11_send_rock_data_splitted_11[rover3,general,waypoint5]
+1 do_navigate1[rover3,waypoint5]
+1 do_navigate2[rover3,waypoint1,waypoint5]
+1 do_navigate2[rover3,waypoint0,waypoint5]
+1 do_navigate2[rover3,waypoint3,waypoint5]
+1 do_navigate2[rover3,waypoint4,waypoint5]
+1 do_navigate2[rover3,waypoint2,waypoint5]
+1 do_navigate2[rover3,waypoint5,waypoint5]
+1 m11_send_rock_data_splitted_11[rover0,general,waypoint5]
+1 do_navigate1[rover0,waypoint5]
+1 do_navigate2[rover0,waypoint1,waypoint5]
+1 do_navigate2[rover0,waypoint0,waypoint5]
+1 do_navigate2[rover0,waypoint2,waypoint5]
+1 do_navigate2[rover0,waypoint3,waypoint5]
+1 do_navigate2[rover0,waypoint4,waypoint5]
+1 do_navigate2[rover0,waypoint5,waypoint5]
+1 m11_send_rock_data_splitted_11[rover1,general,waypoint5]
+1 do_navigate1[rover1,waypoint5]
+1 do_navigate2[rover1,waypoint1,waypoint5]
+1 do_navigate2[rover1,waypoint0,waypoint5]
+1 do_navigate2[rover1,waypoint2,waypoint5]
+1 do_navigate2[rover1,waypoint3,waypoint5]
+1 do_navigate2[rover1,waypoint4,waypoint5]
+1 do_navigate2[rover1,waypoint5,waypoint5]
+1 get_soil_data[waypoint4]
+1 send_soil_data[rover3,waypoint4]
+1 m8_send_soil_data_splitted_12[rover3,general,waypoint4]
+1 send_soil_data[rover0,waypoint4]
+1 m8_send_soil_data_splitted_12[rover0,general,waypoint4]
+1 get_soil_data[waypoint3]
+1 send_soil_data[rover3,waypoint3]
+1 m8_send_soil_data_splitted_12[rover3,general,waypoint3]
+1 send_soil_data[rover0,waypoint3]
+1 m8_send_soil_data_splitted_12[rover0,general,waypoint3]
+1 get_soil_data[waypoint1]
+1 send_soil_data[rover3,waypoint1]
+1 m8_send_soil_data_splitted_12[rover3,general,waypoint1]
+1 send_soil_data[rover0,waypoint1]
+1 m8_send_soil_data_splitted_12[rover0,general,waypoint1]
+
+;; initial abstract task
+242
+
+;; methods
+661
+__top_method
+242
+455 450 445 412 371 364 356 243 -1
+6 7 5 6 4 5 3 4 2 3 1 2 0 1 -1
+<<<m13_get_image_data;m13_get_image_data_splitted_9[rover1,low_res,objective2];_splitting_method_m13_get_image_data_splitted_9;0;-1,-2,1>;do_calibrate[rover1,camera2];m15_do_calibrate;0;-1,1,2>;send_image_data[rover1,objective2,low_res];m14_send_image_data;2;0,1,-1>
+243
+266 244 267 -1
+1 2 0 1 0 2 -1
+_splitting_method_m13_get_image_data_splitted_2
+244
+245 0 -1
+0 1 -1
+m0_do_navigate1
+245
+1 2 -1
+0 1 -1
+m1_do_navigate1
+245
+4 6 246 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+246
+1 2 -1
+0 1 -1
+m3_do_navigate2
+246
+3 -1
+-1
+m1_do_navigate1
+245
+20 11 247 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+247
+1 2 -1
+0 1 -1
+m4_do_navigate2
+247
+7 12 14 248 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+248
+1 2 -1
+0 1 -1
+m4_do_navigate2
+248
+8 9 11 247 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+247
+15 17 19 249 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+249
+1 2 -1
+0 1 -1
+m3_do_navigate2
+249
+16 -1
+-1
+m1_do_navigate1
+245
+21 14 248 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+245
+23 25 250 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+250
+1 2 -1
+0 1 -1
+m4_do_navigate2
+250
+15 22 19 249 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+245
+1 30 251 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+251
+1 2 -1
+0 1 -1
+m4_do_navigate2
+251
+26 27 6 246 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+251
+15 28 19 249 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+245
+31 19 249 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+_splitting_method_m13_get_image_data_splitted_2
+244
+252 32 -1
+0 1 -1
+m0_do_navigate1
+252
+31 2 -1
+0 1 -1
+m1_do_navigate1
+252
+4 6 253 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+253
+31 2 -1
+0 1 -1
+m4_do_navigate2
+253
+33 3 30 254 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+254
+31 2 -1
+0 1 -1
+m3_do_navigate2
+254
+28 -1
+-1
+m1_do_navigate1
+252
+20 11 255 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+255
+31 2 -1
+0 1 -1
+m3_do_navigate2
+255
+17 -1
+-1
+m1_do_navigate1
+252
+21 14 256 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+256
+31 2 -1
+0 1 -1
+m4_do_navigate2
+256
+8 9 11 255 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+252
+23 25 257 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+257
+31 2 -1
+0 1 -1
+m3_do_navigate2
+257
+22 -1
+-1
+m1_do_navigate1
+252
+1 30 254 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+252
+31 19 258 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+258
+31 2 -1
+0 1 -1
+m4_do_navigate2
+258
+8 34 11 255 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+258
+35 36 25 257 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+258
+33 16 30 254 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+_splitting_method_m13_get_image_data_splitted_2
+244
+259 37 -1
+0 1 -1
+m0_do_navigate1
+259
+4 2 -1
+0 1 -1
+m1_do_navigate1
+259
+4 6 260 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+260
+4 2 -1
+0 1 -1
+m4_do_navigate2
+260
+33 3 30 261 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+261
+4 2 -1
+0 1 -1
+m3_do_navigate2
+261
+27 -1
+-1
+m1_do_navigate1
+259
+20 11 262 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+262
+4 2 -1
+0 1 -1
+m4_do_navigate2
+262
+7 12 14 263 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+263
+4 2 -1
+0 1 -1
+m4_do_navigate2
+263
+8 9 11 262 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+262
+15 17 19 264 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+264
+4 2 -1
+0 1 -1
+m4_do_navigate2
+264
+8 34 11 262 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+264
+35 36 25 265 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+265
+4 2 -1
+0 1 -1
+m4_do_navigate2
+265
+15 22 19 264 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+264
+33 16 30 261 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+259
+21 14 263 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+259
+23 25 265 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+259
+1 30 261 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+259
+31 19 264 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<_splitting_method_m15_do_calibrate_splitted_8;m15_do_calibrate_splitted_1[rover1,camera2,waypoint0];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1>
+266
+245 38 -1
+0 1 -1
+<_splitting_method_m15_do_calibrate_splitted_8;m15_do_calibrate_splitted_1[rover1,camera2,waypoint2];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1>
+266
+252 39 -1
+0 1 -1
+<_splitting_method_m15_do_calibrate_splitted_8;m15_do_calibrate_splitted_1[rover1,camera2,waypoint1];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1>
+266
+259 40 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective2,low_res,waypoint1];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+267
+259 41 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective2,low_res,waypoint3];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+267
+268 42 -1
+0 1 -1
+m0_do_navigate1
+268
+20 2 -1
+0 1 -1
+m1_do_navigate1
+268
+4 6 269 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+269
+20 2 -1
+0 1 -1
+m4_do_navigate2
+269
+33 3 30 270 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+270
+20 2 -1
+0 1 -1
+m4_do_navigate2
+270
+26 27 6 269 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+270
+15 28 19 271 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+271
+20 2 -1
+0 1 -1
+m3_do_navigate2
+271
+34 -1
+-1
+m1_do_navigate1
+268
+20 11 272 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+272
+20 2 -1
+0 1 -1
+m4_do_navigate2
+272
+7 12 14 273 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+273
+20 2 -1
+0 1 -1
+m3_do_navigate2
+273
+9 -1
+-1
+m4_do_navigate2
+272
+15 17 19 271 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+268
+21 14 273 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+268
+23 25 274 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+274
+20 2 -1
+0 1 -1
+m4_do_navigate2
+274
+15 22 19 271 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+268
+1 30 270 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+268
+31 19 271 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective2,low_res,waypoint2];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+267
+252 43 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective2,low_res,waypoint4];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+267
+275 44 -1
+0 1 -1
+m0_do_navigate1
+275
+21 2 -1
+0 1 -1
+m1_do_navigate1
+275
+4 6 276 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+276
+21 2 -1
+0 1 -1
+m4_do_navigate2
+276
+33 3 30 277 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+277
+21 2 -1
+0 1 -1
+m4_do_navigate2
+277
+26 27 6 276 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+277
+15 28 19 278 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+278
+21 2 -1
+0 1 -1
+m4_do_navigate2
+278
+8 34 11 279 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+279
+21 2 -1
+0 1 -1
+m3_do_navigate2
+279
+12 -1
+-1
+m4_do_navigate2
+278
+35 36 25 280 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+280
+21 2 -1
+0 1 -1
+m4_do_navigate2
+280
+15 22 19 278 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+278
+33 16 30 277 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+275
+20 11 279 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+275
+21 14 281 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+281
+21 2 -1
+0 1 -1
+m4_do_navigate2
+281
+8 9 11 279 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+275
+23 25 280 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+275
+1 30 277 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+275
+31 19 278 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<<<<<m13_get_image_data;m13_get_image_data_splitted_9[rover3,low_res,objective2];_splitting_method_m13_get_image_data_splitted_9;0;-1,-2,1>;do_calibrate[rover3,camera0];m15_do_calibrate;0;-1,1,2>;m15_do_calibrate_splitted_8[rover3,camera0];_splitting_method_m15_do_calibrate_splitted_8;0;-1,-2,1,2>;m15_do_calibrate_splitted_1[rover3,camera0,waypoint0];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1,2,3>;send_image_data[rover3,objective2,low_res];m14_send_image_data;3;0,1,2,-1>
+243
+283 64 282 304 -1
+2 3 1 2 1 3 0 2 0 3 0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+282
+283 45 -1
+0 1 -1
+m0_do_navigate1
+283
+46 2 -1
+0 1 -1
+m1_do_navigate1
+283
+48 6 284 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+284
+46 2 -1
+0 1 -1
+m3_do_navigate2
+284
+47 -1
+-1
+m1_do_navigate1
+283
+50 11 285 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+285
+46 2 -1
+0 1 -1
+m3_do_navigate2
+285
+49 -1
+-1
+m1_do_navigate1
+283
+52 14 286 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+286
+46 2 -1
+0 1 -1
+m4_do_navigate2
+286
+8 51 11 285 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+283
+56 25 287 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+287
+46 2 -1
+0 1 -1
+m4_do_navigate2
+287
+15 55 19 288 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+288
+46 2 -1
+0 1 -1
+m4_do_navigate2
+288
+8 53 11 285 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+288
+35 54 25 287 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+283
+46 30 289 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+289
+46 2 -1
+0 1 -1
+m4_do_navigate2
+289
+26 57 6 284 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+289
+8 58 11 285 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+283
+59 19 288 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+_splitting_method_m13_get_image_data_splitted_2
+282
+290 60 -1
+0 1 -1
+m0_do_navigate1
+290
+59 2 -1
+0 1 -1
+m1_do_navigate1
+290
+48 6 291 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+291
+59 2 -1
+0 1 -1
+m4_do_navigate2
+291
+33 47 30 292 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+292
+59 2 -1
+0 1 -1
+m4_do_navigate2
+292
+26 57 6 291 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+292
+8 58 11 293 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+293
+59 2 -1
+0 1 -1
+m3_do_navigate2
+293
+61 -1
+-1
+m1_do_navigate1
+290
+50 11 293 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+290
+52 14 294 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+294
+59 2 -1
+0 1 -1
+m4_do_navigate2
+294
+8 51 11 293 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+290
+56 25 295 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+295
+59 2 -1
+0 1 -1
+m3_do_navigate2
+295
+55 -1
+-1
+m1_do_navigate1
+290
+46 30 292 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+290
+59 19 296 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+296
+59 2 -1
+0 1 -1
+m4_do_navigate2
+296
+8 53 11 293 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+296
+35 54 25 295 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+_splitting_method_m13_get_image_data_splitted_2
+282
+297 62 -1
+0 1 -1
+m0_do_navigate1
+297
+48 2 -1
+0 1 -1
+m1_do_navigate1
+297
+48 6 298 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+298
+48 2 -1
+0 1 -1
+m4_do_navigate2
+298
+33 47 30 299 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+299
+48 2 -1
+0 1 -1
+m3_do_navigate2
+299
+57 -1
+-1
+m1_do_navigate1
+297
+50 11 300 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+300
+48 2 -1
+0 1 -1
+m4_do_navigate2
+300
+7 63 14 301 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+301
+48 2 -1
+0 1 -1
+m4_do_navigate2
+301
+8 51 11 300 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+300
+33 49 30 299 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+300
+15 61 19 302 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+302
+48 2 -1
+0 1 -1
+m4_do_navigate2
+302
+8 53 11 300 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+302
+35 54 25 303 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+303
+48 2 -1
+0 1 -1
+m4_do_navigate2
+303
+15 55 19 302 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+297
+52 14 301 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+297
+56 25 303 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+297
+46 30 299 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+297
+59 19 302 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective2,low_res,waypoint1];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+304
+297 65 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective2,low_res,waypoint3];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+304
+305 66 -1
+0 1 -1
+m0_do_navigate1
+305
+50 2 -1
+0 1 -1
+m1_do_navigate1
+305
+48 6 306 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+306
+50 2 -1
+0 1 -1
+m4_do_navigate2
+306
+33 47 30 307 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+307
+50 2 -1
+0 1 -1
+m3_do_navigate2
+307
+58 -1
+-1
+m1_do_navigate1
+305
+50 11 308 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+308
+50 2 -1
+0 1 -1
+m4_do_navigate2
+308
+7 63 14 309 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+309
+50 2 -1
+0 1 -1
+m3_do_navigate2
+309
+51 -1
+-1
+m4_do_navigate2
+308
+33 49 30 307 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+308
+15 61 19 310 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+310
+50 2 -1
+0 1 -1
+m3_do_navigate2
+310
+53 -1
+-1
+m1_do_navigate1
+305
+52 14 309 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+305
+56 25 311 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+311
+50 2 -1
+0 1 -1
+m4_do_navigate2
+311
+15 55 19 310 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+305
+46 30 307 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+305
+59 19 310 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective2,low_res,waypoint2];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+304
+290 67 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective2,low_res,waypoint4];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+304
+312 68 -1
+0 1 -1
+m0_do_navigate1
+312
+52 2 -1
+0 1 -1
+m1_do_navigate1
+312
+48 6 313 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+313
+52 2 -1
+0 1 -1
+m4_do_navigate2
+313
+33 47 30 314 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+314
+52 2 -1
+0 1 -1
+m4_do_navigate2
+314
+26 57 6 313 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+314
+8 58 11 315 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+315
+52 2 -1
+0 1 -1
+m3_do_navigate2
+315
+63 -1
+-1
+m1_do_navigate1
+312
+50 11 315 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+312
+52 14 316 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+316
+52 2 -1
+0 1 -1
+m4_do_navigate2
+316
+8 51 11 315 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+312
+56 25 317 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+317
+52 2 -1
+0 1 -1
+m4_do_navigate2
+317
+15 55 19 318 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+318
+52 2 -1
+0 1 -1
+m4_do_navigate2
+318
+8 53 11 315 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+318
+35 54 25 317 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+312
+46 30 314 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+312
+59 19 318 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<<<<<m13_get_image_data;m13_get_image_data_splitted_9[rover2,low_res,objective2];_splitting_method_m13_get_image_data_splitted_9;0;-1,-2,1>;do_calibrate[rover2,camera3];m15_do_calibrate;0;-1,1,2>;m15_do_calibrate_splitted_8[rover2,camera3];_splitting_method_m15_do_calibrate_splitted_8;0;-1,-2,1,2>;m15_do_calibrate_splitted_1[rover2,camera3,waypoint0];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1,2,3>;send_image_data[rover2,objective2,low_res];m14_send_image_data;3;0,1,2,-1>
+243
+320 88 319 341 -1
+2 3 1 2 1 3 0 2 0 3 0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+319
+320 69 -1
+0 1 -1
+m0_do_navigate1
+320
+70 2 -1
+0 1 -1
+m1_do_navigate1
+320
+73 6 321 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+321
+70 2 -1
+0 1 -1
+m4_do_navigate2
+321
+15 72 19 322 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+322
+70 2 -1
+0 1 -1
+m3_do_navigate2
+322
+71 -1
+-1
+m1_do_navigate1
+320
+75 11 323 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+323
+70 2 -1
+0 1 -1
+m3_do_navigate2
+323
+74 -1
+-1
+m1_do_navigate1
+320
+77 14 324 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+324
+70 2 -1
+0 1 -1
+m4_do_navigate2
+324
+15 76 19 322 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+320
+79 25 325 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+325
+70 2 -1
+0 1 -1
+m4_do_navigate2
+325
+15 78 19 322 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+320
+70 30 326 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+326
+70 2 -1
+0 1 -1
+m4_do_navigate2
+326
+8 80 11 323 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+326
+15 81 19 322 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+320
+82 19 322 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+_splitting_method_m13_get_image_data_splitted_2
+319
+327 83 -1
+0 1 -1
+m0_do_navigate1
+327
+73 2 -1
+0 1 -1
+m1_do_navigate1
+327
+73 6 328 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+328
+73 2 -1
+0 1 -1
+m4_do_navigate2
+328
+15 72 19 329 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+329
+73 2 -1
+0 1 -1
+m3_do_navigate2
+329
+84 -1
+-1
+m1_do_navigate1
+327
+75 11 330 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+330
+73 2 -1
+0 1 -1
+m4_do_navigate2
+330
+33 74 30 331 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+331
+73 2 -1
+0 1 -1
+m4_do_navigate2
+331
+8 80 11 330 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+331
+15 81 19 329 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+327
+77 14 332 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+332
+73 2 -1
+0 1 -1
+m4_do_navigate2
+332
+15 76 19 329 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+327
+79 25 333 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+333
+73 2 -1
+0 1 -1
+m4_do_navigate2
+333
+15 78 19 329 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+327
+70 30 331 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+327
+82 19 329 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+_splitting_method_m13_get_image_data_splitted_2
+319
+334 85 -1
+0 1 -1
+m0_do_navigate1
+334
+82 2 -1
+0 1 -1
+m1_do_navigate1
+334
+73 6 335 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+335
+82 2 -1
+0 1 -1
+m3_do_navigate2
+335
+72 -1
+-1
+m1_do_navigate1
+334
+75 11 336 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+336
+82 2 -1
+0 1 -1
+m4_do_navigate2
+336
+33 74 30 337 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+337
+82 2 -1
+0 1 -1
+m3_do_navigate2
+337
+81 -1
+-1
+m1_do_navigate1
+334
+77 14 338 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+338
+82 2 -1
+0 1 -1
+m3_do_navigate2
+338
+76 -1
+-1
+m1_do_navigate1
+334
+79 25 339 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+339
+82 2 -1
+0 1 -1
+m3_do_navigate2
+339
+78 -1
+-1
+m1_do_navigate1
+334
+70 30 337 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+334
+82 19 340 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+340
+82 2 -1
+0 1 -1
+m4_do_navigate2
+340
+26 84 6 335 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+340
+7 86 14 338 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+340
+35 87 25 339 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+340
+33 71 30 337 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover2,general,objective2,low_res,waypoint1];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+341
+327 89 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover2,general,objective2,low_res,waypoint3];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+341
+342 90 -1
+0 1 -1
+m0_do_navigate1
+342
+75 2 -1
+0 1 -1
+m1_do_navigate1
+342
+73 6 343 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+343
+75 2 -1
+0 1 -1
+m4_do_navigate2
+343
+15 72 19 344 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+344
+75 2 -1
+0 1 -1
+m4_do_navigate2
+344
+26 84 6 343 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+344
+7 86 14 345 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+345
+75 2 -1
+0 1 -1
+m4_do_navigate2
+345
+15 76 19 344 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+344
+35 87 25 346 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+346
+75 2 -1
+0 1 -1
+m4_do_navigate2
+346
+15 78 19 344 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+344
+33 71 30 347 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+347
+75 2 -1
+0 1 -1
+m3_do_navigate2
+347
+80 -1
+-1
+m1_do_navigate1
+342
+75 11 348 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+348
+75 2 -1
+0 1 -1
+m4_do_navigate2
+348
+33 74 30 347 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+342
+77 14 345 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+342
+79 25 346 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+342
+70 30 347 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+342
+82 19 344 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover2,general,objective2,low_res,waypoint2];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+341
+334 91 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover2,general,objective2,low_res,waypoint4];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+341
+349 92 -1
+0 1 -1
+m0_do_navigate1
+349
+77 2 -1
+0 1 -1
+m1_do_navigate1
+349
+73 6 350 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+350
+77 2 -1
+0 1 -1
+m4_do_navigate2
+350
+15 72 19 351 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+351
+77 2 -1
+0 1 -1
+m3_do_navigate2
+351
+86 -1
+-1
+m1_do_navigate1
+349
+75 11 352 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+352
+77 2 -1
+0 1 -1
+m4_do_navigate2
+352
+33 74 30 353 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+353
+77 2 -1
+0 1 -1
+m4_do_navigate2
+353
+8 80 11 352 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+353
+15 81 19 351 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+349
+77 14 354 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+354
+77 2 -1
+0 1 -1
+m4_do_navigate2
+354
+15 76 19 351 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+349
+79 25 355 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+355
+77 2 -1
+0 1 -1
+m4_do_navigate2
+355
+15 78 19 351 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+349
+70 30 353 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+349
+82 19 351 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<<m13_get_image_data;m13_get_image_data_splitted_9[rover1,high_res,objective0];<_splitting_method_m13_get_image_data_splitted_9;do_calibrate[rover1,camera2];m15_do_calibrate;0;-1,1>;0;-1,-2,1>;send_image_data[rover1,objective0,high_res];m14_send_image_data;2;0,1,-1>
+356
+266 357 358 -1
+1 2 0 1 0 2 -1
+_splitting_method_m13_get_image_data_splitted_2
+357
+245 93 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+357
+252 94 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+357
+259 95 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective0,high_res,waypoint1];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+358
+259 96 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective0,high_res,waypoint3];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+358
+268 97 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective0,high_res,waypoint2];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+358
+252 98 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective0,high_res,waypoint4];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+358
+275 99 -1
+0 1 -1
+<m13_get_image_data;send_image_data[rover3,objective0,high_res];m14_send_image_data;1;0,-1>
+356
+359 363 -1
+0 1 -1
+<_splitting_method_m13_get_image_data_splitted_9;do_calibrate[rover3,camera1];m15_do_calibrate;0;-1,1>
+359
+361 360 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+360
+283 100 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+360
+290 101 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+360
+297 102 -1
+0 1 -1
+<_splitting_method_m15_do_calibrate_splitted_8;m15_do_calibrate_splitted_1[rover3,camera1,waypoint0];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1>
+361
+283 103 -1
+0 1 -1
+<_splitting_method_m15_do_calibrate_splitted_8;m15_do_calibrate_splitted_1[rover3,camera1,waypoint2];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1>
+361
+290 104 -1
+0 1 -1
+<_splitting_method_m15_do_calibrate_splitted_8;m15_do_calibrate_splitted_1[rover3,camera1,waypoint1];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1>
+361
+297 105 -1
+0 1 -1
+<<<_splitting_method_m13_get_image_data_splitted_9;do_calibrate[rover3,camera0];m15_do_calibrate;0;-1,1>;m15_do_calibrate_splitted_8[rover3,camera0];_splitting_method_m15_do_calibrate_splitted_8;0;-1,-2,1>;m15_do_calibrate_splitted_1[rover3,camera0,waypoint0];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1,2>
+359
+283 64 362 -1
+1 2 0 2 0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+362
+283 106 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+362
+290 107 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+362
+297 108 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective0,high_res,waypoint1];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+363
+297 109 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective0,high_res,waypoint3];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+363
+305 110 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective0,high_res,waypoint2];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+363
+290 111 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective0,high_res,waypoint4];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+363
+312 112 -1
+0 1 -1
+<<m13_get_image_data;m13_get_image_data_splitted_9[rover1,low_res,objective0];<_splitting_method_m13_get_image_data_splitted_9;do_calibrate[rover1,camera2];m15_do_calibrate;0;-1,1>;0;-1,-2,1>;send_image_data[rover1,objective0,low_res];m14_send_image_data;2;0,1,-1>
+364
+266 365 366 -1
+1 2 0 1 0 2 -1
+_splitting_method_m13_get_image_data_splitted_2
+365
+245 113 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+365
+252 114 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+365
+259 115 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective0,low_res,waypoint1];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+366
+259 116 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective0,low_res,waypoint3];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+366
+268 117 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective0,low_res,waypoint2];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+366
+252 118 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover1,general,objective0,low_res,waypoint4];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+366
+275 119 -1
+0 1 -1
+<<m13_get_image_data;m13_get_image_data_splitted_9[rover3,low_res,objective0];<<<_splitting_method_m13_get_image_data_splitted_9;do_calibrate[rover3,camera0];m15_do_calibrate;0;-1,1>;m15_do_calibrate_splitted_8[rover3,camera0];_splitting_method_m15_do_calibrate_splitted_8;0;-1,-2,1>;m15_do_calibrate_splitted_1[rover3,camera0,waypoint0];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1,2>;0;-1,-2,-3,1>;send_image_data[rover3,objective0,low_res];m14_send_image_data;3;0,1,2,-1>
+364
+283 64 367 368 -1
+2 3 1 2 1 3 0 2 0 3 0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+367
+283 120 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+367
+290 121 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+367
+297 122 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective0,low_res,waypoint1];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+368
+297 123 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective0,low_res,waypoint3];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+368
+305 124 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective0,low_res,waypoint2];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+368
+290 125 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover3,general,objective0,low_res,waypoint4];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+368
+312 126 -1
+0 1 -1
+<<m13_get_image_data;m13_get_image_data_splitted_9[rover2,low_res,objective0];<<<_splitting_method_m13_get_image_data_splitted_9;do_calibrate[rover2,camera3];m15_do_calibrate;0;-1,1>;m15_do_calibrate_splitted_8[rover2,camera3];_splitting_method_m15_do_calibrate_splitted_8;0;-1,-2,1>;m15_do_calibrate_splitted_1[rover2,camera3,waypoint0];_splitting_method_m15_do_calibrate_splitted_1;1;0,-1,2>;0;-1,-2,-3,1>;send_image_data[rover2,objective0,low_res];m14_send_image_data;3;0,1,2,-1>
+364
+320 88 369 370 -1
+2 3 1 2 1 3 0 2 0 3 0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+369
+320 127 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+369
+327 128 -1
+0 1 -1
+_splitting_method_m13_get_image_data_splitted_2
+369
+334 129 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover2,general,objective0,low_res,waypoint1];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+370
+327 130 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover2,general,objective0,low_res,waypoint3];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+370
+342 131 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover2,general,objective0,low_res,waypoint2];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+370
+334 132 -1
+0 1 -1
+<_splitting_method_m14_send_image_data_splitted_10;m14_send_image_data_splitted_5[rover2,general,objective0,low_res,waypoint4];_splitting_method_m14_send_image_data_splitted_5;1;0,-1>
+370
+349 133 -1
+0 1 -1
+<m10_get_rock_data;m10_get_rock_data_splitted_3[rover3,waypoint4];_splitting_method_m10_get_rock_data_splitted_3;1;0,-1,-2,2>
+371
+312 372 134 373 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m5_empty_store
+372
+135 2 -1
+0 1 -1
+m6_empty_store
+372
+137 136 -1
+0 1 -1
+m12_send_rock_data
+373
+52 138 -1
+0 1 -1
+m11_send_rock_data
+373
+374 -1
+-1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover3,general,waypoint4,waypoint4];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+374
+312 139 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover3,general,waypoint4,waypoint1];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+374
+297 140 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover3,general,waypoint4,waypoint3];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+374
+305 141 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover3,general,waypoint4,waypoint2];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+374
+290 142 -1
+0 1 -1
+<m10_get_rock_data;m10_get_rock_data_splitted_3[rover1,waypoint4];_splitting_method_m10_get_rock_data_splitted_3;1;0,-1,-2,2>
+371
+275 375 143 376 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m5_empty_store
+375
+144 2 -1
+0 1 -1
+m6_empty_store
+375
+146 145 -1
+0 1 -1
+m12_send_rock_data
+376
+21 147 -1
+0 1 -1
+m11_send_rock_data
+376
+377 -1
+-1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover1,general,waypoint4,waypoint4];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+377
+275 148 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover1,general,waypoint4,waypoint1];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+377
+259 149 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover1,general,waypoint4,waypoint3];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+377
+268 150 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover1,general,waypoint4,waypoint2];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+377
+252 151 -1
+0 1 -1
+<m10_get_rock_data;m10_get_rock_data_splitted_3[rover2,waypoint4];_splitting_method_m10_get_rock_data_splitted_3;1;0,-1,-2,2>
+371
+349 378 152 379 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m5_empty_store
+378
+153 2 -1
+0 1 -1
+m6_empty_store
+378
+155 154 -1
+0 1 -1
+m12_send_rock_data
+379
+77 156 -1
+0 1 -1
+m11_send_rock_data
+379
+380 -1
+-1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover2,general,waypoint4,waypoint4];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+380
+349 157 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover2,general,waypoint4,waypoint1];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+380
+327 158 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover2,general,waypoint4,waypoint3];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+380
+342 159 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover2,general,waypoint4,waypoint2];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+380
+334 160 -1
+0 1 -1
+<m10_get_rock_data;m10_get_rock_data_splitted_3[rover0,waypoint4];_splitting_method_m10_get_rock_data_splitted_3;1;0,-1,-2,2>
+371
+384 381 161 382 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m5_empty_store
+381
+162 2 -1
+0 1 -1
+m6_empty_store
+381
+164 163 -1
+0 1 -1
+m12_send_rock_data
+382
+165 166 -1
+0 1 -1
+m11_send_rock_data
+382
+383 -1
+-1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover0,general,waypoint4,waypoint4];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+383
+384 167 -1
+0 1 -1
+m0_do_navigate1
+384
+165 2 -1
+0 1 -1
+m1_do_navigate1
+384
+172 6 385 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+385
+165 2 -1
+0 1 -1
+m4_do_navigate2
+385
+33 171 30 386 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+386
+165 2 -1
+0 1 -1
+m4_do_navigate2
+386
+26 168 6 385 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+386
+15 170 19 387 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+387
+165 2 -1
+0 1 -1
+m3_do_navigate2
+387
+169 -1
+-1
+m1_do_navigate1
+384
+176 11 388 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+388
+165 2 -1
+0 1 -1
+m4_do_navigate2
+388
+35 174 25 389 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+389
+165 2 -1
+0 1 -1
+m4_do_navigate2
+389
+8 173 11 388 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+388
+15 175 19 387 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+384
+165 14 390 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+390
+165 2 -1
+0 1 -1
+m4_do_navigate2
+390
+15 177 19 387 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+384
+178 25 389 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+384
+179 30 386 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+384
+180 19 387 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover0,general,waypoint4,waypoint1];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+383
+391 181 -1
+0 1 -1
+m0_do_navigate1
+391
+172 2 -1
+0 1 -1
+m1_do_navigate1
+391
+172 6 392 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+392
+172 2 -1
+0 1 -1
+m4_do_navigate2
+392
+33 171 30 393 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+393
+172 2 -1
+0 1 -1
+m3_do_navigate2
+393
+168 -1
+-1
+m1_do_navigate1
+391
+176 11 394 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+394
+172 2 -1
+0 1 -1
+m4_do_navigate2
+394
+35 174 25 395 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+395
+172 2 -1
+0 1 -1
+m4_do_navigate2
+395
+8 173 11 394 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+394
+15 175 19 396 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+396
+172 2 -1
+0 1 -1
+m4_do_navigate2
+396
+8 182 11 394 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+396
+7 169 14 397 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+397
+172 2 -1
+0 1 -1
+m4_do_navigate2
+397
+15 177 19 396 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+396
+33 183 30 393 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+391
+165 14 397 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+391
+178 25 395 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+391
+179 30 393 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+391
+180 19 396 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover0,general,waypoint4,waypoint3];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+383
+398 184 -1
+0 1 -1
+m0_do_navigate1
+398
+176 2 -1
+0 1 -1
+m1_do_navigate1
+398
+172 6 399 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+399
+176 2 -1
+0 1 -1
+m4_do_navigate2
+399
+33 171 30 400 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+400
+176 2 -1
+0 1 -1
+m4_do_navigate2
+400
+26 168 6 399 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+400
+15 170 19 401 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+401
+176 2 -1
+0 1 -1
+m3_do_navigate2
+401
+182 -1
+-1
+m1_do_navigate1
+398
+176 11 402 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+402
+176 2 -1
+0 1 -1
+m4_do_navigate2
+402
+35 174 25 403 24 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+403
+176 2 -1
+0 1 -1
+m3_do_navigate2
+403
+173 -1
+-1
+m4_do_navigate2
+402
+15 175 19 401 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+398
+165 14 404 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+404
+176 2 -1
+0 1 -1
+m4_do_navigate2
+404
+15 177 19 401 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+398
+178 25 403 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+398
+179 30 400 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+398
+180 19 401 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover0,general,waypoint4,waypoint2];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+383
+405 185 -1
+0 1 -1
+m0_do_navigate1
+405
+180 2 -1
+0 1 -1
+m1_do_navigate1
+405
+172 6 406 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+406
+180 2 -1
+0 1 -1
+m4_do_navigate2
+406
+33 171 30 407 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+407
+180 2 -1
+0 1 -1
+m3_do_navigate2
+407
+170 -1
+-1
+m1_do_navigate1
+405
+176 11 408 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+408
+180 2 -1
+0 1 -1
+m3_do_navigate2
+408
+175 -1
+-1
+m1_do_navigate1
+405
+165 14 409 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+409
+180 2 -1
+0 1 -1
+m3_do_navigate2
+409
+177 -1
+-1
+m1_do_navigate1
+405
+178 25 410 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+410
+180 2 -1
+0 1 -1
+m4_do_navigate2
+410
+8 173 11 408 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+405
+179 30 407 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+405
+180 19 411 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+411
+180 2 -1
+0 1 -1
+m4_do_navigate2
+411
+8 182 11 408 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+411
+7 169 14 409 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+411
+33 183 30 407 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+<<m10_get_rock_data;m10_get_rock_data_splitted_3[rover2,waypoint5];_splitting_method_m10_get_rock_data_splitted_3;1;0,-1,-2,2>;send_rock_data[rover2,waypoint5];m11_send_rock_data;3;0,1,2,-1>
+412
+414 378 186 413 -1
+2 3 0 2 0 1 1 2 1 3 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover2,general,waypoint5,waypoint4];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+413
+349 187 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover2,general,waypoint5,waypoint1];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+413
+327 188 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover2,general,waypoint5,waypoint3];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+413
+342 189 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover2,general,waypoint5,waypoint2];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+413
+334 190 -1
+0 1 -1
+m0_do_navigate1
+414
+79 2 -1
+0 1 -1
+m1_do_navigate1
+414
+73 6 415 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+415
+79 2 -1
+0 1 -1
+m4_do_navigate2
+415
+15 72 19 416 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+416
+79 2 -1
+0 1 -1
+m3_do_navigate2
+416
+87 -1
+-1
+m1_do_navigate1
+414
+75 11 417 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+417
+79 2 -1
+0 1 -1
+m4_do_navigate2
+417
+33 74 30 418 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+418
+79 2 -1
+0 1 -1
+m4_do_navigate2
+418
+8 80 11 417 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+418
+15 81 19 416 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+414
+77 14 419 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+419
+79 2 -1
+0 1 -1
+m4_do_navigate2
+419
+15 76 19 416 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+414
+79 25 420 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+420
+79 2 -1
+0 1 -1
+m4_do_navigate2
+420
+15 78 19 416 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+414
+70 30 418 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+414
+82 19 416 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<<m10_get_rock_data;m10_get_rock_data_splitted_3[rover3,waypoint5];_splitting_method_m10_get_rock_data_splitted_3;1;0,-1,-2,2>;send_rock_data[rover3,waypoint5];m11_send_rock_data;3;0,1,2,-1>
+412
+422 372 191 421 -1
+2 3 0 2 0 1 1 2 1 3 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover3,general,waypoint5,waypoint4];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+421
+312 192 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover3,general,waypoint5,waypoint1];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+421
+297 193 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover3,general,waypoint5,waypoint3];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+421
+305 194 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover3,general,waypoint5,waypoint2];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+421
+290 195 -1
+0 1 -1
+m0_do_navigate1
+422
+56 2 -1
+0 1 -1
+m1_do_navigate1
+422
+48 6 423 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+423
+56 2 -1
+0 1 -1
+m4_do_navigate2
+423
+33 47 30 424 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+424
+56 2 -1
+0 1 -1
+m4_do_navigate2
+424
+26 57 6 423 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+424
+8 58 11 425 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+425
+56 2 -1
+0 1 -1
+m4_do_navigate2
+425
+7 63 14 426 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+426
+56 2 -1
+0 1 -1
+m4_do_navigate2
+426
+8 51 11 425 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+425
+33 49 30 424 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+425
+15 61 19 427 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+427
+56 2 -1
+0 1 -1
+m3_do_navigate2
+427
+54 -1
+-1
+m1_do_navigate1
+422
+50 11 425 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+422
+52 14 426 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+422
+56 25 428 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+428
+56 2 -1
+0 1 -1
+m4_do_navigate2
+428
+15 55 19 427 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+422
+46 30 424 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+422
+59 19 427 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<<m10_get_rock_data;m10_get_rock_data_splitted_3[rover0,waypoint5];_splitting_method_m10_get_rock_data_splitted_3;1;0,-1,-2,2>;send_rock_data[rover0,waypoint5];m11_send_rock_data;3;0,1,2,-1>
+412
+430 381 196 429 -1
+2 3 0 2 0 1 1 2 1 3 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover0,general,waypoint5,waypoint4];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+429
+384 197 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover0,general,waypoint5,waypoint1];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+429
+391 198 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover0,general,waypoint5,waypoint3];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+429
+398 199 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover0,general,waypoint5,waypoint2];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+429
+405 200 -1
+0 1 -1
+m0_do_navigate1
+430
+178 2 -1
+0 1 -1
+m1_do_navigate1
+430
+172 6 431 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+431
+178 2 -1
+0 1 -1
+m4_do_navigate2
+431
+33 171 30 432 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+432
+178 2 -1
+0 1 -1
+m4_do_navigate2
+432
+26 168 6 431 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+432
+15 170 19 433 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+433
+178 2 -1
+0 1 -1
+m4_do_navigate2
+433
+8 182 11 434 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+434
+178 2 -1
+0 1 -1
+m3_do_navigate2
+434
+174 -1
+-1
+m4_do_navigate2
+433
+7 169 14 435 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+435
+178 2 -1
+0 1 -1
+m4_do_navigate2
+435
+15 177 19 433 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+433
+33 183 30 432 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+430
+176 11 434 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+430
+165 14 435 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+430
+178 25 436 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+436
+178 2 -1
+0 1 -1
+m4_do_navigate2
+436
+8 173 11 434 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+430
+179 30 432 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+430
+180 19 433 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<<m10_get_rock_data;m10_get_rock_data_splitted_3[rover1,waypoint5];_splitting_method_m10_get_rock_data_splitted_3;1;0,-1,-2,2>;send_rock_data[rover1,waypoint5];m11_send_rock_data;3;0,1,2,-1>
+412
+438 375 201 437 -1
+2 3 0 2 0 1 1 2 1 3 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover1,general,waypoint5,waypoint4];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+437
+275 202 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover1,general,waypoint5,waypoint1];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+437
+259 203 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover1,general,waypoint5,waypoint3];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+437
+268 204 -1
+0 1 -1
+<_splitting_method_m11_send_rock_data_splitted_11;m11_send_rock_data_splitted_6[rover1,general,waypoint5,waypoint2];_splitting_method_m11_send_rock_data_splitted_6;1;0,-1>
+437
+252 205 -1
+0 1 -1
+m0_do_navigate1
+438
+23 2 -1
+0 1 -1
+m1_do_navigate1
+438
+4 6 439 5 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+439
+23 2 -1
+0 1 -1
+m4_do_navigate2
+439
+33 3 30 440 29 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+440
+23 2 -1
+0 1 -1
+m4_do_navigate2
+440
+26 27 6 439 5 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+440
+15 28 19 441 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+441
+23 2 -1
+0 1 -1
+m3_do_navigate2
+441
+36 -1
+-1
+m1_do_navigate1
+438
+20 11 442 10 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+442
+23 2 -1
+0 1 -1
+m4_do_navigate2
+442
+7 12 14 443 13 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m2_do_navigate2
+443
+23 2 -1
+0 1 -1
+m4_do_navigate2
+443
+8 9 11 442 10 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m4_do_navigate2
+442
+15 17 19 441 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+438
+21 14 443 13 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+438
+23 25 444 24 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m2_do_navigate2
+444
+23 2 -1
+0 1 -1
+m4_do_navigate2
+444
+15 22 19 441 18 -1
+0 3 0 1 0 4 0 2 3 4 1 2 2 3 -1
+m1_do_navigate1
+438
+1 30 440 29 -1
+2 3 0 2 0 3 0 1 1 2 -1
+m1_do_navigate1
+438
+31 19 441 18 -1
+2 3 0 2 0 3 0 1 1 2 -1
+<m7_get_soil_data;m7_get_soil_data_splitted_4[rover3,waypoint4];_splitting_method_m7_get_soil_data_splitted_4;1;0,-1,-2,2>
+445
+312 372 206 446 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m9_send_soil_data
+446
+52 207 -1
+0 1 -1
+m8_send_soil_data
+446
+447 -1
+-1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint4,waypoint1];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+447
+297 208 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint4,waypoint3];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+447
+305 209 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint4,waypoint2];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+447
+290 210 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint4,waypoint4];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+447
+312 211 -1
+0 1 -1
+<m7_get_soil_data;m7_get_soil_data_splitted_4[rover0,waypoint4];_splitting_method_m7_get_soil_data_splitted_4;1;0,-1,-2,2>
+445
+384 381 212 448 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m9_send_soil_data
+448
+165 213 -1
+0 1 -1
+m8_send_soil_data
+448
+449 -1
+-1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint4,waypoint1];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+449
+391 214 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint4,waypoint3];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+449
+398 215 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint4,waypoint2];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+449
+405 216 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint4,waypoint4];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+449
+384 217 -1
+0 1 -1
+<m7_get_soil_data;m7_get_soil_data_splitted_4[rover3,waypoint3];_splitting_method_m7_get_soil_data_splitted_4;1;0,-1,-2,2>
+450
+305 372 218 451 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m9_send_soil_data
+451
+50 219 -1
+0 1 -1
+m8_send_soil_data
+451
+452 -1
+-1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint3,waypoint1];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+452
+297 220 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint3,waypoint3];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+452
+305 221 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint3,waypoint2];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+452
+290 222 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint3,waypoint4];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+452
+312 223 -1
+0 1 -1
+<m7_get_soil_data;m7_get_soil_data_splitted_4[rover0,waypoint3];_splitting_method_m7_get_soil_data_splitted_4;1;0,-1,-2,2>
+450
+398 381 224 453 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m9_send_soil_data
+453
+176 225 -1
+0 1 -1
+m8_send_soil_data
+453
+454 -1
+-1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint3,waypoint1];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+454
+391 226 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint3,waypoint3];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+454
+398 227 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint3,waypoint2];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+454
+405 228 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint3,waypoint4];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+454
+384 229 -1
+0 1 -1
+<m7_get_soil_data;m7_get_soil_data_splitted_4[rover3,waypoint1];_splitting_method_m7_get_soil_data_splitted_4;1;0,-1,-2,2>
+455
+297 372 230 456 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m9_send_soil_data
+456
+48 231 -1
+0 1 -1
+m8_send_soil_data
+456
+457 -1
+-1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint1,waypoint1];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+457
+297 232 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint1,waypoint3];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+457
+305 233 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint1,waypoint2];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+457
+290 234 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover3,general,waypoint1,waypoint4];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+457
+312 235 -1
+0 1 -1
+<m7_get_soil_data;m7_get_soil_data_splitted_4[rover0,waypoint1];_splitting_method_m7_get_soil_data_splitted_4;1;0,-1,-2,2>
+455
+391 381 236 458 -1
+2 3 0 2 0 1 1 2 1 3 -1
+m9_send_soil_data
+458
+172 237 -1
+0 1 -1
+m8_send_soil_data
+458
+459 -1
+-1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint1,waypoint1];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+459
+391 238 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint1,waypoint3];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+459
+398 239 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint1,waypoint2];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+459
+405 240 -1
+0 1 -1
+<_splitting_method_m8_send_soil_data_splitted_12;m8_send_soil_data_splitted_7[rover0,general,waypoint1,waypoint4];_splitting_method_m8_send_soil_data_splitted_7;1;0,-1>
+459
+384 241 -1
+0 1 -1

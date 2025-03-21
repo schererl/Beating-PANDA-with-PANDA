@@ -67,7 +67,7 @@ update_engine() {
 # Run the planner on given input files
 run_planner() {
     if [ "$#" -ne 3 ]; then
-        echo "Usage: $0 run DOMAINFILE PROBLEMFILE PLANFILE OPTION"
+        echo "Usage: $0 run DOMAINFILE PROBLEMFILE OPTION"
         echo "OPTION:"
         echo "  1: lmCut (standard)"
         echo "  2: lmc-BD"
